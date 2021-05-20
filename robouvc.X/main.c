@@ -28,7 +28,7 @@ void main(void) {
      * e as portas RE0, RE1 e RE2 como an
      */
      
-	//git teste//
+	//git teste2//
     ANSEL0 = 0b11111111;
     ANSEL1 = 0b00000001;
     
