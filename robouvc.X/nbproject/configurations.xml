@@ -5,6 +5,8 @@
                    displayName="Header Files"
                    projectFiles="true">
       <itemPath>PWM.h</itemPath>
+      <itemPath>geral.h</itemPath>
+      <itemPath>bluetooth.h</itemPath>
     </logicalFolder>
     <logicalFolder name="LinkerScript"
                    displayName="Linker Files"
