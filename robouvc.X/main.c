@@ -9,9 +9,10 @@
 #include <xc.h>
 #include <pic18f4431.h>
 #include "PWM.h"
+#include "geral.h"
+#include "bluetooth.h"
 
 #define _XTAL_FREQ 20000000
-#define VELOCIDADE_MAXIMA 100
 
 #define SL7 PORTAbits.RA0
 #define SL6 PORTAbits.RA1
@@ -28,7 +29,6 @@ void main(void) {
      * e as portas RE0, RE1 e RE2 como an
      */
      
-	//git teste2//
     ANSEL0 = 0b11111111;
     ANSEL1 = 0b00000001;
     
@@ -45,6 +45,15 @@ void main(void) {
     
     configBits();
     configPWM();
+    
+    while(1){
+        setDutyPWM0(100);
+        setDutyPWM2(50);
+        setDutyPWM4(20);
+        setDutyPWM6(80);
+        
+        RC0 = 1;
+    }
     
     return;
 }
