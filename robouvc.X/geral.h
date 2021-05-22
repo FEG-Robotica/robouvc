@@ -65,3 +65,10 @@ void configBits() {
 
 }
 
+void configAD() {
+    ADCON0 = 0b001110111;
+    ADCON1 = 0b00010000;
+    ADCON2 = 0b00000101;
+    ADCON3 = 0b00000000;
+}
+
