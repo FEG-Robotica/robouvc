@@ -66,9 +66,52 @@ void configBits() {
 }
 
 void configAD() {
-    ADCON0 = 0b001110111;
-    ADCON1 = 0b00010000;
-    ADCON2 = 0b00000101;
+    
+    ADCON0bits.ACONV = 1;
+    ADCON0bits.ACSCH = 1;
+    ADCON0bits.ACMOD = 0b01;
+    ADCON0bits.GODONE = 1;
+    ADCON0bits.ADON = 1;
+    
+    ADCON1bits.VCFG = 0b00;
+    
+    ADCON2bits.ADFM = 0;
+    ADCON2bits.ADCS = 0b010;
+    ADCON2bits.ACQT = 0b0110;
+    
+    //ADCON0 = 0b00110111;
+    //ADCON1 = 0b00010000;
+    //ADCON2 = 0b00000101;
     ADCON3 = 0b00000000;
+    ADCHS  = 0b00000000;
 }
+
+void configADtest() {
+
+    ADCON1bits.VCFG0 = 0;
+    ADCON1bits.VCFG1 = 0;
+
+    ADCON0bits.ACMOD0 = 0;
+    ADCON0bits.ACMOD1 = 1;
+
+    ADCHS = 0b00000000;
+
+    ADCON2bits.ADFM = 1;
+    ADCON2bits.ACQT = 0b0100;
+    ADCON2bits.ADCS = 0b101;
+
+    ADCON0bits.ADON = 1;
+}
+
+/*unsigned int vdig_AN0; float vanal_AN0;															
+
+float read_AD_AN0() {
+    vdig_AN0 = ADRESH;
+    vdig_AN0 = vdig_AN0 << 8;
+    vdig_AN0 += ADRESL;
+    vanal_AN0 = 4.88e-3 * vdig_AN0;
+    return vanal_AN0;
+}*/
+
+
 
