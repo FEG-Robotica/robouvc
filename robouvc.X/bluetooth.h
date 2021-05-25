@@ -4,6 +4,8 @@
  *
  * Created on 19 de Maio de 2021, 20:07
  */
+
+
 void configUSART() {
     SPBRG = 0x81; /* seta baud rate = 31 (valor para simula??o no proteus(1F)
                              * erro p/ BR = 31: 1,73%
