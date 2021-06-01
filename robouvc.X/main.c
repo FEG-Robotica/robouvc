@@ -9,8 +9,8 @@
 #include <xc.h>
 #include <pic18f4431.h>
 #include "PWM.h"
-#include "geral.h"
 #include "bluetooth.h"
+#include "geral.h"
 
 #define _XTAL_FREQ 20000000
 #define MAX_LENGTH_UART 16
@@ -25,11 +25,9 @@
 
 void __interrupt() ISR(void) {
     
-    RC3 = 1;
     
     if (PIR1bits.RCIF) {
         
-        RC2 = 1;
         
         if (RCSTAbits.FERR || RCSTAbits.OERR) {
             RCSTAbits.OERR = 1;
@@ -40,8 +38,7 @@ void __interrupt() ISR(void) {
         
         if (UARTReadChar() == 'f') {
             UARTSendString("frente", MAX_LENGTH_UART);
-            RC0 = 1;
-        }
+        }   
 
         PIR1bits.RCIF = 0;
     }
@@ -75,11 +72,20 @@ void main(void) {
     configBits();
     configUSART();
     configPWM();
-    configAD();
+    configADtest();
     
+    int AN0,AN1,AN2,AN3,AN4,AN5,AN6;
     
     while(1){
-        RC1 = 1;
+        
+        AN1 = getAD_AN(1);
+        char* string = valorConvUART(AN1);
+        UARTSendString(string ,MAX_LENGTH_UART);
+        UARTSendChar('\r');
+        __delay_ms(300);
+        //AN1 = getAD_AN(1);
+        //UARTSendChar(AN1 + 65);
+        //__delay_ms(300);
     }
     
     return;
