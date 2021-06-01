@@ -4,6 +4,7 @@
  *
  * Created on 19 de Maio de 2021, 19:36
  */
+
 void configBits() {
     // CONFIG1H
 #pragma config OSC = HS         // Oscillator Selection bits (HS oscillator)
@@ -66,27 +67,6 @@ void configBits() {
 }
 
 void configAD() {
-    
-    ADCON0bits.ACONV = 1;
-    ADCON0bits.ACSCH = 1;
-    ADCON0bits.ACMOD = 0b01;
-    ADCON0bits.GODONE = 1;
-    ADCON0bits.ADON = 1;
-    
-    ADCON1bits.VCFG = 0b00;
-    
-    ADCON2bits.ADFM = 0;
-    ADCON2bits.ADCS = 0b010;
-    ADCON2bits.ACQT = 0b0110;
-    
-    //ADCON0 = 0b00110111;
-    //ADCON1 = 0b00010000;
-    //ADCON2 = 0b00000101;
-    ADCON3 = 0b00000000;
-    ADCHS  = 0b00000000;
-}
-
-void configADtest() {
 
     ADCON1bits.VCFG0 = 0;
     ADCON1bits.VCFG1 = 0;
@@ -97,21 +77,103 @@ void configADtest() {
     ADCHS = 0b00000000;
 
     ADCON2bits.ADFM = 1;
-    ADCON2bits.ACQT = 0b0100;
+
+    ADCON0bits.ACONV = 0;
+    ADCON0bits.ACSCH = 1;
+
+    ADCON2bits.ACQT = 0b0110;
     ADCON2bits.ADCS = 0b101;
 
     ADCON0bits.ADON = 1;
+    ADCON3 = 0b00000000;
 }
 
-/*unsigned int vdig_AN0; float vanal_AN0;															
+void configADtest() {
 
-float read_AD_AN0() {
-    vdig_AN0 = ADRESH;
-    vdig_AN0 = vdig_AN0 << 8;
-    vdig_AN0 += ADRESL;
-    vanal_AN0 = 4.88e-3 * vdig_AN0;
-    return vanal_AN0;
-}*/
+    ADCON1bits.VCFG0 = 0;
+    ADCON1bits.VCFG1 = 0;
 
+    //ADCHS  = 0b00000000;
+
+    ADCON0bits.ACONV = 0;
+    ADCON0bits.ACSCH = 0;
+
+    ADCON0bits.ACMOD = 0b00;
+
+    ADCON2bits.ADFM = 1;
+
+    ADCON2bits.ACQT = 0b0110;
+    ADCON2bits.ADCS = 0b101;
+
+
+    //ADCON0 = 0b00110111;
+    //ADCON1 = 0b00010000;
+    //ADCON2 = 0b00000101;
+    ADCON3 = 0b00000000;
+}
+
+int bitExtract(int numero, int k, int p) {
+    return (((1 << k) - 1) & (numero >> p));
+}
+
+const char* valorConvUART(int valor) {// só converte até 9.99
+
+    int centena = valor / 100;
+    int dezena = (valor / 10) % 10;
+    int unidade = (valor % 100) % 10;
+
+    char string[5] = {'\0'};
+
+    string[0] = centena + '0';
+    string[1] = '.';
+    string[2] = dezena + '0';
+    string[3] = unidade + '0';
+
+    return string;
+}
+
+int vdig_AN;
+float vanal_AN;
+
+float readAD_AN() {
+    
+    vdig_AN = ADRESH;
+    vdig_AN = vdig_AN << 8;
+    vdig_AN += ADRESL;
+
+    vanal_AN = 4.88 * vdig_AN * 0.1;
+    
+    return vanal_AN;
+}
+
+int getAD_AN(int porta) {
+    
+    ADCON0bits.ACMOD = bitExtract(porta, 2, 0);
+    
+    ADCHSbits.GASEL0 = bitExtract(porta, 1, 2);
+    ADCHSbits.GBSEL0 = bitExtract(porta, 1, 2);
+    ADCHSbits.GCSEL0 = bitExtract(porta, 1, 2);
+    ADCHSbits.GDSEL0 = bitExtract(porta, 1, 2);
+    
+    ADCON0bits.ADON = 1;
+    ADCON0bits.GODONE = 1;
+    while (ADCON0bits.GODONE);
+
+    float ANread = readAD_AN();
+    ADCON0bits.ADON = 0;
+
+    return (int) ANread;
+    
+    /*PINO      ACMOD       SELbits
+     * 0 (000)  0 (00)      0 00
+     * 1 (001)  1 (01)      0 00
+     * 2 (010)  2 (10)      0 00
+     * 3 (011)  3 (11)      0 00
+     * 4 (100)  0 (00)      1 01
+     * 5 (101)  1 (01)      1 01
+     * 6 (110)  2 (10)      1 01
+     * 7 (111)  3 (11)      1 01
+    */     
+}
 
 
