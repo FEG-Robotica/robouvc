@@ -10,18 +10,9 @@
 #include <pic18f4431.h>
 #include "PWM.h"
 #include "bluetooth.h"
+#include "ADC.h"
+#include "defines.h"
 #include "geral.h"
-
-#define _XTAL_FREQ 20000000
-#define MAX_LENGTH_UART 16
-
-#define SL7 PORTAbits.RA0
-#define SL6 PORTAbits.RA1
-#define SL5 PORTAbits.RA2
-#define SL4 PORTAbits.RA3
-#define SL3 PORTAbits.RA4
-#define SL2 PORTAbits.RA5
-#define SL1 PORTEbits.RE0
 
 void __interrupt() ISR(void) {
     
@@ -72,20 +63,12 @@ void main(void) {
     configBits();
     configUSART();
     configPWM();
-    configADtest();
+    configAD();
     
     int AN0,AN1,AN2,AN3,AN4,AN5,AN6;
     
     while(1){
-        
-        AN1 = getAD_AN(1);
-        char* string = valorConvUART(AN1);
-        UARTSendString(string ,MAX_LENGTH_UART);
-        UARTSendChar('\r');
-        __delay_ms(300);
-        //AN1 = getAD_AN(1);
-        //UARTSendChar(AN1 + 65);
-        //__delay_ms(300);
+        testeAD();
     }
     
     return;

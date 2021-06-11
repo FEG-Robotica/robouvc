@@ -7,6 +7,8 @@
       <itemPath>PWM.h</itemPath>
       <itemPath>geral.h</itemPath>
       <itemPath>bluetooth.h</itemPath>
+      <itemPath>ADC.h</itemPath>
+      <itemPath>defines.h</itemPath>
     </logicalFolder>
     <logicalFolder name="LinkerScript"
                    displayName="Linker Files"

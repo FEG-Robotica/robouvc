@@ -3,6 +3,14 @@
 [d edition pro ]
 [d chip 18F4431 ]
 [d frameptr 4065 ]
+"8 D:\usuarios\Hiro\Documents\Robótica\RoboUVC\robouvc\robouvc.X/ADC.h
+[v _configAD configAD `(v  1 e 1 0 ]
+"32
+[v _valorConvUART valorConvUART `(*.39Cuc  1 e 2 0 ]
+"51
+[v _readAD_AN readAD_AN `(f  1 e 4 0 ]
+"62
+[v _getAD_AN getAD_AN `(i  1 e 2 0 ]
 "9 D:\usuarios\Hiro\Documents\Robótica\RoboUVC\robouvc\robouvc.X/bluetooth.h
 [v _configUSART configUSART `(v  1 e 1 0 ]
 "39
@@ -16,20 +24,22 @@
 "53
 [v _UARTSendString UARTSendString `(v  1 e 1 0 ]
 [v i2_UARTSendString UARTSendString `(v  1 e 1 0 ]
-"8 D:\usuarios\Hiro\Documents\Robótica\RoboUVC\robouvc\robouvc.X/geral.h
+"10 D:\usuarios\Hiro\Documents\Robótica\RoboUVC\robouvc\robouvc.X/geral.h
 [v _configBits configBits `(v  1 e 1 0 ]
-"91
-[v _configADtest configADtest `(v  1 e 1 0 ]
-"115
+"71
 [v _bitExtract bitExtract `(i  1 e 2 0 ]
-"119
-[v _valorConvUART valorConvUART `(*.39Cuc  1 e 2 0 ]
-"138
-[v _readAD_AN readAD_AN `(f  1 e 4 0 ]
-"149
-[v _getAD_AN getAD_AN `(i  1 e 2 0 ]
+"167
+[v _testeAD testeAD `(v  1 e 1 0 ]
 "9 D:\usuarios\Hiro\Documents\Robótica\RoboUVC\robouvc\robouvc.X/PWM.h
 [v _configPWM configPWM `(v  1 e 1 0 ]
+"23
+[v _setDutyPWM0 setDutyPWM0 `(v  1 e 1 0 ]
+"29
+[v _setDutyPWM2 setDutyPWM2 `(v  1 e 1 0 ]
+"35
+[v _setDutyPWM4 setDutyPWM4 `(v  1 e 1 0 ]
+"41
+[v _setDutyPWM6 setDutyPWM6 `(v  1 e 1 0 ]
 "7 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\awdiv.c
 [v ___awdiv __awdiv `(i  1 e 2 0 ]
 "7 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\awmod.c
@@ -64,13 +74,13 @@
 [v ___omul __omul `(uo  1 e 8 0 ]
 "10 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\xxtofl.c
 [v ___xxtofl __xxtofl `(d  1 e 4 0 ]
-"26 D:\usuarios\Hiro\Documents\Robótica\RoboUVC\robouvc\robouvc.X\main.c
+"17 D:\usuarios\Hiro\Documents\Robótica\RoboUVC\robouvc\robouvc.X\main.c
 [v _ISR ISR `IIH(v  1 e 1 0 ]
-"48
+"39
 [v _main main `(v  1 e 1 0 ]
-"135 D:\usuarios\Hiro\Documents\Robótica\RoboUVC\robouvc\robouvc.X/geral.h
+"48 D:\usuarios\Hiro\Documents\Robótica\RoboUVC\robouvc\robouvc.X/ADC.h
 [v _vdig_AN vdig_AN `i  1 e 2 0 ]
-"136
+"49
 [v _vanal_AN vanal_AN `f  1 e 4 0 ]
 "365 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f4431.h
 [v _OVDCONS OVDCONS `VEuc  1 e 1 @3946 ]
@@ -108,6 +118,21 @@
 [v _PTCON0 PTCON0 `VEuc  1 e 1 @3967 ]
 "1197
 [v _PORTB PORTB `VEuc  1 e 1 @3969 ]
+[s S461 . 1 `uc 1 RB0 1 0 :1:0 
+`uc 1 RB1 1 0 :1:1 
+`uc 1 RB2 1 0 :1:2 
+`uc 1 RB3 1 0 :1:3 
+`uc 1 RB4 1 0 :1:4 
+`uc 1 RB5 1 0 :1:5 
+`uc 1 RB6 1 0 :1:6 
+`uc 1 RB7 1 0 :1:7 
+]
+"1218
+[s S470 . 1 `uc 1 . 1 0 :3:0 
+`uc 1 CCP2_PA2 1 0 :1:3 
+]
+[u S473 . 1 `S461 1 . 1 0 `S470 1 . 1 0 ]
+[v _PORTBbits PORTBbits `VES473  1 e 1 @3969 ]
 "1268
 [v _PORTC PORTC `VEuc  1 e 1 @3970 ]
 "1534
@@ -145,15 +170,13 @@
 [v _TRISD TRISD `VEuc  1 e 1 @3989 ]
 "3161
 [v _TRISE TRISE `VEuc  1 e 1 @3990 ]
-"3263
-[v _ADCHS ADCHS `VEuc  1 e 1 @3993 ]
-[s S407 . 1 `uc 1 SASEL 1 0 :2:0 
+[s S410 . 1 `uc 1 SASEL 1 0 :2:0 
 `uc 1 SCSEL 1 0 :2:2 
 `uc 1 SBSEL 1 0 :2:4 
 `uc 1 SDSEL 1 0 :2:6 
 ]
 "3296
-[s S412 . 1 `uc 1 GASEL0 1 0 :1:0 
+[s S415 . 1 `uc 1 GASEL0 1 0 :1:0 
 `uc 1 GASEL1 1 0 :1:1 
 `uc 1 GCSEL0 1 0 :1:2 
 `uc 1 GCSEL1 1 0 :1:3 
@@ -162,7 +185,7 @@
 `uc 1 GDSEL0 1 0 :1:6 
 `uc 1 GDSEL1 1 0 :1:7 
 ]
-[s S421 . 1 `uc 1 SASEL0 1 0 :1:0 
+[s S424 . 1 `uc 1 SASEL0 1 0 :1:0 
 `uc 1 SASEL1 1 0 :1:1 
 `uc 1 SCSEL0 1 0 :1:2 
 `uc 1 SCSEL1 1 0 :1:3 
@@ -171,8 +194,8 @@
 `uc 1 SDSEL0 1 0 :1:6 
 `uc 1 SDSEL1 1 0 :1:7 
 ]
-[u S430 . 1 `S407 1 . 1 0 `S412 1 . 1 0 `S421 1 . 1 0 ]
-[v _ADCHSbits ADCHSbits `VES430  1 e 1 @3993 ]
+[u S433 . 1 `S410 1 . 1 0 `S415 1 . 1 0 `S424 1 . 1 0 ]
+[v _ADCHSbits ADCHSbits `VES433  1 e 1 @3993 ]
 "3401
 [v _ADCON3 ADCON3 `VEuc  1 e 1 @3994 ]
 [s S94 . 1 `uc 1 TMR1IE 1 0 :1:0 
@@ -273,12 +296,12 @@
 [v _ANSEL0 ANSEL0 `VEuc  1 e 1 @4024 ]
 "5214
 [v _ANSEL1 ANSEL1 `VEuc  1 e 1 @4025 ]
-[s S376 . 1 `uc 1 ADCS 1 0 :3:0 
+[s S375 . 1 `uc 1 ADCS 1 0 :3:0 
 `uc 1 ACQT 1 0 :4:3 
 `uc 1 ADFM 1 0 :1:7 
 ]
 "5455
-[s S380 . 1 `uc 1 ADCS0 1 0 :1:0 
+[s S379 . 1 `uc 1 ADCS0 1 0 :1:0 
 `uc 1 ADCS1 1 0 :1:1 
 `uc 1 ADCS2 1 0 :1:2 
 `uc 1 ACQT0 1 0 :1:3 
@@ -286,8 +309,8 @@
 `uc 1 ACQT2 1 0 :1:5 
 `uc 1 ACQT3 1 0 :1:6 
 ]
-[u S388 . 1 `S376 1 . 1 0 `S380 1 . 1 0 ]
-[v _ADCON2bits ADCON2bits `VES388  1 e 1 @4032 ]
+[u S387 . 1 `S375 1 . 1 0 `S379 1 . 1 0 ]
+[v _ADCON2bits ADCON2bits `VES387  1 e 1 @4032 ]
 [s S261 . 1 `uc 1 ADPNT 1 0 :2:0 
 `uc 1 BFOVFL 1 0 :1:2 
 `uc 1 BFEMT 1 0 :1:3 
@@ -347,7 +370,7 @@
 [v _ADRESL ADRESL `VEuc  1 e 1 @4035 ]
 "5739
 [v _ADRESH ADRESH `VEuc  1 e 1 @4036 ]
-[s S475 . 1 `uc 1 RBIF 1 0 :1:0 
+[s S510 . 1 `uc 1 RBIF 1 0 :1:0 
 `uc 1 INT0IF 1 0 :1:1 
 `uc 1 TMR0IF 1 0 :1:2 
 `uc 1 RBIE 1 0 :1:3 
@@ -357,7 +380,7 @@
 `uc 1 GIE_GIEH 1 0 :1:7 
 ]
 "7339
-[s S484 . 1 `uc 1 . 1 0 :1:0 
+[s S519 . 1 `uc 1 . 1 0 :1:0 
 `uc 1 INT0F 1 0 :1:1 
 `uc 1 T0IF 1 0 :1:2 
 `uc 1 . 1 0 :1:3 
@@ -366,37 +389,46 @@
 `uc 1 PEIE 1 0 :1:6 
 `uc 1 GIE 1 0 :1:7 
 ]
-[s S493 . 1 `uc 1 . 1 0 :6:0 
+[s S528 . 1 `uc 1 . 1 0 :6:0 
 `uc 1 GIEL 1 0 :1:6 
 `uc 1 GIEH 1 0 :1:7 
 ]
-[u S497 . 1 `S475 1 . 1 0 `S484 1 . 1 0 `S493 1 . 1 0 ]
-[v _INTCONbits INTCONbits `VES497  1 e 1 @4082 ]
+[u S532 . 1 `S510 1 . 1 0 `S519 1 . 1 0 `S528 1 . 1 0 ]
+[v _INTCONbits INTCONbits `VES532  1 e 1 @4082 ]
+"8818
+[v _RC0 RC0 `VEb  1 e 0 @31760 ]
+"8821
+[v _RC1 RC1 `VEb  1 e 0 @31761 ]
+"8833
+[v _RC2 RC2 `VEb  1 e 0 @31762 ]
+"8836
+[v _RC3 RC3 `VEb  1 e 0 @31763 ]
 "9433
 [v _TRMT TRMT `VEb  1 e 0 @32097 ]
-"48 D:\usuarios\Hiro\Documents\Robótica\RoboUVC\robouvc\robouvc.X\main.c
+"39 D:\usuarios\Hiro\Documents\Robótica\RoboUVC\robouvc\robouvc.X\main.c
 [v _main main `(v  1 e 1 0 ]
 {
-"82
-[v main@string string `*.39uc  1 a 2 4 ]
-"77
-[v main@AN1 AN1 `i  1 a 2 2 ]
-"92
+"75
 } 0
-"119 D:\usuarios\Hiro\Documents\Robótica\RoboUVC\robouvc\robouvc.X/geral.h
+"167 D:\usuarios\Hiro\Documents\Robótica\RoboUVC\robouvc\robouvc.X/geral.h
+[v _testeAD testeAD `(v  1 e 1 0 ]
+{
+"203
+} 0
+"32 D:\usuarios\Hiro\Documents\Robótica\RoboUVC\robouvc\robouvc.X/ADC.h
 [v _valorConvUART valorConvUART `(*.39Cuc  1 e 2 0 ]
 {
-"125
-[v valorConvUART@string string `[5]uc  1 a 5 39 ]
-"123
-[v valorConvUART@unidade unidade `i  1 a 2 35 ]
-"122
-[v valorConvUART@dezena dezena `i  1 a 2 33 ]
-"121
-[v valorConvUART@centena centena `i  1 a 2 31 ]
-"119
-[v valorConvUART@valor valor `i  1 p 2 29 ]
-"133
+"38
+[v valorConvUART@string string `[5]uc  1 a 5 10 ]
+"36
+[v valorConvUART@unidade unidade `i  1 a 2 6 ]
+"35
+[v valorConvUART@dezena dezena `i  1 a 2 4 ]
+"34
+[v valorConvUART@centena centena `i  1 a 2 2 ]
+"32
+[v valorConvUART@valor valor `i  1 p 2 0 ]
+"46
 } 0
 "7 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\awmod.c
 [v ___awmod __awmod `(i  1 e 2 0 ]
@@ -422,19 +454,19 @@
 [v ___awdiv@divisor divisor `i  1 p 2 17 ]
 "41
 } 0
-"149 D:\usuarios\Hiro\Documents\Robótica\RoboUVC\robouvc\robouvc.X/geral.h
+"62 D:\usuarios\Hiro\Documents\Robótica\RoboUVC\robouvc\robouvc.X/ADC.h
 [v _getAD_AN getAD_AN `(i  1 e 2 0 ]
 {
-"162
+"75
 [v getAD_AN@ANread ANread `f  1 a 4 64 ]
-"149
+"62
 [v getAD_AN@porta porta `i  1 p 2 62 ]
-"177
+"90
 } 0
-"138
+"51
 [v _readAD_AN readAD_AN `(f  1 e 4 0 ]
 {
-"147
+"60
 } 0
 "10 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\xxtofl.c
 [v ___xxtofl __xxtofl `(d  1 e 4 0 ]
@@ -454,21 +486,21 @@
 "8 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcmul.c
 [v ___flmul __flmul `(d  1 e 4 0 ]
 {
-[s S975 . 4 `uc 1 a 1 0 `uc 1 b 1 1 `uc 1 c 1 2 `uc 1 d 1 3 ]
+[s S1039 . 4 `uc 1 a 1 0 `uc 1 b 1 1 `uc 1 c 1 2 `uc 1 d 1 3 ]
 "13
-[s S980 . 4 `s 1 wordA 2 0 `s 1 wordB 2 2 ]
-[u S983 . 4 `l 1 i 4 0 `d 1 f 4 0 `S975 1 fAsBytes 4 0 `S980 1 fAsWords 4 0 ]
-[v ___flmul@prod prod `S983  1 a 4 48 ]
+[s S1044 . 4 `s 1 wordA 2 0 `s 1 wordB 2 2 ]
+[u S1047 . 4 `l 1 i 4 0 `d 1 f 4 0 `S1039 1 fAsBytes 4 0 `S1044 1 fAsWords 4 0 ]
+[v ___flmul@prod prod `S1047  1 a 4 48 ]
 "12
-[v ___flmul@grs grs `ul  1 a 4 43 ]
-[s S1051 . 2 `uc 1 a 1 0 `uc 1 b 1 1 ]
+[v ___flmul@grs grs `ul  1 a 4 42 ]
+[s S1115 . 2 `uc 1 a 1 0 `uc 1 b 1 1 ]
 "14
-[u S1054 . 2 `s 1 i 2 0 `us 1 n 2 0 `S1051 1 nAsBytes 2 0 ]
-[v ___flmul@temp temp `S1054  1 a 2 52 ]
+[u S1118 . 2 `s 1 i 2 0 `us 1 n 2 0 `S1115 1 nAsBytes 2 0 ]
+[v ___flmul@temp temp `S1118  1 a 2 52 ]
 "10
 [v ___flmul@bexp bexp `uc  1 a 1 47 ]
 "11
-[v ___flmul@aexp aexp `uc  1 a 1 42 ]
+[v ___flmul@aexp aexp `uc  1 a 1 46 ]
 "9
 [v ___flmul@sign sign `uc  1 a 1 41 ]
 "8
@@ -476,13 +508,13 @@
 [v ___flmul@a a `d  1 p 4 33 ]
 "205
 } 0
-"115 D:\usuarios\Hiro\Documents\Robótica\RoboUVC\robouvc\robouvc.X/geral.h
+"71 D:\usuarios\Hiro\Documents\Robótica\RoboUVC\robouvc\robouvc.X/geral.h
 [v _bitExtract bitExtract `(i  1 e 2 0 ]
 {
 [v bitExtract@numero numero `i  1 p 2 15 ]
 [v bitExtract@k k `i  1 p 2 17 ]
 [v bitExtract@p p `i  1 p 2 19 ]
-"117
+"73
 } 0
 "43 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\fltol.c
 [v ___fltol __fltol `(l  1 e 4 0 ]
@@ -494,34 +526,14 @@
 [v ___fltol@f1 f1 `d  1 p 4 15 ]
 "70
 } 0
-"9 D:\usuarios\Hiro\Documents\Robótica\RoboUVC\robouvc\robouvc.X/bluetooth.h
-[v _configUSART configUSART `(v  1 e 1 0 ]
-{
-"37
-} 0
-"9 D:\usuarios\Hiro\Documents\Robótica\RoboUVC\robouvc\robouvc.X/PWM.h
-[v _configPWM configPWM `(v  1 e 1 0 ]
-{
-"21
-} 0
-"8 D:\usuarios\Hiro\Documents\Robótica\RoboUVC\robouvc\robouvc.X/geral.h
-[v _configBits configBits `(v  1 e 1 0 ]
-{
-"67
-} 0
-"91
-[v _configADtest configADtest `(v  1 e 1 0 ]
-{
-"113
-} 0
 "53 D:\usuarios\Hiro\Documents\Robótica\RoboUVC\robouvc\robouvc.X/bluetooth.h
 [v _UARTSendString UARTSendString `(v  1 e 1 0 ]
 {
 "54
-[v UARTSendString@i i `i  1 a 2 22 ]
+[v UARTSendString@i i `i  1 a 2 21 ]
 "53
-[v UARTSendString@str str `*.35uc  1 p 2 16 ]
-[v UARTSendString@max_length max_length `Ci  1 p 2 18 ]
+[v UARTSendString@str str `*.35uc  1 p 2 15 ]
+[v UARTSendString@max_length max_length `Ci  1 p 2 17 ]
 "63
 } 0
 "48
@@ -537,10 +549,30 @@
 {
 "46
 } 0
-"26 D:\usuarios\Hiro\Documents\Robótica\RoboUVC\robouvc\robouvc.X\main.c
+"9
+[v _configUSART configUSART `(v  1 e 1 0 ]
+{
+"37
+} 0
+"9 D:\usuarios\Hiro\Documents\Robótica\RoboUVC\robouvc\robouvc.X/PWM.h
+[v _configPWM configPWM `(v  1 e 1 0 ]
+{
+"21
+} 0
+"10 D:\usuarios\Hiro\Documents\Robótica\RoboUVC\robouvc\robouvc.X/geral.h
+[v _configBits configBits `(v  1 e 1 0 ]
+{
+"69
+} 0
+"8 D:\usuarios\Hiro\Documents\Robótica\RoboUVC\robouvc\robouvc.X/ADC.h
+[v _configAD configAD `(v  1 e 1 0 ]
+{
+"30
+} 0
+"17 D:\usuarios\Hiro\Documents\Robótica\RoboUVC\robouvc\robouvc.X\main.c
 [v _ISR ISR `IIH(v  1 e 1 0 ]
 {
-"45
+"36
 } 0
 "53 D:\usuarios\Hiro\Documents\Robótica\RoboUVC\robouvc\robouvc.X/bluetooth.h
 [v i2_UARTSendString UARTSendString `(v  1 e 1 0 ]
