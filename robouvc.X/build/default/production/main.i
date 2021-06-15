@@ -5408,10 +5408,13 @@ void testeMotores(){
     PORTBbits.RB7 = 1;
 
 
+
+    UARTSendString("PWMA Testando",16);
     for(i = 0; i <= 100; i++){
         setDutyPWM0(i);
         _delay((unsigned long)((20)*(20000000/4000.0)));
     }
+    UARTSendString("PWMA Teste finalizado",16);
     setDutyPWM0(0);
 
 
@@ -5581,7 +5584,7 @@ void main(void) {
     int AN0,AN1,AN2,AN3,AN4,AN5,AN6;
 
     while(1){
-        testeAD();
+        testeMotores();
     }
 
     return;

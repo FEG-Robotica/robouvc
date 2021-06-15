@@ -1348,7 +1348,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e :U _configBits ]
 [f ]
 "69
-[; ;./geral.h: 69:     }
+[; ;./geral.h: 69:         setDutyPWM6(i);
 [e :UE 338 ]
 }
 "12
@@ -1367,91 +1367,91 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;./geral.h: 18: 
 [p x BOREN = OFF ]
 "22
-[; ;./geral.h: 22:     }
+[; ;./geral.h: 22:         setDutyPWM0(i);
 [p x WDTEN = OFF ]
 "23
-[; ;./geral.h: 23:     setDutyPWM0(0);
+[; ;./geral.h: 23:         _delay((unsigned long)((20)*(20000000/4000.0)));
 [p x WDPS = 32768 ]
 "24
-[; ;./geral.h: 24: 
+[; ;./geral.h: 24:     }
 [p x WINEN = OFF ]
 "27
-[; ;./geral.h: 27:         setDutyPWM6(i);
+[; ;./geral.h: 27: 
 [p x PWMPIN = OFF ]
 "28
-[; ;./geral.h: 28:         _delay((unsigned long)((20)*(20000000/4000.0)));
+[; ;./geral.h: 28: 
 [p x LPOL = HIGH ]
 "29
-[; ;./geral.h: 29:     }
+[; ;./geral.h: 29:     for(i = 0; i <= 100; i++){
 [p x HPOL = HIGH ]
 "30
-[; ;./geral.h: 30:     setDutyPWM6(0);
+[; ;./geral.h: 30:         setDutyPWM6(i);
 [p x T1OSCMX = ON ]
 "33
-[; ;./geral.h: 33:     for(i = 0; i <= 100; i++){
+[; ;./geral.h: 33:     setDutyPWM6(0);
 [p x MCLRE = ON ]
 "36
-[; ;./geral.h: 36:     }
+[; ;./geral.h: 36:     for(i = 0; i <= 100; i++){
 [p x STVREN = ON ]
 "37
-[; ;./geral.h: 37:     setDutyPWM2(0);
+[; ;./geral.h: 37:         setDutyPWM2(i);
 [p x LVP = ON ]
 "40
-[; ;./geral.h: 40:     for(i = 0; i <= 100; i++){
+[; ;./geral.h: 40:     setDutyPWM2(0);
 [p x CP0 = OFF ]
 "41
-[; ;./geral.h: 41:         setDutyPWM2(i);
+[; ;./geral.h: 41: 
 [p x CP1 = OFF ]
 "42
-[; ;./geral.h: 42:         _delay((unsigned long)((20)*(20000000/4000.0)));
+[; ;./geral.h: 42: 
 [p x CP2 = OFF ]
 "43
-[; ;./geral.h: 43:     }
+[; ;./geral.h: 43:     for(i = 0; i <= 100; i++){
 [p x CP3 = OFF ]
 "46
-[; ;./geral.h: 46: 
+[; ;./geral.h: 46:     }
 [p x CPB = OFF ]
 "47
-[; ;./geral.h: 47:     for(i = 0; i <= 100; i++){
+[; ;./geral.h: 47:     setDutyPWM4(0);
 [p x CPD = OFF ]
 "50
-[; ;./geral.h: 50:         _delay((unsigned long)((20)*(20000000/4000.0)));
+[; ;./geral.h: 50:     for(i = 0; i <= 100; i++){
 [p x WRT0 = OFF ]
 "51
-[; ;./geral.h: 51:     }
+[; ;./geral.h: 51:         setDutyPWM0(i);
 [p x WRT1 = OFF ]
 "52
-[; ;./geral.h: 52:     setDutyPWM0(0);
+[; ;./geral.h: 52:         setDutyPWM2(i);
 [p x WRT2 = OFF ]
 "53
-[; ;./geral.h: 53:     setDutyPWM2(0);
+[; ;./geral.h: 53:         _delay((unsigned long)((20)*(20000000/4000.0)));
 [p x WRT3 = OFF ]
 "56
-[; ;./geral.h: 56:     for(i = 0; i <= 100; i++){
+[; ;./geral.h: 56:     setDutyPWM2(0);
 [p x WRTC = OFF ]
 "57
-[; ;./geral.h: 57:         setDutyPWM0(i);
+[; ;./geral.h: 57: 
 [p x WRTB = OFF ]
 "58
-[; ;./geral.h: 58:         setDutyPWM4(i);
+[; ;./geral.h: 58: 
 [p x WRTD = OFF ]
 "61
-[; ;./geral.h: 61:     setDutyPWM0(0);
+[; ;./geral.h: 61:         setDutyPWM4(i);
 [p x EBTR0 = OFF ]
 "62
-[; ;./geral.h: 62:     setDutyPWM4(0);
+[; ;./geral.h: 62:         _delay((unsigned long)((20)*(20000000/4000.0)));
 [p x EBTR1 = OFF ]
 "63
-[; ;./geral.h: 63: 
+[; ;./geral.h: 63:     }
 [p x EBTR2 = OFF ]
 "64
-[; ;./geral.h: 64: 
+[; ;./geral.h: 64:     setDutyPWM0(0);
 [p x EBTR3 = OFF ]
 "67
-[; ;./geral.h: 67:         setDutyPWM2(i);
+[; ;./geral.h: 67: 
 [p x EBTRB = OFF ]
 "71
-[; ;./geral.h: 71:     setDutyPWM2(0);
+[; ;./geral.h: 71:         _delay((unsigned long)((20)*(20000000/4000.0)));
 [v _bitExtract `(i ~T0 @X0 1 ef3`i`i`i ]
 {
 [e :U _bitExtract ]
@@ -1460,327 +1460,333 @@ Version 4.0 HI-TECH Software Intermediate Code
 [v _p `i ~T0 @X0 1 r3 ]
 [f ]
 "72
-[; ;./geral.h: 72: 
+[; ;./geral.h: 72:     }
 [e ) & - << -> 1 `i _k -> 1 `i >> _numero _p ]
 [e $UE 339  ]
 "73
-[; ;./geral.h: 73: 
+[; ;./geral.h: 73:     setDutyPWM6(0);
 [e :UE 339 ]
 }
 "81
-[; ;./geral.h: 81: }
+[; ;./geral.h: 81:     }
 [v _testeMotores `(v ~T0 @X0 1 ef ]
 {
 [e :U _testeMotores ]
 [f ]
 "83
-[; ;./geral.h: 83: 
+[; ;./geral.h: 83:     setDutyPWM4(0);
 [v _i `i ~T0 @X0 1 a ]
 "84
-[; ;./geral.h: 84: 
+[; ;./geral.h: 84: }
 [e = . . _PORTBbits 0 6 -> -> 1 `i `uc ]
 "85
 [; ;./geral.h: 85: 
 [e = . . _PORTBbits 0 7 -> -> 1 `i `uc ]
-"88
-[; ;./geral.h: 88: 
+"89
+[; ;./geral.h: 89: void testeLampadas(){
+[e ( _UARTSendString (2 , :s 1C -> 16 `i ]
+"90
+[; ;./geral.h: 90:     int i;
 {
 [e = _i -> 0 `i ]
 [e $ <= _i -> 100 `i 341  ]
 [e $U 342  ]
 [e :U 341 ]
 {
-"89
-[; ;./geral.h: 89:     for(i = 0; i < 16; i++){
-[e ( _setDutyPWM0 (1 -> _i `ui ]
-"90
-[; ;./geral.h: 90:         RC0 = bitExtract(i, 1, 0);
-[e ( __delay (1 -> * -> -> 20 `i `d / -> -> 20000000 `l `d .4000.0 `ul ]
 "91
-[; ;./geral.h: 91:         RC1 = bitExtract(i, 1, 1);
+[; ;./geral.h: 91: 
+[e ( _setDutyPWM0 (1 -> _i `ui ]
+"92
+[; ;./geral.h: 92:     for(i = 0; i < 16; i++){
+[e ( __delay (1 -> * -> -> 20 `i `d / -> -> 20000000 `l `d .4000.0 `ul ]
+"93
+[; ;./geral.h: 93:         RC0 = bitExtract(i, 1, 0);
 }
 [e ++ _i -> 1 `i ]
 [e $ <= _i -> 100 `i 341  ]
 [e :U 342 ]
 }
-"92
-[; ;./geral.h: 92:         RC2 = bitExtract(i, 1, 2);
-[e ( _setDutyPWM0 (1 -> -> 0 `i `ui ]
+"94
+[; ;./geral.h: 94:         RC1 = bitExtract(i, 1, 1);
+[e ( _UARTSendString (2 , :s 2C -> 16 `i ]
 "95
-[; ;./geral.h: 95:     }
+[; ;./geral.h: 95:         RC2 = bitExtract(i, 1, 2);
+[e ( _setDutyPWM0 (1 -> -> 0 `i `ui ]
+"98
+[; ;./geral.h: 98:     }
 {
 [e = _i -> 0 `i ]
 [e $ <= _i -> 100 `i 344  ]
 [e $U 345  ]
 [e :U 344 ]
 {
-"96
-[; ;./geral.h: 96: }
+"99
+[; ;./geral.h: 99: }
 [e ( _setDutyPWM6 (1 -> _i `ui ]
-"97
-[; ;./geral.h: 97: 
+"100
+[; ;./geral.h: 100: 
 [e ( __delay (1 -> * -> -> 20 `i `d / -> -> 20000000 `l `d .4000.0 `ul ]
-"98
-[; ;./geral.h: 98: void testeAD(){
+"101
+[; ;./geral.h: 101: void testeAD(){
 }
 [e ++ _i -> 1 `i ]
 [e $ <= _i -> 100 `i 344  ]
 [e :U 345 ]
 }
-"99
-[; ;./geral.h: 99:     UARTSendString("AN0: ",16);
-[e ( _setDutyPWM6 (1 -> -> 0 `i `ui ]
 "102
-[; ;./geral.h: 102: 
+[; ;./geral.h: 102:     UARTSendString("AN0: ",16);
+[e ( _setDutyPWM6 (1 -> -> 0 `i `ui ]
+"105
+[; ;./geral.h: 105: 
 {
 [e = _i -> 0 `i ]
 [e $ <= _i -> 100 `i 347  ]
 [e $U 348  ]
 [e :U 347 ]
 {
-"103
-[; ;./geral.h: 103:     UARTSendString("AN1: ",16);
+"106
+[; ;./geral.h: 106:     UARTSendString("AN1: ",16);
 [e ( _setDutyPWM2 (1 -> _i `ui ]
-"104
-[; ;./geral.h: 104:     UARTSendString(valorConvUART(getAD_AN(1)), 16);
+"107
+[; ;./geral.h: 107:     UARTSendString(valorConvUART(getAD_AN(1)), 16);
 [e ( __delay (1 -> * -> -> 20 `i `d / -> -> 20000000 `l `d .4000.0 `ul ]
-"105
-[; ;./geral.h: 105:     UARTSendString("\r",16);
+"108
+[; ;./geral.h: 108:     UARTSendString("\r",16);
 }
 [e ++ _i -> 1 `i ]
 [e $ <= _i -> 100 `i 347  ]
 [e :U 348 ]
 }
-"106
-[; ;./geral.h: 106: 
-[e ( _setDutyPWM2 (1 -> -> 0 `i `ui ]
 "109
-[; ;./geral.h: 109:     UARTSendString("\r",16);
+[; ;./geral.h: 109: 
+[e ( _setDutyPWM2 (1 -> -> 0 `i `ui ]
+"112
+[; ;./geral.h: 112:     UARTSendString("\r",16);
 {
 [e = _i -> 0 `i ]
 [e $ <= _i -> 100 `i 350  ]
 [e $U 351  ]
 [e :U 350 ]
 {
-"110
-[; ;./geral.h: 110: 
+"113
+[; ;./geral.h: 113: 
 [e ( _setDutyPWM2 (1 -> _i `ui ]
-"111
-[; ;./geral.h: 111:     UARTSendString("AN3: ",16);
+"114
+[; ;./geral.h: 114:     UARTSendString("AN3: ",16);
 [e ( __delay (1 -> * -> -> 20 `i `d / -> -> 20000000 `l `d .4000.0 `ul ]
-"112
-[; ;./geral.h: 112:     UARTSendString(valorConvUART(getAD_AN(3)), 16);
+"115
+[; ;./geral.h: 115:     UARTSendString(valorConvUART(getAD_AN(3)), 16);
 }
 [e ++ _i -> 1 `i ]
 [e $ <= _i -> 100 `i 350  ]
 [e :U 351 ]
 }
-"113
-[; ;./geral.h: 113:     UARTSendString("\r",16);
-[e ( _setDutyPWM4 (1 -> -> 0 `i `ui ]
 "116
-[; ;./geral.h: 116:     UARTSendString(valorConvUART(getAD_AN(4)), 16);
+[; ;./geral.h: 116:     UARTSendString("\r",16);
+[e ( _setDutyPWM4 (1 -> -> 0 `i `ui ]
+"119
+[; ;./geral.h: 119:     UARTSendString(valorConvUART(getAD_AN(4)), 16);
 {
 [e = _i -> 0 `i ]
 [e $ <= _i -> 100 `i 353  ]
 [e $U 354  ]
 [e :U 353 ]
 {
-"117
-[; ;./geral.h: 117:     UARTSendString("\r",16);
-[e ( _setDutyPWM0 (1 -> _i `ui ]
-"118
-[; ;./geral.h: 118: 
-[e ( _setDutyPWM2 (1 -> _i `ui ]
-"119
-[; ;./geral.h: 119:     UARTSendString("AN5: ",16);
-[e ( __delay (1 -> * -> -> 20 `i `d / -> -> 20000000 `l `d .4000.0 `ul ]
 "120
-[; ;./geral.h: 120:     UARTSendString(valorConvUART(getAD_AN(5)), 16);
+[; ;./geral.h: 120:     UARTSendString("\r",16);
+[e ( _setDutyPWM0 (1 -> _i `ui ]
+"121
+[; ;./geral.h: 121: 
+[e ( _setDutyPWM2 (1 -> _i `ui ]
+"122
+[; ;./geral.h: 122:     UARTSendString("AN5: ",16);
+[e ( __delay (1 -> * -> -> 20 `i `d / -> -> 20000000 `l `d .4000.0 `ul ]
+"123
+[; ;./geral.h: 123:     UARTSendString(valorConvUART(getAD_AN(5)), 16);
 }
 [e ++ _i -> 1 `i ]
 [e $ <= _i -> 100 `i 353  ]
 [e :U 354 ]
 }
-"121
-[; ;./geral.h: 121:     UARTSendString("\r",16);
+"124
+[; ;./geral.h: 124:     UARTSendString("\r",16);
 [e ( _setDutyPWM0 (1 -> -> 0 `i `ui ]
-"122
-[; ;./geral.h: 122: 
-[e ( _setDutyPWM2 (1 -> -> 0 `i `ui ]
 "125
-[; ;./geral.h: 125:     UARTSendString("\r",16);
+[; ;./geral.h: 125: 
+[e ( _setDutyPWM2 (1 -> -> 0 `i `ui ]
+"128
+[; ;./geral.h: 128:     UARTSendString("\r",16);
 {
 [e = _i -> 0 `i ]
 [e $ <= _i -> 100 `i 356  ]
 [e $U 357  ]
 [e :U 356 ]
 {
-"126
-[; ;./geral.h: 126: 
-[e ( _setDutyPWM0 (1 -> _i `ui ]
-"127
-[; ;./geral.h: 127:     UARTSendString("AN7: ",16);
-[e ( _setDutyPWM4 (1 -> _i `ui ]
-"128
-[; ;./geral.h: 128:     UARTSendString(valorConvUART(getAD_AN(7)), 16);
-[e ( __delay (1 -> * -> -> 20 `i `d / -> -> 20000000 `l `d .4000.0 `ul ]
 "129
-[; ;./geral.h: 129:     UARTSendString("\r",16);
+[; ;./geral.h: 129: 
+[e ( _setDutyPWM0 (1 -> _i `ui ]
+"130
+[; ;./geral.h: 130:     UARTSendString("AN7: ",16);
+[e ( _setDutyPWM4 (1 -> _i `ui ]
+"131
+[; ;./geral.h: 131:     UARTSendString(valorConvUART(getAD_AN(7)), 16);
+[e ( __delay (1 -> * -> -> 20 `i `d / -> -> 20000000 `l `d .4000.0 `ul ]
+"132
+[; ;./geral.h: 132:     UARTSendString("\r",16);
 }
 [e ++ _i -> 1 `i ]
 [e $ <= _i -> 100 `i 356  ]
 [e :U 357 ]
 }
-"130
-[; ;./geral.h: 130:     UARTSendString("----------",16);
+"133
+[; ;./geral.h: 133:     UARTSendString("----------",16);
 [e ( _setDutyPWM0 (1 -> -> 0 `i `ui ]
-"131
-[; ;./geral.h: 131:     UARTSendString("\r",16);
-[e ( _setDutyPWM4 (1 -> -> 0 `i `ui ]
 "134
-[; ;./geral.h: 134: }
+[; ;./geral.h: 134:     UARTSendString("\r",16);
+[e ( _setDutyPWM4 (1 -> -> 0 `i `ui ]
+"137
+[; ;./geral.h: 137: }
 {
 [e = _i -> 0 `i ]
 [e $ <= _i -> 100 `i 359  ]
 [e $U 360  ]
 [e :U 359 ]
 {
-"135
-[e ( _setDutyPWM6 (1 -> _i `ui ]
-"136
-[e ( _setDutyPWM2 (1 -> _i `ui ]
-"137
-[e ( __delay (1 -> * -> -> 20 `i `d / -> -> 20000000 `l `d .4000.0 `ul ]
 "138
+[e ( _setDutyPWM6 (1 -> _i `ui ]
+"139
+[e ( _setDutyPWM2 (1 -> _i `ui ]
+"140
+[e ( __delay (1 -> * -> -> 20 `i `d / -> -> 20000000 `l `d .4000.0 `ul ]
+"141
 }
 [e ++ _i -> 1 `i ]
 [e $ <= _i -> 100 `i 359  ]
 [e :U 360 ]
 }
-"139
+"142
 [e ( _setDutyPWM6 (1 -> -> 0 `i `ui ]
-"140
-[e ( _setDutyPWM2 (1 -> -> 0 `i `ui ]
 "143
+[e ( _setDutyPWM2 (1 -> -> 0 `i `ui ]
+"146
 {
 [e = _i -> 0 `i ]
 [e $ <= _i -> 100 `i 362  ]
 [e $U 363  ]
 [e :U 362 ]
 {
-"144
-[e ( _setDutyPWM6 (1 -> _i `ui ]
-"145
-[e ( _setDutyPWM4 (1 -> _i `ui ]
-"146
-[e ( __delay (1 -> * -> -> 20 `i `d / -> -> 20000000 `l `d .4000.0 `ul ]
 "147
+[e ( _setDutyPWM6 (1 -> _i `ui ]
+"148
+[e ( _setDutyPWM4 (1 -> _i `ui ]
+"149
+[e ( __delay (1 -> * -> -> 20 `i `d / -> -> 20000000 `l `d .4000.0 `ul ]
+"150
 }
 [e ++ _i -> 1 `i ]
 [e $ <= _i -> 100 `i 362  ]
 [e :U 363 ]
 }
-"148
+"151
 [e ( _setDutyPWM6 (1 -> -> 0 `i `ui ]
-"149
+"152
 [e ( _setDutyPWM4 (1 -> -> 0 `i `ui ]
-"150
+"153
 [e :UE 340 ]
 }
-"155
+"158
 [v _testeLampadas `(v ~T0 @X0 1 ef ]
 {
 [e :U _testeLampadas ]
 [f ]
-"156
+"159
 [v _i `i ~T0 @X0 1 a ]
-"158
+"161
 {
 [e = _i -> 0 `i ]
 [e $ < _i -> 16 `i 366  ]
 [e $U 367  ]
 [e :U 366 ]
 {
-"159
-[e = _RC0 -> ( _bitExtract (3 , , _i -> 1 `i -> 0 `i `b ]
-"160
-[e = _RC1 -> ( _bitExtract (3 , , _i -> 1 `i -> 1 `i `b ]
-"161
-[e = _RC2 -> ( _bitExtract (3 , , _i -> 1 `i -> 2 `i `b ]
 "162
-[e = _RC3 -> ( _bitExtract (3 , , _i -> 1 `i -> 3 `i `b ]
+[e = _RC0 -> ( _bitExtract (3 , , _i -> 1 `i -> 0 `i `b ]
 "163
-[e ( __delay (1 -> * -> -> 500 `i `d / -> -> 20000000 `l `d .4000.0 `ul ]
+[e = _RC1 -> ( _bitExtract (3 , , _i -> 1 `i -> 1 `i `b ]
 "164
+[e = _RC2 -> ( _bitExtract (3 , , _i -> 1 `i -> 2 `i `b ]
+"165
+[e = _RC3 -> ( _bitExtract (3 , , _i -> 1 `i -> 3 `i `b ]
+"166
+[e ( __delay (1 -> * -> -> 500 `i `d / -> -> 20000000 `l `d .4000.0 `ul ]
+"167
 }
 [e ++ _i -> 1 `i ]
 [e $ < _i -> 16 `i 366  ]
 [e :U 367 ]
 }
-"165
+"168
 [e :UE 365 ]
 }
-"167
+"170
 [v _testeAD `(v ~T0 @X0 1 ef ]
 {
 [e :U _testeAD ]
 [f ]
-"168
-[e ( _UARTSendString (2 , :s 1C -> 16 `i ]
-"169
-[e ( _UARTSendString (2 , -> ( _valorConvUART (1 ( _getAD_AN (1 -> 0 `i `*uc -> 16 `i ]
-"170
-[e ( _UARTSendString (2 , :s 2C -> 16 `i ]
-"172
+"171
 [e ( _UARTSendString (2 , :s 3C -> 16 `i ]
+"172
+[e ( _UARTSendString (2 , -> ( _valorConvUART (1 ( _getAD_AN (1 -> 0 `i `*uc -> 16 `i ]
 "173
-[e ( _UARTSendString (2 , -> ( _valorConvUART (1 ( _getAD_AN (1 -> 1 `i `*uc -> 16 `i ]
-"174
 [e ( _UARTSendString (2 , :s 4C -> 16 `i ]
-"176
+"175
 [e ( _UARTSendString (2 , :s 5C -> 16 `i ]
+"176
+[e ( _UARTSendString (2 , -> ( _valorConvUART (1 ( _getAD_AN (1 -> 1 `i `*uc -> 16 `i ]
 "177
-[e ( _UARTSendString (2 , -> ( _valorConvUART (1 ( _getAD_AN (1 -> 2 `i `*uc -> 16 `i ]
-"178
 [e ( _UARTSendString (2 , :s 6C -> 16 `i ]
-"180
+"179
 [e ( _UARTSendString (2 , :s 7C -> 16 `i ]
+"180
+[e ( _UARTSendString (2 , -> ( _valorConvUART (1 ( _getAD_AN (1 -> 2 `i `*uc -> 16 `i ]
 "181
-[e ( _UARTSendString (2 , -> ( _valorConvUART (1 ( _getAD_AN (1 -> 3 `i `*uc -> 16 `i ]
-"182
 [e ( _UARTSendString (2 , :s 8C -> 16 `i ]
-"184
+"183
 [e ( _UARTSendString (2 , :s 9C -> 16 `i ]
+"184
+[e ( _UARTSendString (2 , -> ( _valorConvUART (1 ( _getAD_AN (1 -> 3 `i `*uc -> 16 `i ]
 "185
-[e ( _UARTSendString (2 , -> ( _valorConvUART (1 ( _getAD_AN (1 -> 4 `i `*uc -> 16 `i ]
-"186
 [e ( _UARTSendString (2 , :s 10C -> 16 `i ]
-"188
+"187
 [e ( _UARTSendString (2 , :s 11C -> 16 `i ]
+"188
+[e ( _UARTSendString (2 , -> ( _valorConvUART (1 ( _getAD_AN (1 -> 4 `i `*uc -> 16 `i ]
 "189
-[e ( _UARTSendString (2 , -> ( _valorConvUART (1 ( _getAD_AN (1 -> 5 `i `*uc -> 16 `i ]
-"190
 [e ( _UARTSendString (2 , :s 12C -> 16 `i ]
-"192
+"191
 [e ( _UARTSendString (2 , :s 13C -> 16 `i ]
+"192
+[e ( _UARTSendString (2 , -> ( _valorConvUART (1 ( _getAD_AN (1 -> 5 `i `*uc -> 16 `i ]
 "193
-[e ( _UARTSendString (2 , -> ( _valorConvUART (1 ( _getAD_AN (1 -> 6 `i `*uc -> 16 `i ]
-"194
 [e ( _UARTSendString (2 , :s 14C -> 16 `i ]
-"196
+"195
 [e ( _UARTSendString (2 , :s 15C -> 16 `i ]
+"196
+[e ( _UARTSendString (2 , -> ( _valorConvUART (1 ( _getAD_AN (1 -> 6 `i `*uc -> 16 `i ]
 "197
-[e ( _UARTSendString (2 , -> ( _valorConvUART (1 ( _getAD_AN (1 -> 7 `i `*uc -> 16 `i ]
-"198
 [e ( _UARTSendString (2 , :s 16C -> 16 `i ]
 "199
 [e ( _UARTSendString (2 , :s 17C -> 16 `i ]
 "200
+[e ( _UARTSendString (2 , -> ( _valorConvUART (1 ( _getAD_AN (1 -> 7 `i `*uc -> 16 `i ]
+"201
 [e ( _UARTSendString (2 , :s 18C -> 16 `i ]
 "202
-[e ( __delay (1 -> * -> -> 500 `i `d / -> -> 20000000 `l `d .4000.0 `ul ]
+[e ( _UARTSendString (2 , :s 19C -> 16 `i ]
 "203
+[e ( _UARTSendString (2 , :s 20C -> 16 `i ]
+"205
+[e ( __delay (1 -> * -> -> 500 `i `d / -> -> 20000000 `l `d .4000.0 `ul ]
+"206
 [e :UE 369 ]
 }
 [v $root$_ISR `(v ~T0 @X0 0 e ]
@@ -1817,7 +1823,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 {
 "31
 [; ;main.c: 31:             UARTSendString("frente", 16);
-[e ( _UARTSendString (2 , :s 19C -> 16 `i ]
+[e ( _UARTSendString (2 , :s 21C -> 16 `i ]
 "32
 [; ;main.c: 32:         }
 }
@@ -1908,8 +1914,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e :U 376 ]
 {
 "71
-[; ;main.c: 71:         testeAD();
-[e ( _testeAD ..  ]
+[; ;main.c: 71:         testeMotores();
+[e ( _testeMotores ..  ]
 "72
 [; ;main.c: 72:     }
 }
@@ -1923,17 +1929,18 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;main.c: 75: }
 [e :UE 374 ]
 }
-[a 19C 102 114 101 110 116 101 0 ]
-[a 17C 45 45 45 45 45 45 45 45 45 45 0 ]
-[a 15C 65 78 55 58 32 0 ]
-[a 13C 65 78 54 58 32 0 ]
-[a 11C 65 78 53 58 32 0 ]
-[a 9C 65 78 52 58 32 0 ]
-[a 7C 65 78 51 58 32 0 ]
-[a 5C 65 78 50 58 32 0 ]
-[a 3C 65 78 49 58 32 0 ]
-[a 1C 65 78 48 58 32 0 ]
-[a 2C 13 0 ]
+[a 1C 80 87 77 65 32 84 101 115 116 97 110 100 111 0 ]
+[a 2C 80 87 77 65 32 84 101 115 116 101 32 102 105 110 97 108 105 122 97 100 111 0 ]
+[a 21C 102 114 101 110 116 101 0 ]
+[a 19C 45 45 45 45 45 45 45 45 45 45 0 ]
+[a 17C 65 78 55 58 32 0 ]
+[a 15C 65 78 54 58 32 0 ]
+[a 13C 65 78 53 58 32 0 ]
+[a 11C 65 78 52 58 32 0 ]
+[a 9C 65 78 51 58 32 0 ]
+[a 7C 65 78 50 58 32 0 ]
+[a 5C 65 78 49 58 32 0 ]
+[a 3C 65 78 48 58 32 0 ]
 [a 4C 13 0 ]
 [a 6C 13 0 ]
 [a 8C 13 0 ]
@@ -1942,3 +1949,4 @@ Version 4.0 HI-TECH Software Intermediate Code
 [a 14C 13 0 ]
 [a 16C 13 0 ]
 [a 18C 13 0 ]
+[a 20C 13 0 ]

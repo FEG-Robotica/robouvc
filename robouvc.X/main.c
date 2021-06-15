@@ -68,7 +68,7 @@ void main(void) {
     int AN0,AN1,AN2,AN3,AN4,AN5,AN6;
     
     while(1){
-        testeAD();
+        testeMotores();
     }
     
     return;

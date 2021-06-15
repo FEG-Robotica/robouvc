@@ -85,10 +85,13 @@ void testeMotores(){
     ENB = 1;
     
     //PWM A
+    
+    UARTSendString("PWMA Testando",MAX_LENGTH_UART);
     for(i = 0; i <= 100; i++){
         setDutyPWM0(i);
         __delay_ms(20);
     }
+    UARTSendString("PWMA Teste Fim",MAX_LENGTH_UART);
     setDutyPWM0(0);
     
     //PWM D
