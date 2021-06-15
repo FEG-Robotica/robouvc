@@ -8,6 +8,7 @@
       <itemPath>geral.h</itemPath>
       <itemPath>bluetooth.h</itemPath>
       <itemPath>Seguidor.h</itemPath>
+      <itemPath>Seguidor_Teste.h</itemPath>
     </logicalFolder>
     <logicalFolder name="LinkerScript"
                    displayName="Linker Files"
