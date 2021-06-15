@@ -5232,12 +5232,102 @@ void UARTSendString(char* str, const int max_length) {
 }
 # 12 "main.c" 2
 
+# 1 "./ADC.h" 1
+
+
+
+
+
+
+
+void configAD() {
+
+    ADCON1bits.VCFG0 = 0;
+    ADCON1bits.VCFG1 = 0;
+
+
+
+    ADCON0bits.ACONV = 0;
+    ADCON0bits.ACSCH = 0;
+
+    ADCON0bits.ACMOD = 0b00;
+
+    ADCON2bits.ADFM = 1;
+
+    ADCON2bits.ACQT = 0b0110;
+    ADCON2bits.ADCS = 0b101;
+
+
+
+
+
+    ADCON3 = 0b00000000;
+}
+
+const char* valorConvUART(int valor) {
+
+    int centena = valor / 100;
+    int dezena = (valor / 10) % 10;
+    int unidade = (valor % 100) % 10;
+
+    char string[5] = {'\0'};
+
+    string[0] = centena + '0';
+    string[1] = '.';
+    string[2] = dezena + '0';
+    string[3] = unidade + '0';
+
+    return string;
+}
+
+int vdig_AN;
+float vanal_AN;
+
+float readAD_AN() {
+
+    vdig_AN = ADRESH;
+    vdig_AN = vdig_AN << 8;
+    vdig_AN += ADRESL;
+
+    vanal_AN = 4.88 * vdig_AN * 0.1;
+
+    return vanal_AN;
+}
+
+int getAD_AN(int porta) {
+
+    ADCON0bits.ACMOD = bitExtract(porta, 2, 0);
+
+    ADCHSbits.GASEL0 = bitExtract(porta, 1, 2);
+    ADCHSbits.GBSEL0 = bitExtract(porta, 1, 2);
+    ADCHSbits.GCSEL0 = bitExtract(porta, 1, 2);
+    ADCHSbits.GDSEL0 = bitExtract(porta, 1, 2);
+
+    ADCON0bits.ADON = 1;
+    ADCON0bits.GODONE = 1;
+    while (ADCON0bits.GODONE);
+
+    float ANread = readAD_AN();
+    ADCON0bits.ADON = 0;
+
+    return (int) ANread;
+# 90 "./ADC.h"
+}
+# 13 "main.c" 2
+
+# 1 "./defines.h" 1
+# 14 "main.c" 2
+
 # 1 "./geral.h" 1
 
 
 
 
 
+
+
+# 1 "./defines.h" 1
+# 8 "./geral.h" 2
 
 
 void configBits() {
@@ -5301,107 +5391,145 @@ void configBits() {
 
 }
 
-void configAD() {
-
-    ADCON1bits.VCFG0 = 0;
-    ADCON1bits.VCFG1 = 0;
-
-    ADCON0bits.ACMOD0 = 0;
-    ADCON0bits.ACMOD1 = 1;
-
-    ADCHS = 0b00000000;
-
-    ADCON2bits.ADFM = 1;
-
-    ADCON0bits.ACONV = 0;
-    ADCON0bits.ACSCH = 1;
-
-    ADCON2bits.ACQT = 0b0110;
-    ADCON2bits.ADCS = 0b101;
-
-    ADCON0bits.ADON = 1;
-    ADCON3 = 0b00000000;
-}
-
-void configADtest() {
-
-    ADCON1bits.VCFG0 = 0;
-    ADCON1bits.VCFG1 = 0;
-
-
-
-    ADCON0bits.ACONV = 0;
-    ADCON0bits.ACSCH = 0;
-
-    ADCON0bits.ACMOD = 0b00;
-
-    ADCON2bits.ADFM = 1;
-
-    ADCON2bits.ACQT = 0b0110;
-    ADCON2bits.ADCS = 0b101;
-
-
-
-
-
-    ADCON3 = 0b00000000;
-}
-
 int bitExtract(int numero, int k, int p) {
     return (((1 << k) - 1) & (numero >> p));
 }
 
-const char* valorConvUART(int valor) {
 
-    int centena = valor / 100;
-    int dezena = (valor / 10) % 10;
-    int unidade = (valor % 100) % 10;
 
-    char string[5] = {'\0'};
 
-    string[0] = centena + '0';
-    string[1] = '.';
-    string[2] = dezena + '0';
-    string[3] = unidade + '0';
 
-    return string;
+
+
+void testeMotores(){
+
+    int i;
+    PORTBbits.RB6 = 1;
+    PORTBbits.RB7 = 1;
+
+
+
+    UARTSendString("PWMA Testando",16);
+    for(i = 0; i <= 100; i++){
+        setDutyPWM0(i);
+        _delay((unsigned long)((20)*(20000000/4000.0)));
+    }
+    UARTSendString("PWMA Teste finalizado",16);
+    setDutyPWM0(0);
+
+
+    for(i = 0; i <= 100; i++){
+        setDutyPWM6(i);
+        _delay((unsigned long)((20)*(20000000/4000.0)));
+    }
+    setDutyPWM6(0);
+
+
+    for(i = 0; i <= 100; i++){
+        setDutyPWM2(i);
+        _delay((unsigned long)((20)*(20000000/4000.0)));
+    }
+    setDutyPWM2(0);
+
+
+    for(i = 0; i <= 100; i++){
+        setDutyPWM2(i);
+        _delay((unsigned long)((20)*(20000000/4000.0)));
+    }
+    setDutyPWM4(0);
+
+
+    for(i = 0; i <= 100; i++){
+        setDutyPWM0(i);
+        setDutyPWM2(i);
+        _delay((unsigned long)((20)*(20000000/4000.0)));
+    }
+    setDutyPWM0(0);
+    setDutyPWM2(0);
+
+
+    for(i = 0; i <= 100; i++){
+        setDutyPWM0(i);
+        setDutyPWM4(i);
+        _delay((unsigned long)((20)*(20000000/4000.0)));
+    }
+    setDutyPWM0(0);
+    setDutyPWM4(0);
+
+
+    for(i = 0; i <= 100; i++){
+        setDutyPWM6(i);
+        setDutyPWM2(i);
+        _delay((unsigned long)((20)*(20000000/4000.0)));
+    }
+    setDutyPWM6(0);
+    setDutyPWM2(0);
+
+
+    for(i = 0; i <= 100; i++){
+        setDutyPWM6(i);
+        setDutyPWM4(i);
+        _delay((unsigned long)((20)*(20000000/4000.0)));
+    }
+    setDutyPWM6(0);
+    setDutyPWM4(0);
 }
 
-int vdig_AN;
-float vanal_AN;
 
-float readAD_AN() {
 
-    vdig_AN = ADRESH;
-    vdig_AN = vdig_AN << 8;
-    vdig_AN += ADRESL;
 
-    vanal_AN = 4.88 * vdig_AN * 0.1;
+void testeLampadas(){
+    int i;
 
-    return vanal_AN;
+    for(i = 0; i < 16; i++){
+        RC0 = bitExtract(i, 1, 0);
+        RC1 = bitExtract(i, 1, 1);
+        RC2 = bitExtract(i, 1, 2);
+        RC3 = bitExtract(i, 1, 3);
+        _delay((unsigned long)((500)*(20000000/4000.0)));
+    }
 }
 
-int getAD_AN(int porta) {
+void testeAD(){
+    UARTSendString("AN0: ",16);
+    UARTSendString(valorConvUART(getAD_AN(0)), 16);
+    UARTSendString("\r",16);
 
-    ADCON0bits.ACMOD = bitExtract(porta, 2, 0);
+    UARTSendString("AN1: ",16);
+    UARTSendString(valorConvUART(getAD_AN(1)), 16);
+    UARTSendString("\r",16);
 
-    ADCHSbits.GASEL0 = bitExtract(porta, 1, 2);
-    ADCHSbits.GBSEL0 = bitExtract(porta, 1, 2);
-    ADCHSbits.GCSEL0 = bitExtract(porta, 1, 2);
-    ADCHSbits.GDSEL0 = bitExtract(porta, 1, 2);
+    UARTSendString("AN2: ",16);
+    UARTSendString(valorConvUART(getAD_AN(2)), 16);
+    UARTSendString("\r",16);
 
-    ADCON0bits.ADON = 1;
-    ADCON0bits.GODONE = 1;
-    while (ADCON0bits.GODONE);
+    UARTSendString("AN3: ",16);
+    UARTSendString(valorConvUART(getAD_AN(3)), 16);
+    UARTSendString("\r",16);
 
-    float ANread = readAD_AN();
-    ADCON0bits.ADON = 0;
+    UARTSendString("AN4: ",16);
+    UARTSendString(valorConvUART(getAD_AN(4)), 16);
+    UARTSendString("\r",16);
 
-    return (int) ANread;
-# 177 "./geral.h"
+    UARTSendString("AN5: ",16);
+    UARTSendString(valorConvUART(getAD_AN(5)), 16);
+    UARTSendString("\r",16);
+
+    UARTSendString("AN6: ",16);
+    UARTSendString(valorConvUART(getAD_AN(6)), 16);
+    UARTSendString("\r",16);
+
+    UARTSendString("AN7: ",16);
+    UARTSendString(valorConvUART(getAD_AN(7)), 16);
+    UARTSendString("\r",16);
+    UARTSendString("----------",16);
+    UARTSendString("\r",16);
+
+    _delay((unsigned long)((500)*(20000000/4000.0)));
 }
-# 13 "main.c" 2
-# 26 "main.c"
+# 15 "main.c" 2
+
+
 void __attribute__((picinterrupt(("")))) ISR(void) {
 
 
@@ -5451,20 +5579,12 @@ void main(void) {
     configBits();
     configUSART();
     configPWM();
-    configADtest();
+    configAD();
 
     int AN0,AN1,AN2,AN3,AN4,AN5,AN6;
 
     while(1){
-
-        AN1 = getAD_AN(1);
-        char* string = valorConvUART(AN1);
-        UARTSendString(string ,16);
-        UARTSendChar('\r');
-        _delay((unsigned long)((300)*(20000000/4000.0)));
-
-
-
+        testeMotores();
     }
 
     return;

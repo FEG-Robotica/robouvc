@@ -5,6 +5,8 @@
  * Created on 19 de Maio de 2021, 19:36
  */
 
+#include "defines.h"
+
 void configBits() {
     // CONFIG1H
 #pragma config OSC = HS         // Oscillator Selection bits (HS oscillator)
@@ -66,114 +68,140 @@ void configBits() {
 
 }
 
-void configAD() {
-
-    ADCON1bits.VCFG0 = 0;
-    ADCON1bits.VCFG1 = 0;
-
-    ADCON0bits.ACMOD0 = 0;
-    ADCON0bits.ACMOD1 = 1;
-
-    ADCHS = 0b00000000;
-
-    ADCON2bits.ADFM = 1;
-
-    ADCON0bits.ACONV = 0;
-    ADCON0bits.ACSCH = 1;
-
-    ADCON2bits.ACQT = 0b0110;
-    ADCON2bits.ADCS = 0b101;
-
-    ADCON0bits.ADON = 1;
-    ADCON3 = 0b00000000;
-}
-
-void configADtest() {
-
-    ADCON1bits.VCFG0 = 0;
-    ADCON1bits.VCFG1 = 0;
-
-    //ADCHS  = 0b00000000;
-
-    ADCON0bits.ACONV = 0;
-    ADCON0bits.ACSCH = 0;
-
-    ADCON0bits.ACMOD = 0b00;
-
-    ADCON2bits.ADFM = 1;
-
-    ADCON2bits.ACQT = 0b0110;
-    ADCON2bits.ADCS = 0b101;
-
-
-    //ADCON0 = 0b00110111;
-    //ADCON1 = 0b00010000;
-    //ADCON2 = 0b00000101;
-    ADCON3 = 0b00000000;
-}
-
 int bitExtract(int numero, int k, int p) {
     return (((1 << k) - 1) & (numero >> p));
 }
 
-const char* valorConvUART(int valor) {// só converte até 9.99
-
-    int centena = valor / 100;
-    int dezena = (valor / 10) % 10;
-    int unidade = (valor % 100) % 10;
-
-    char string[5] = {'\0'};
-
-    string[0] = centena + '0';
-    string[1] = '.';
-    string[2] = dezena + '0';
-    string[3] = unidade + '0';
-
-    return string;
+/*
+ * ATENÇÃO - NÃO TESTAR OS MOTORES COM AS RODAS EM CONTATO COM O SOLO
+ * ATENÇÃO - NÃO TESTAR OS MOTORES COM AS RODAS EM CONTATO COM O SOLO
+ * ATENÇÃO - NÃO TESTAR OS MOTORES COM AS RODAS EM CONTATO COM O SOLO
+ * ATENÇÃO - NÃO TESTAR OS MOTORES COM AS RODAS EM CONTATO COM O SOLO
+ */
+void testeMotores(){
+    
+    int i;
+    ENA = 1;
+    ENB = 1;
+    
+    //PWM A
+    
+    UARTSendString("PWMA Testando",MAX_LENGTH_UART);
+    for(i = 0; i <= 100; i++){
+        setDutyPWM0(i);
+        __delay_ms(20);
+    }
+    UARTSendString("PWMA Teste Fim",MAX_LENGTH_UART);
+    setDutyPWM0(0);
+    
+    //PWM D
+    for(i = 0; i <= 100; i++){
+        setDutyPWM6(i);
+        __delay_ms(20);
+    }
+    setDutyPWM6(0);
+    
+    //PWM B
+    for(i = 0; i <= 100; i++){
+        setDutyPWM2(i);
+        __delay_ms(20);
+    }
+    setDutyPWM2(0);
+    
+    //PWM C
+    for(i = 0; i <= 100; i++){
+        setDutyPWM2(i);
+        __delay_ms(20);
+    }
+    setDutyPWM4(0);
+    
+    //PWM A e PWM B
+    for(i = 0; i <= 100; i++){
+        setDutyPWM0(i);
+        setDutyPWM2(i);
+        __delay_ms(20);
+    }
+    setDutyPWM0(0);
+    setDutyPWM2(0);
+    
+    //PWM A e PWM C
+    for(i = 0; i <= 100; i++){
+        setDutyPWM0(i);
+        setDutyPWM4(i);
+        __delay_ms(20);
+    }
+    setDutyPWM0(0);
+    setDutyPWM4(0);
+    
+    //PWM D e PWM B
+    for(i = 0; i <= 100; i++){
+        setDutyPWM6(i);
+        setDutyPWM2(i);
+        __delay_ms(20);
+    }
+    setDutyPWM6(0);
+    setDutyPWM2(0);
+    
+    //PWM D e PWM C
+    for(i = 0; i <= 100; i++){
+        setDutyPWM6(i);
+        setDutyPWM4(i);
+        __delay_ms(20);
+    }
+    setDutyPWM6(0);
+    setDutyPWM4(0);
 }
 
-int vdig_AN;
-float vanal_AN;
-
-float readAD_AN() {
+/*
+ *Lampadas conectadas em RC<0:3> 
+ */
+void testeLampadas(){
+    int i;
     
-    vdig_AN = ADRESH;
-    vdig_AN = vdig_AN << 8;
-    vdig_AN += ADRESL;
-
-    vanal_AN = 4.88 * vdig_AN * 0.1;
-    
-    return vanal_AN;
+    for(i = 0; i < 16; i++){
+        RC0 = bitExtract(i, 1, 0);
+        RC1 = bitExtract(i, 1, 1);
+        RC2 = bitExtract(i, 1, 2);
+        RC3 = bitExtract(i, 1, 3);
+        __delay_ms(500);
+    }
 }
 
-int getAD_AN(int porta) {
+void testeAD(){
+    UARTSendString("AN0: ",MAX_LENGTH_UART);
+    UARTSendString(valorConvUART(getAD_AN(0)), MAX_LENGTH_UART);
+    UARTSendString("\r",MAX_LENGTH_UART);
     
-    ADCON0bits.ACMOD = bitExtract(porta, 2, 0);
+    UARTSendString("AN1: ",MAX_LENGTH_UART);
+    UARTSendString(valorConvUART(getAD_AN(1)), MAX_LENGTH_UART);
+    UARTSendString("\r",MAX_LENGTH_UART);
     
-    ADCHSbits.GASEL0 = bitExtract(porta, 1, 2);
-    ADCHSbits.GBSEL0 = bitExtract(porta, 1, 2);
-    ADCHSbits.GCSEL0 = bitExtract(porta, 1, 2);
-    ADCHSbits.GDSEL0 = bitExtract(porta, 1, 2);
+    UARTSendString("AN2: ",MAX_LENGTH_UART);
+    UARTSendString(valorConvUART(getAD_AN(2)), MAX_LENGTH_UART);
+    UARTSendString("\r",MAX_LENGTH_UART);
     
-    ADCON0bits.ADON = 1;
-    ADCON0bits.GODONE = 1;
-    while (ADCON0bits.GODONE);
-
-    float ANread = readAD_AN();
-    ADCON0bits.ADON = 0;
-
-    return (int) ANread;
+    UARTSendString("AN3: ",MAX_LENGTH_UART);
+    UARTSendString(valorConvUART(getAD_AN(3)), MAX_LENGTH_UART);
+    UARTSendString("\r",MAX_LENGTH_UART);
     
-    /*PINO      ACMOD       SELbits
-     * 0 (000)  0 (00)      0 00
-     * 1 (001)  1 (01)      0 00
-     * 2 (010)  2 (10)      0 00
-     * 3 (011)  3 (11)      0 00
-     * 4 (100)  0 (00)      1 01
-     * 5 (101)  1 (01)      1 01
-     * 6 (110)  2 (10)      1 01
-     * 7 (111)  3 (11)      1 01
-    */     
+    UARTSendString("AN4: ",MAX_LENGTH_UART);
+    UARTSendString(valorConvUART(getAD_AN(4)), MAX_LENGTH_UART);
+    UARTSendString("\r",MAX_LENGTH_UART);
+    
+    UARTSendString("AN5: ",MAX_LENGTH_UART);
+    UARTSendString(valorConvUART(getAD_AN(5)), MAX_LENGTH_UART);
+    UARTSendString("\r",MAX_LENGTH_UART);
+    
+    UARTSendString("AN6: ",MAX_LENGTH_UART);
+    UARTSendString(valorConvUART(getAD_AN(6)), MAX_LENGTH_UART);
+    UARTSendString("\r",MAX_LENGTH_UART);
+    
+    UARTSendString("AN7: ",MAX_LENGTH_UART);
+    UARTSendString(valorConvUART(getAD_AN(7)), MAX_LENGTH_UART);
+    UARTSendString("\r",MAX_LENGTH_UART);
+    UARTSendString("----------",MAX_LENGTH_UART);
+    UARTSendString("\r",MAX_LENGTH_UART);
+    
+    __delay_ms(500);
 }
-
 
