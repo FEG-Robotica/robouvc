@@ -7,8 +7,7 @@
       <itemPath>PWM.h</itemPath>
       <itemPath>geral.h</itemPath>
       <itemPath>bluetooth.h</itemPath>
-      <itemPath>ADC.h</itemPath>
-      <itemPath>defines.h</itemPath>
+      <itemPath>Seguidor.h</itemPath>
     </logicalFolder>
     <logicalFolder name="LinkerScript"
                    displayName="Linker Files"
@@ -35,7 +34,7 @@
         <targetPluginBoard></targetPluginBoard>
         <platformTool>PICkit3PlatformTool</platformTool>
         <languageToolchain>XC8</languageToolchain>
-        <languageToolchainVersion>2.10</languageToolchainVersion>
+        <languageToolchainVersion>2.32</languageToolchainVersion>
         <platform>3</platform>
       </toolsSet>
       <packs>
