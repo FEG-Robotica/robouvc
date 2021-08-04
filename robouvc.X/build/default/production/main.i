@@ -5220,7 +5220,8 @@ __attribute__((__unsupported__("The READTIMER" "3" "() macro is not available wi
 unsigned char __t1rd16on(void);
 unsigned char __t3rd16on(void);
 # 33 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\xc.h" 2 3
-# 10 "main.c" 2
+# 9 "main.c" 2
+
 
 # 1 "./PWM.h" 1
 
@@ -5268,7 +5269,8 @@ void setDutyPWM6(unsigned int porcVelo) {
     PDC3L = velo & 0b11111111;
     PDC3H = (velo >> 8) & 0b11111111;
 }
-# 12 "main.c" 2
+# 11 "main.c" 2
+
 # 1 "./bluetooth.h" 1
 
 
@@ -5323,7 +5325,8 @@ void UARTSendString(char* str, const int max_length) {
 
     }
 }
-# 13 "main.c" 2
+# 12 "main.c" 2
+
 # 1 "./geral.h" 1
 
 
@@ -5492,7 +5495,7 @@ int getAD_AN(int porta) {
     return (int) ANread;
 # 177 "./geral.h"
 }
-# 14 "main.c" 2
+# 13 "main.c" 2
 # 26 "main.c"
 void __attribute__((picinterrupt(("")))) ISR(void) {
 
