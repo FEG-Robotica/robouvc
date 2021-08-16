@@ -42,7 +42,7 @@ intcode CODE 0 8 8 90 1
 smallconst SMALLCONST 0 300 300 A 1
 bssCOMRAM COMRAM 1 45 45 B 1
 config CONFIG 4 300000 300000 E 1
-$C:\Users\rapha\AppData\Local\Temp\xcAs32c.o
+$C:\Users\rapha\AppData\Local\Temp\xcAs7qc.o
 idloc IDLOC 5 200000 200000 8 1
 init CODE 0 98 98 4 1
 reset_vec CODE 0 0 0 4 1
@@ -85,90 +85,90 @@ MEDIUMCONST 1132-3FFF 1
 # All other numeric values are in decimal.
 %LINETAB
 $dist/default/production\robouvc.X.production.o
-8 intcode CODE >4317:C:\Users\rapha\AppData\Local\Temp\xcAs32c.s
-8 intcode CODE >26:C:\Users\rapha\OneDrive\Documentos\UNESP\FEG Robótica\Projetos\Robo UVC\robouvc-main\robouvc.X\main.c
-22 intcode CODE >29:C:\Users\rapha\OneDrive\Documentos\UNESP\FEG Robótica\Projetos\Robo UVC\robouvc-main\robouvc.X\main.c
-30 intcode CODE >32:C:\Users\rapha\OneDrive\Documentos\UNESP\FEG Robótica\Projetos\Robo UVC\robouvc-main\robouvc.X\main.c
-4C intcode CODE >33:C:\Users\rapha\OneDrive\Documentos\UNESP\FEG Robótica\Projetos\Robo UVC\robouvc-main\robouvc.X\main.c
-4E intcode CODE >34:C:\Users\rapha\OneDrive\Documentos\UNESP\FEG Robótica\Projetos\Robo UVC\robouvc-main\robouvc.X\main.c
-50 intcode CODE >35:C:\Users\rapha\OneDrive\Documentos\UNESP\FEG Robótica\Projetos\Robo UVC\robouvc-main\robouvc.X\main.c
-52 intcode CODE >39:C:\Users\rapha\OneDrive\Documentos\UNESP\FEG Robótica\Projetos\Robo UVC\robouvc-main\robouvc.X\main.c
-66 intcode CODE >40:C:\Users\rapha\OneDrive\Documentos\UNESP\FEG Robótica\Projetos\Robo UVC\robouvc-main\robouvc.X\main.c
-7A intcode CODE >43:C:\Users\rapha\OneDrive\Documentos\UNESP\FEG Robótica\Projetos\Robo UVC\robouvc-main\robouvc.X\main.c
-7C intcode CODE >45:C:\Users\rapha\OneDrive\Documentos\UNESP\FEG Robótica\Projetos\Robo UVC\robouvc-main\robouvc.X\main.c
-1128 text21 CODE >39:C:\Users\rapha\OneDrive\Documentos\UNESP\FEG Robótica\Projetos\Robo UVC\robouvc-main\robouvc.X/bluetooth.h
-1128 text21 CODE >40:C:\Users\rapha\OneDrive\Documentos\UNESP\FEG Robótica\Projetos\Robo UVC\robouvc-main\robouvc.X/bluetooth.h
-112C text21 CODE >41:C:\Users\rapha\OneDrive\Documentos\UNESP\FEG Robótica\Projetos\Robo UVC\robouvc-main\robouvc.X/bluetooth.h
-112E text21 CODE >42:C:\Users\rapha\OneDrive\Documentos\UNESP\FEG Robótica\Projetos\Robo UVC\robouvc-main\robouvc.X/bluetooth.h
-1100 text20 CODE >44:C:\Users\rapha\OneDrive\Documentos\UNESP\FEG Robótica\Projetos\Robo UVC\robouvc-main\robouvc.X/bluetooth.h
-1100 text20 CODE >45:C:\Users\rapha\OneDrive\Documentos\UNESP\FEG Robótica\Projetos\Robo UVC\robouvc-main\robouvc.X/bluetooth.h
-110E text20 CODE >46:C:\Users\rapha\OneDrive\Documentos\UNESP\FEG Robótica\Projetos\Robo UVC\robouvc-main\robouvc.X/bluetooth.h
-111C text19 CODE >48:C:\Users\rapha\OneDrive\Documentos\UNESP\FEG Robótica\Projetos\Robo UVC\robouvc-main\robouvc.X/bluetooth.h
-111E text19 CODE >49:C:\Users\rapha\OneDrive\Documentos\UNESP\FEG Robótica\Projetos\Robo UVC\robouvc-main\robouvc.X/bluetooth.h
-1122 text19 CODE >50:C:\Users\rapha\OneDrive\Documentos\UNESP\FEG Robótica\Projetos\Robo UVC\robouvc-main\robouvc.X/bluetooth.h
-1126 text19 CODE >51:C:\Users\rapha\OneDrive\Documentos\UNESP\FEG Robótica\Projetos\Robo UVC\robouvc-main\robouvc.X/bluetooth.h
-BC8 text18 CODE >53:C:\Users\rapha\OneDrive\Documentos\UNESP\FEG Robótica\Projetos\Robo UVC\robouvc-main\robouvc.X/bluetooth.h
-BC8 text18 CODE >54:C:\Users\rapha\OneDrive\Documentos\UNESP\FEG Robótica\Projetos\Robo UVC\robouvc-main\robouvc.X/bluetooth.h
-BD0 text18 CODE >56:C:\Users\rapha\OneDrive\Documentos\UNESP\FEG Robótica\Projetos\Robo UVC\robouvc-main\robouvc.X/bluetooth.h
-BF6 text18 CODE >58:C:\Users\rapha\OneDrive\Documentos\UNESP\FEG Robótica\Projetos\Robo UVC\robouvc-main\robouvc.X/bluetooth.h
-C36 text18 CODE >59:C:\Users\rapha\OneDrive\Documentos\UNESP\FEG Robótica\Projetos\Robo UVC\robouvc-main\robouvc.X/bluetooth.h
-C66 text18 CODE >60:C:\Users\rapha\OneDrive\Documentos\UNESP\FEG Robótica\Projetos\Robo UVC\robouvc-main\robouvc.X/bluetooth.h
-C6A text18 CODE >62:C:\Users\rapha\OneDrive\Documentos\UNESP\FEG Robótica\Projetos\Robo UVC\robouvc-main\robouvc.X/bluetooth.h
-C8C text18 CODE >63:C:\Users\rapha\OneDrive\Documentos\UNESP\FEG Robótica\Projetos\Robo UVC\robouvc-main\robouvc.X/bluetooth.h
-10F0 text16 CODE >44:C:\Users\rapha\OneDrive\Documentos\UNESP\FEG Robótica\Projetos\Robo UVC\robouvc-main\robouvc.X/bluetooth.h
-10F0 text16 CODE >45:C:\Users\rapha\OneDrive\Documentos\UNESP\FEG Robótica\Projetos\Robo UVC\robouvc-main\robouvc.X/bluetooth.h
-10FE text16 CODE >46:C:\Users\rapha\OneDrive\Documentos\UNESP\FEG Robótica\Projetos\Robo UVC\robouvc-main\robouvc.X/bluetooth.h
-1110 text15 CODE >48:C:\Users\rapha\OneDrive\Documentos\UNESP\FEG Robótica\Projetos\Robo UVC\robouvc-main\robouvc.X/bluetooth.h
-1112 text15 CODE >49:C:\Users\rapha\OneDrive\Documentos\UNESP\FEG Robótica\Projetos\Robo UVC\robouvc-main\robouvc.X/bluetooth.h
-1116 text15 CODE >50:C:\Users\rapha\OneDrive\Documentos\UNESP\FEG Robótica\Projetos\Robo UVC\robouvc-main\robouvc.X/bluetooth.h
-111A text15 CODE >51:C:\Users\rapha\OneDrive\Documentos\UNESP\FEG Robótica\Projetos\Robo UVC\robouvc-main\robouvc.X/bluetooth.h
-B02 text14 CODE >53:C:\Users\rapha\OneDrive\Documentos\UNESP\FEG Robótica\Projetos\Robo UVC\robouvc-main\robouvc.X/bluetooth.h
-B02 text14 CODE >54:C:\Users\rapha\OneDrive\Documentos\UNESP\FEG Robótica\Projetos\Robo UVC\robouvc-main\robouvc.X/bluetooth.h
-B0A text14 CODE >56:C:\Users\rapha\OneDrive\Documentos\UNESP\FEG Robótica\Projetos\Robo UVC\robouvc-main\robouvc.X/bluetooth.h
-B30 text14 CODE >58:C:\Users\rapha\OneDrive\Documentos\UNESP\FEG Robótica\Projetos\Robo UVC\robouvc-main\robouvc.X/bluetooth.h
-B70 text14 CODE >59:C:\Users\rapha\OneDrive\Documentos\UNESP\FEG Robótica\Projetos\Robo UVC\robouvc-main\robouvc.X/bluetooth.h
-BA0 text14 CODE >60:C:\Users\rapha\OneDrive\Documentos\UNESP\FEG Robótica\Projetos\Robo UVC\robouvc-main\robouvc.X/bluetooth.h
-BA4 text14 CODE >62:C:\Users\rapha\OneDrive\Documentos\UNESP\FEG Robótica\Projetos\Robo UVC\robouvc-main\robouvc.X/bluetooth.h
-BC6 text14 CODE >63:C:\Users\rapha\OneDrive\Documentos\UNESP\FEG Robótica\Projetos\Robo UVC\robouvc-main\robouvc.X/bluetooth.h
-1094 text13 CODE >91:C:\Users\rapha\OneDrive\Documentos\UNESP\FEG Robótica\Projetos\Robo UVC\robouvc-main\robouvc.X/geral.h
-1094 text13 CODE >93:C:\Users\rapha\OneDrive\Documentos\UNESP\FEG Robótica\Projetos\Robo UVC\robouvc-main\robouvc.X/geral.h
-1096 text13 CODE >94:C:\Users\rapha\OneDrive\Documentos\UNESP\FEG Robótica\Projetos\Robo UVC\robouvc-main\robouvc.X/geral.h
-1098 text13 CODE >98:C:\Users\rapha\OneDrive\Documentos\UNESP\FEG Robótica\Projetos\Robo UVC\robouvc-main\robouvc.X/geral.h
-109A text13 CODE >99:C:\Users\rapha\OneDrive\Documentos\UNESP\FEG Robótica\Projetos\Robo UVC\robouvc-main\robouvc.X/geral.h
-109C text13 CODE >101:C:\Users\rapha\OneDrive\Documentos\UNESP\FEG Robótica\Projetos\Robo UVC\robouvc-main\robouvc.X/geral.h
-10A0 text13 CODE >103:C:\Users\rapha\OneDrive\Documentos\UNESP\FEG Robótica\Projetos\Robo UVC\robouvc-main\robouvc.X/geral.h
-10A2 text13 CODE >105:C:\Users\rapha\OneDrive\Documentos\UNESP\FEG Robótica\Projetos\Robo UVC\robouvc-main\robouvc.X/geral.h
-10AA text13 CODE >106:C:\Users\rapha\OneDrive\Documentos\UNESP\FEG Robótica\Projetos\Robo UVC\robouvc-main\robouvc.X/geral.h
-10B2 text13 CODE >112:C:\Users\rapha\OneDrive\Documentos\UNESP\FEG Robótica\Projetos\Robo UVC\robouvc-main\robouvc.X/geral.h
-10B6 text13 CODE >113:C:\Users\rapha\OneDrive\Documentos\UNESP\FEG Robótica\Projetos\Robo UVC\robouvc-main\robouvc.X/geral.h
-1130 text12 CODE >8:C:\Users\rapha\OneDrive\Documentos\UNESP\FEG Robótica\Projetos\Robo UVC\robouvc-main\robouvc.X/geral.h
-1130 text12 CODE >67:C:\Users\rapha\OneDrive\Documentos\UNESP\FEG Robótica\Projetos\Robo UVC\robouvc-main\robouvc.X/geral.h
-1070 text11 CODE >9:C:\Users\rapha\OneDrive\Documentos\UNESP\FEG Robótica\Projetos\Robo UVC\robouvc-main\robouvc.X/PWM.h
-1070 text11 CODE >11:C:\Users\rapha\OneDrive\Documentos\UNESP\FEG Robótica\Projetos\Robo UVC\robouvc-main\robouvc.X/PWM.h
-1074 text11 CODE >12:C:\Users\rapha\OneDrive\Documentos\UNESP\FEG Robótica\Projetos\Robo UVC\robouvc-main\robouvc.X/PWM.h
-1078 text11 CODE >13:C:\Users\rapha\OneDrive\Documentos\UNESP\FEG Robótica\Projetos\Robo UVC\robouvc-main\robouvc.X/PWM.h
-107C text11 CODE >14:C:\Users\rapha\OneDrive\Documentos\UNESP\FEG Robótica\Projetos\Robo UVC\robouvc-main\robouvc.X/PWM.h
-1080 text11 CODE >15:C:\Users\rapha\OneDrive\Documentos\UNESP\FEG Robótica\Projetos\Robo UVC\robouvc-main\robouvc.X/PWM.h
-1084 text11 CODE >16:C:\Users\rapha\OneDrive\Documentos\UNESP\FEG Robótica\Projetos\Robo UVC\robouvc-main\robouvc.X/PWM.h
-1086 text11 CODE >17:C:\Users\rapha\OneDrive\Documentos\UNESP\FEG Robótica\Projetos\Robo UVC\robouvc-main\robouvc.X/PWM.h
-108A text11 CODE >18:C:\Users\rapha\OneDrive\Documentos\UNESP\FEG Robótica\Projetos\Robo UVC\robouvc-main\robouvc.X/PWM.h
-108E text11 CODE >19:C:\Users\rapha\OneDrive\Documentos\UNESP\FEG Robótica\Projetos\Robo UVC\robouvc-main\robouvc.X/PWM.h
-1092 text11 CODE >21:C:\Users\rapha\OneDrive\Documentos\UNESP\FEG Robótica\Projetos\Robo UVC\robouvc-main\robouvc.X/PWM.h
-10B8 text10 CODE >9:C:\Users\rapha\OneDrive\Documentos\UNESP\FEG Robótica\Projetos\Robo UVC\robouvc-main\robouvc.X/bluetooth.h
-10B8 text10 CODE >10:C:\Users\rapha\OneDrive\Documentos\UNESP\FEG Robótica\Projetos\Robo UVC\robouvc-main\robouvc.X/bluetooth.h
-10BC text10 CODE >22:C:\Users\rapha\OneDrive\Documentos\UNESP\FEG Robótica\Projetos\Robo UVC\robouvc-main\robouvc.X/bluetooth.h
-10BE text10 CODE >24:C:\Users\rapha\OneDrive\Documentos\UNESP\FEG Robótica\Projetos\Robo UVC\robouvc-main\robouvc.X/bluetooth.h
-10C0 text10 CODE >25:C:\Users\rapha\OneDrive\Documentos\UNESP\FEG Robótica\Projetos\Robo UVC\robouvc-main\robouvc.X/bluetooth.h
-10C2 text10 CODE >26:C:\Users\rapha\OneDrive\Documentos\UNESP\FEG Robótica\Projetos\Robo UVC\robouvc-main\robouvc.X/bluetooth.h
-10C4 text10 CODE >27:C:\Users\rapha\OneDrive\Documentos\UNESP\FEG Robótica\Projetos\Robo UVC\robouvc-main\robouvc.X/bluetooth.h
-10C6 text10 CODE >29:C:\Users\rapha\OneDrive\Documentos\UNESP\FEG Robótica\Projetos\Robo UVC\robouvc-main\robouvc.X/bluetooth.h
-10C8 text10 CODE >30:C:\Users\rapha\OneDrive\Documentos\UNESP\FEG Robótica\Projetos\Robo UVC\robouvc-main\robouvc.X/bluetooth.h
-10CA text10 CODE >31:C:\Users\rapha\OneDrive\Documentos\UNESP\FEG Robótica\Projetos\Robo UVC\robouvc-main\robouvc.X/bluetooth.h
-10CC text10 CODE >32:C:\Users\rapha\OneDrive\Documentos\UNESP\FEG Robótica\Projetos\Robo UVC\robouvc-main\robouvc.X/bluetooth.h
-10CE text10 CODE >33:C:\Users\rapha\OneDrive\Documentos\UNESP\FEG Robótica\Projetos\Robo UVC\robouvc-main\robouvc.X/bluetooth.h
-10D0 text10 CODE >35:C:\Users\rapha\OneDrive\Documentos\UNESP\FEG Robótica\Projetos\Robo UVC\robouvc-main\robouvc.X/bluetooth.h
-10D2 text10 CODE >36:C:\Users\rapha\OneDrive\Documentos\UNESP\FEG Robótica\Projetos\Robo UVC\robouvc-main\robouvc.X/bluetooth.h
-10D4 text10 CODE >37:C:\Users\rapha\OneDrive\Documentos\UNESP\FEG Robótica\Projetos\Robo UVC\robouvc-main\robouvc.X/bluetooth.h
+8 intcode CODE >4317:C:\Users\rapha\AppData\Local\Temp\xcAs7qc.s
+8 intcode CODE >26:C:\Users\rapha\OneDrive\Documentos\Unesp\FEG Robótica\Projetos\Robo UVC\Uvc-git\robouvc\robouvc.X\main.c
+22 intcode CODE >29:C:\Users\rapha\OneDrive\Documentos\Unesp\FEG Robótica\Projetos\Robo UVC\Uvc-git\robouvc\robouvc.X\main.c
+30 intcode CODE >32:C:\Users\rapha\OneDrive\Documentos\Unesp\FEG Robótica\Projetos\Robo UVC\Uvc-git\robouvc\robouvc.X\main.c
+4C intcode CODE >33:C:\Users\rapha\OneDrive\Documentos\Unesp\FEG Robótica\Projetos\Robo UVC\Uvc-git\robouvc\robouvc.X\main.c
+4E intcode CODE >34:C:\Users\rapha\OneDrive\Documentos\Unesp\FEG Robótica\Projetos\Robo UVC\Uvc-git\robouvc\robouvc.X\main.c
+50 intcode CODE >35:C:\Users\rapha\OneDrive\Documentos\Unesp\FEG Robótica\Projetos\Robo UVC\Uvc-git\robouvc\robouvc.X\main.c
+52 intcode CODE >39:C:\Users\rapha\OneDrive\Documentos\Unesp\FEG Robótica\Projetos\Robo UVC\Uvc-git\robouvc\robouvc.X\main.c
+66 intcode CODE >40:C:\Users\rapha\OneDrive\Documentos\Unesp\FEG Robótica\Projetos\Robo UVC\Uvc-git\robouvc\robouvc.X\main.c
+7A intcode CODE >43:C:\Users\rapha\OneDrive\Documentos\Unesp\FEG Robótica\Projetos\Robo UVC\Uvc-git\robouvc\robouvc.X\main.c
+7C intcode CODE >45:C:\Users\rapha\OneDrive\Documentos\Unesp\FEG Robótica\Projetos\Robo UVC\Uvc-git\robouvc\robouvc.X\main.c
+1128 text21 CODE >39:C:\Users\rapha\OneDrive\Documentos\Unesp\FEG Robótica\Projetos\Robo UVC\Uvc-git\robouvc\robouvc.X/bluetooth.h
+1128 text21 CODE >40:C:\Users\rapha\OneDrive\Documentos\Unesp\FEG Robótica\Projetos\Robo UVC\Uvc-git\robouvc\robouvc.X/bluetooth.h
+112C text21 CODE >41:C:\Users\rapha\OneDrive\Documentos\Unesp\FEG Robótica\Projetos\Robo UVC\Uvc-git\robouvc\robouvc.X/bluetooth.h
+112E text21 CODE >42:C:\Users\rapha\OneDrive\Documentos\Unesp\FEG Robótica\Projetos\Robo UVC\Uvc-git\robouvc\robouvc.X/bluetooth.h
+1100 text20 CODE >44:C:\Users\rapha\OneDrive\Documentos\Unesp\FEG Robótica\Projetos\Robo UVC\Uvc-git\robouvc\robouvc.X/bluetooth.h
+1100 text20 CODE >45:C:\Users\rapha\OneDrive\Documentos\Unesp\FEG Robótica\Projetos\Robo UVC\Uvc-git\robouvc\robouvc.X/bluetooth.h
+110E text20 CODE >46:C:\Users\rapha\OneDrive\Documentos\Unesp\FEG Robótica\Projetos\Robo UVC\Uvc-git\robouvc\robouvc.X/bluetooth.h
+111C text19 CODE >48:C:\Users\rapha\OneDrive\Documentos\Unesp\FEG Robótica\Projetos\Robo UVC\Uvc-git\robouvc\robouvc.X/bluetooth.h
+111E text19 CODE >49:C:\Users\rapha\OneDrive\Documentos\Unesp\FEG Robótica\Projetos\Robo UVC\Uvc-git\robouvc\robouvc.X/bluetooth.h
+1122 text19 CODE >50:C:\Users\rapha\OneDrive\Documentos\Unesp\FEG Robótica\Projetos\Robo UVC\Uvc-git\robouvc\robouvc.X/bluetooth.h
+1126 text19 CODE >51:C:\Users\rapha\OneDrive\Documentos\Unesp\FEG Robótica\Projetos\Robo UVC\Uvc-git\robouvc\robouvc.X/bluetooth.h
+BC8 text18 CODE >53:C:\Users\rapha\OneDrive\Documentos\Unesp\FEG Robótica\Projetos\Robo UVC\Uvc-git\robouvc\robouvc.X/bluetooth.h
+BC8 text18 CODE >54:C:\Users\rapha\OneDrive\Documentos\Unesp\FEG Robótica\Projetos\Robo UVC\Uvc-git\robouvc\robouvc.X/bluetooth.h
+BD0 text18 CODE >56:C:\Users\rapha\OneDrive\Documentos\Unesp\FEG Robótica\Projetos\Robo UVC\Uvc-git\robouvc\robouvc.X/bluetooth.h
+BF6 text18 CODE >58:C:\Users\rapha\OneDrive\Documentos\Unesp\FEG Robótica\Projetos\Robo UVC\Uvc-git\robouvc\robouvc.X/bluetooth.h
+C36 text18 CODE >59:C:\Users\rapha\OneDrive\Documentos\Unesp\FEG Robótica\Projetos\Robo UVC\Uvc-git\robouvc\robouvc.X/bluetooth.h
+C66 text18 CODE >60:C:\Users\rapha\OneDrive\Documentos\Unesp\FEG Robótica\Projetos\Robo UVC\Uvc-git\robouvc\robouvc.X/bluetooth.h
+C6A text18 CODE >62:C:\Users\rapha\OneDrive\Documentos\Unesp\FEG Robótica\Projetos\Robo UVC\Uvc-git\robouvc\robouvc.X/bluetooth.h
+C8C text18 CODE >63:C:\Users\rapha\OneDrive\Documentos\Unesp\FEG Robótica\Projetos\Robo UVC\Uvc-git\robouvc\robouvc.X/bluetooth.h
+10F0 text16 CODE >44:C:\Users\rapha\OneDrive\Documentos\Unesp\FEG Robótica\Projetos\Robo UVC\Uvc-git\robouvc\robouvc.X/bluetooth.h
+10F0 text16 CODE >45:C:\Users\rapha\OneDrive\Documentos\Unesp\FEG Robótica\Projetos\Robo UVC\Uvc-git\robouvc\robouvc.X/bluetooth.h
+10FE text16 CODE >46:C:\Users\rapha\OneDrive\Documentos\Unesp\FEG Robótica\Projetos\Robo UVC\Uvc-git\robouvc\robouvc.X/bluetooth.h
+1110 text15 CODE >48:C:\Users\rapha\OneDrive\Documentos\Unesp\FEG Robótica\Projetos\Robo UVC\Uvc-git\robouvc\robouvc.X/bluetooth.h
+1112 text15 CODE >49:C:\Users\rapha\OneDrive\Documentos\Unesp\FEG Robótica\Projetos\Robo UVC\Uvc-git\robouvc\robouvc.X/bluetooth.h
+1116 text15 CODE >50:C:\Users\rapha\OneDrive\Documentos\Unesp\FEG Robótica\Projetos\Robo UVC\Uvc-git\robouvc\robouvc.X/bluetooth.h
+111A text15 CODE >51:C:\Users\rapha\OneDrive\Documentos\Unesp\FEG Robótica\Projetos\Robo UVC\Uvc-git\robouvc\robouvc.X/bluetooth.h
+B02 text14 CODE >53:C:\Users\rapha\OneDrive\Documentos\Unesp\FEG Robótica\Projetos\Robo UVC\Uvc-git\robouvc\robouvc.X/bluetooth.h
+B02 text14 CODE >54:C:\Users\rapha\OneDrive\Documentos\Unesp\FEG Robótica\Projetos\Robo UVC\Uvc-git\robouvc\robouvc.X/bluetooth.h
+B0A text14 CODE >56:C:\Users\rapha\OneDrive\Documentos\Unesp\FEG Robótica\Projetos\Robo UVC\Uvc-git\robouvc\robouvc.X/bluetooth.h
+B30 text14 CODE >58:C:\Users\rapha\OneDrive\Documentos\Unesp\FEG Robótica\Projetos\Robo UVC\Uvc-git\robouvc\robouvc.X/bluetooth.h
+B70 text14 CODE >59:C:\Users\rapha\OneDrive\Documentos\Unesp\FEG Robótica\Projetos\Robo UVC\Uvc-git\robouvc\robouvc.X/bluetooth.h
+BA0 text14 CODE >60:C:\Users\rapha\OneDrive\Documentos\Unesp\FEG Robótica\Projetos\Robo UVC\Uvc-git\robouvc\robouvc.X/bluetooth.h
+BA4 text14 CODE >62:C:\Users\rapha\OneDrive\Documentos\Unesp\FEG Robótica\Projetos\Robo UVC\Uvc-git\robouvc\robouvc.X/bluetooth.h
+BC6 text14 CODE >63:C:\Users\rapha\OneDrive\Documentos\Unesp\FEG Robótica\Projetos\Robo UVC\Uvc-git\robouvc\robouvc.X/bluetooth.h
+1094 text13 CODE >91:C:\Users\rapha\OneDrive\Documentos\Unesp\FEG Robótica\Projetos\Robo UVC\Uvc-git\robouvc\robouvc.X/geral.h
+1094 text13 CODE >93:C:\Users\rapha\OneDrive\Documentos\Unesp\FEG Robótica\Projetos\Robo UVC\Uvc-git\robouvc\robouvc.X/geral.h
+1096 text13 CODE >94:C:\Users\rapha\OneDrive\Documentos\Unesp\FEG Robótica\Projetos\Robo UVC\Uvc-git\robouvc\robouvc.X/geral.h
+1098 text13 CODE >98:C:\Users\rapha\OneDrive\Documentos\Unesp\FEG Robótica\Projetos\Robo UVC\Uvc-git\robouvc\robouvc.X/geral.h
+109A text13 CODE >99:C:\Users\rapha\OneDrive\Documentos\Unesp\FEG Robótica\Projetos\Robo UVC\Uvc-git\robouvc\robouvc.X/geral.h
+109C text13 CODE >101:C:\Users\rapha\OneDrive\Documentos\Unesp\FEG Robótica\Projetos\Robo UVC\Uvc-git\robouvc\robouvc.X/geral.h
+10A0 text13 CODE >103:C:\Users\rapha\OneDrive\Documentos\Unesp\FEG Robótica\Projetos\Robo UVC\Uvc-git\robouvc\robouvc.X/geral.h
+10A2 text13 CODE >105:C:\Users\rapha\OneDrive\Documentos\Unesp\FEG Robótica\Projetos\Robo UVC\Uvc-git\robouvc\robouvc.X/geral.h
+10AA text13 CODE >106:C:\Users\rapha\OneDrive\Documentos\Unesp\FEG Robótica\Projetos\Robo UVC\Uvc-git\robouvc\robouvc.X/geral.h
+10B2 text13 CODE >112:C:\Users\rapha\OneDrive\Documentos\Unesp\FEG Robótica\Projetos\Robo UVC\Uvc-git\robouvc\robouvc.X/geral.h
+10B6 text13 CODE >113:C:\Users\rapha\OneDrive\Documentos\Unesp\FEG Robótica\Projetos\Robo UVC\Uvc-git\robouvc\robouvc.X/geral.h
+1130 text12 CODE >8:C:\Users\rapha\OneDrive\Documentos\Unesp\FEG Robótica\Projetos\Robo UVC\Uvc-git\robouvc\robouvc.X/geral.h
+1130 text12 CODE >67:C:\Users\rapha\OneDrive\Documentos\Unesp\FEG Robótica\Projetos\Robo UVC\Uvc-git\robouvc\robouvc.X/geral.h
+1070 text11 CODE >9:C:\Users\rapha\OneDrive\Documentos\Unesp\FEG Robótica\Projetos\Robo UVC\Uvc-git\robouvc\robouvc.X/PWM.h
+1070 text11 CODE >11:C:\Users\rapha\OneDrive\Documentos\Unesp\FEG Robótica\Projetos\Robo UVC\Uvc-git\robouvc\robouvc.X/PWM.h
+1074 text11 CODE >12:C:\Users\rapha\OneDrive\Documentos\Unesp\FEG Robótica\Projetos\Robo UVC\Uvc-git\robouvc\robouvc.X/PWM.h
+1078 text11 CODE >13:C:\Users\rapha\OneDrive\Documentos\Unesp\FEG Robótica\Projetos\Robo UVC\Uvc-git\robouvc\robouvc.X/PWM.h
+107C text11 CODE >14:C:\Users\rapha\OneDrive\Documentos\Unesp\FEG Robótica\Projetos\Robo UVC\Uvc-git\robouvc\robouvc.X/PWM.h
+1080 text11 CODE >15:C:\Users\rapha\OneDrive\Documentos\Unesp\FEG Robótica\Projetos\Robo UVC\Uvc-git\robouvc\robouvc.X/PWM.h
+1084 text11 CODE >16:C:\Users\rapha\OneDrive\Documentos\Unesp\FEG Robótica\Projetos\Robo UVC\Uvc-git\robouvc\robouvc.X/PWM.h
+1086 text11 CODE >17:C:\Users\rapha\OneDrive\Documentos\Unesp\FEG Robótica\Projetos\Robo UVC\Uvc-git\robouvc\robouvc.X/PWM.h
+108A text11 CODE >18:C:\Users\rapha\OneDrive\Documentos\Unesp\FEG Robótica\Projetos\Robo UVC\Uvc-git\robouvc\robouvc.X/PWM.h
+108E text11 CODE >19:C:\Users\rapha\OneDrive\Documentos\Unesp\FEG Robótica\Projetos\Robo UVC\Uvc-git\robouvc\robouvc.X/PWM.h
+1092 text11 CODE >21:C:\Users\rapha\OneDrive\Documentos\Unesp\FEG Robótica\Projetos\Robo UVC\Uvc-git\robouvc\robouvc.X/PWM.h
+10B8 text10 CODE >9:C:\Users\rapha\OneDrive\Documentos\Unesp\FEG Robótica\Projetos\Robo UVC\Uvc-git\robouvc\robouvc.X/bluetooth.h
+10B8 text10 CODE >10:C:\Users\rapha\OneDrive\Documentos\Unesp\FEG Robótica\Projetos\Robo UVC\Uvc-git\robouvc\robouvc.X/bluetooth.h
+10BC text10 CODE >22:C:\Users\rapha\OneDrive\Documentos\Unesp\FEG Robótica\Projetos\Robo UVC\Uvc-git\robouvc\robouvc.X/bluetooth.h
+10BE text10 CODE >24:C:\Users\rapha\OneDrive\Documentos\Unesp\FEG Robótica\Projetos\Robo UVC\Uvc-git\robouvc\robouvc.X/bluetooth.h
+10C0 text10 CODE >25:C:\Users\rapha\OneDrive\Documentos\Unesp\FEG Robótica\Projetos\Robo UVC\Uvc-git\robouvc\robouvc.X/bluetooth.h
+10C2 text10 CODE >26:C:\Users\rapha\OneDrive\Documentos\Unesp\FEG Robótica\Projetos\Robo UVC\Uvc-git\robouvc\robouvc.X/bluetooth.h
+10C4 text10 CODE >27:C:\Users\rapha\OneDrive\Documentos\Unesp\FEG Robótica\Projetos\Robo UVC\Uvc-git\robouvc\robouvc.X/bluetooth.h
+10C6 text10 CODE >29:C:\Users\rapha\OneDrive\Documentos\Unesp\FEG Robótica\Projetos\Robo UVC\Uvc-git\robouvc\robouvc.X/bluetooth.h
+10C8 text10 CODE >30:C:\Users\rapha\OneDrive\Documentos\Unesp\FEG Robótica\Projetos\Robo UVC\Uvc-git\robouvc\robouvc.X/bluetooth.h
+10CA text10 CODE >31:C:\Users\rapha\OneDrive\Documentos\Unesp\FEG Robótica\Projetos\Robo UVC\Uvc-git\robouvc\robouvc.X/bluetooth.h
+10CC text10 CODE >32:C:\Users\rapha\OneDrive\Documentos\Unesp\FEG Robótica\Projetos\Robo UVC\Uvc-git\robouvc\robouvc.X/bluetooth.h
+10CE text10 CODE >33:C:\Users\rapha\OneDrive\Documentos\Unesp\FEG Robótica\Projetos\Robo UVC\Uvc-git\robouvc\robouvc.X/bluetooth.h
+10D0 text10 CODE >35:C:\Users\rapha\OneDrive\Documentos\Unesp\FEG Robótica\Projetos\Robo UVC\Uvc-git\robouvc\robouvc.X/bluetooth.h
+10D2 text10 CODE >36:C:\Users\rapha\OneDrive\Documentos\Unesp\FEG Robótica\Projetos\Robo UVC\Uvc-git\robouvc\robouvc.X/bluetooth.h
+10D4 text10 CODE >37:C:\Users\rapha\OneDrive\Documentos\Unesp\FEG Robótica\Projetos\Robo UVC\Uvc-git\robouvc\robouvc.X/bluetooth.h
 9FC text9 CODE >43:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c99\common\fltol.c
 9FC text9 CODE >47:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c99\common\fltol.c
 A12 text9 CODE >48:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c99\common\fltol.c
@@ -187,9 +187,9 @@ AD0 text9 CODE >67:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c99\common\f
 AE0 text9 CODE >68:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c99\common\fltol.c
 AF0 text9 CODE >69:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c99\common\fltol.c
 B00 text9 CODE >70:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c99\common\fltol.c
-1016 text8 CODE >115:C:\Users\rapha\OneDrive\Documentos\UNESP\FEG Robótica\Projetos\Robo UVC\robouvc-main\robouvc.X/geral.h
-1016 text8 CODE >116:C:\Users\rapha\OneDrive\Documentos\UNESP\FEG Robótica\Projetos\Robo UVC\robouvc-main\robouvc.X/geral.h
-106E text8 CODE >117:C:\Users\rapha\OneDrive\Documentos\UNESP\FEG Robótica\Projetos\Robo UVC\robouvc-main\robouvc.X/geral.h
+1016 text8 CODE >115:C:\Users\rapha\OneDrive\Documentos\Unesp\FEG Robótica\Projetos\Robo UVC\Uvc-git\robouvc\robouvc.X/geral.h
+1016 text8 CODE >116:C:\Users\rapha\OneDrive\Documentos\Unesp\FEG Robótica\Projetos\Robo UVC\Uvc-git\robouvc\robouvc.X/geral.h
+106E text8 CODE >117:C:\Users\rapha\OneDrive\Documentos\Unesp\FEG Robótica\Projetos\Robo UVC\Uvc-git\robouvc\robouvc.X/geral.h
 30A text7 CODE >8:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c99\common\sprcmul.c
 30A text7 CODE >17:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c99\common\sprcmul.c
 310 text7 CODE >18:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c99\common\sprcmul.c
@@ -306,26 +306,26 @@ B00 text9 CODE >70:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c99\common\f
 8D4 text6 CODE >42:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c99\common\xxtofl.c
 8D6 text6 CODE >43:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c99\common\xxtofl.c
 8E6 text6 CODE >44:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c99\common\xxtofl.c
-F70 text5 CODE >138:C:\Users\rapha\OneDrive\Documentos\UNESP\FEG Robótica\Projetos\Robo UVC\robouvc-main\robouvc.X/geral.h
-F70 text5 CODE >140:C:\Users\rapha\OneDrive\Documentos\UNESP\FEG Robótica\Projetos\Robo UVC\robouvc-main\robouvc.X/geral.h
-F76 text5 CODE >141:C:\Users\rapha\OneDrive\Documentos\UNESP\FEG Robótica\Projetos\Robo UVC\robouvc-main\robouvc.X/geral.h
-F7C text5 CODE >142:C:\Users\rapha\OneDrive\Documentos\UNESP\FEG Robótica\Projetos\Robo UVC\robouvc-main\robouvc.X/geral.h
-F84 text5 CODE >144:C:\Users\rapha\OneDrive\Documentos\UNESP\FEG Robótica\Projetos\Robo UVC\robouvc-main\robouvc.X/geral.h
-1004 text5 CODE >146:C:\Users\rapha\OneDrive\Documentos\UNESP\FEG Robótica\Projetos\Robo UVC\robouvc-main\robouvc.X/geral.h
-1014 text5 CODE >147:C:\Users\rapha\OneDrive\Documentos\UNESP\FEG Robótica\Projetos\Robo UVC\robouvc-main\robouvc.X/geral.h
-8E8 text4 CODE >149:C:\Users\rapha\OneDrive\Documentos\UNESP\FEG Robótica\Projetos\Robo UVC\robouvc-main\robouvc.X/geral.h
-8E8 text4 CODE >151:C:\Users\rapha\OneDrive\Documentos\UNESP\FEG Robótica\Projetos\Robo UVC\robouvc-main\robouvc.X/geral.h
-912 text4 CODE >153:C:\Users\rapha\OneDrive\Documentos\UNESP\FEG Robótica\Projetos\Robo UVC\robouvc-main\robouvc.X/geral.h
-938 text4 CODE >154:C:\Users\rapha\OneDrive\Documentos\UNESP\FEG Robótica\Projetos\Robo UVC\robouvc-main\robouvc.X/geral.h
-960 text4 CODE >155:C:\Users\rapha\OneDrive\Documentos\UNESP\FEG Robótica\Projetos\Robo UVC\robouvc-main\robouvc.X/geral.h
-98A text4 CODE >156:C:\Users\rapha\OneDrive\Documentos\UNESP\FEG Robótica\Projetos\Robo UVC\robouvc-main\robouvc.X/geral.h
-9B6 text4 CODE >158:C:\Users\rapha\OneDrive\Documentos\UNESP\FEG Robótica\Projetos\Robo UVC\robouvc-main\robouvc.X/geral.h
-9B8 text4 CODE >159:C:\Users\rapha\OneDrive\Documentos\UNESP\FEG Robótica\Projetos\Robo UVC\robouvc-main\robouvc.X/geral.h
-9BA text4 CODE >160:C:\Users\rapha\OneDrive\Documentos\UNESP\FEG Robótica\Projetos\Robo UVC\robouvc-main\robouvc.X/geral.h
-9C8 text4 CODE >162:C:\Users\rapha\OneDrive\Documentos\UNESP\FEG Robótica\Projetos\Robo UVC\robouvc-main\robouvc.X/geral.h
-9DC text4 CODE >163:C:\Users\rapha\OneDrive\Documentos\UNESP\FEG Robótica\Projetos\Robo UVC\robouvc-main\robouvc.X/geral.h
-9DE text4 CODE >165:C:\Users\rapha\OneDrive\Documentos\UNESP\FEG Robótica\Projetos\Robo UVC\robouvc-main\robouvc.X/geral.h
-9FA text4 CODE >177:C:\Users\rapha\OneDrive\Documentos\UNESP\FEG Robótica\Projetos\Robo UVC\robouvc-main\robouvc.X/geral.h
+F70 text5 CODE >138:C:\Users\rapha\OneDrive\Documentos\Unesp\FEG Robótica\Projetos\Robo UVC\Uvc-git\robouvc\robouvc.X/geral.h
+F70 text5 CODE >140:C:\Users\rapha\OneDrive\Documentos\Unesp\FEG Robótica\Projetos\Robo UVC\Uvc-git\robouvc\robouvc.X/geral.h
+F76 text5 CODE >141:C:\Users\rapha\OneDrive\Documentos\Unesp\FEG Robótica\Projetos\Robo UVC\Uvc-git\robouvc\robouvc.X/geral.h
+F7C text5 CODE >142:C:\Users\rapha\OneDrive\Documentos\Unesp\FEG Robótica\Projetos\Robo UVC\Uvc-git\robouvc\robouvc.X/geral.h
+F84 text5 CODE >144:C:\Users\rapha\OneDrive\Documentos\Unesp\FEG Robótica\Projetos\Robo UVC\Uvc-git\robouvc\robouvc.X/geral.h
+1004 text5 CODE >146:C:\Users\rapha\OneDrive\Documentos\Unesp\FEG Robótica\Projetos\Robo UVC\Uvc-git\robouvc\robouvc.X/geral.h
+1014 text5 CODE >147:C:\Users\rapha\OneDrive\Documentos\Unesp\FEG Robótica\Projetos\Robo UVC\Uvc-git\robouvc\robouvc.X/geral.h
+8E8 text4 CODE >149:C:\Users\rapha\OneDrive\Documentos\Unesp\FEG Robótica\Projetos\Robo UVC\Uvc-git\robouvc\robouvc.X/geral.h
+8E8 text4 CODE >151:C:\Users\rapha\OneDrive\Documentos\Unesp\FEG Robótica\Projetos\Robo UVC\Uvc-git\robouvc\robouvc.X/geral.h
+912 text4 CODE >153:C:\Users\rapha\OneDrive\Documentos\Unesp\FEG Robótica\Projetos\Robo UVC\Uvc-git\robouvc\robouvc.X/geral.h
+938 text4 CODE >154:C:\Users\rapha\OneDrive\Documentos\Unesp\FEG Robótica\Projetos\Robo UVC\Uvc-git\robouvc\robouvc.X/geral.h
+960 text4 CODE >155:C:\Users\rapha\OneDrive\Documentos\Unesp\FEG Robótica\Projetos\Robo UVC\Uvc-git\robouvc\robouvc.X/geral.h
+98A text4 CODE >156:C:\Users\rapha\OneDrive\Documentos\Unesp\FEG Robótica\Projetos\Robo UVC\Uvc-git\robouvc\robouvc.X/geral.h
+9B6 text4 CODE >158:C:\Users\rapha\OneDrive\Documentos\Unesp\FEG Robótica\Projetos\Robo UVC\Uvc-git\robouvc\robouvc.X/geral.h
+9B8 text4 CODE >159:C:\Users\rapha\OneDrive\Documentos\Unesp\FEG Robótica\Projetos\Robo UVC\Uvc-git\robouvc\robouvc.X/geral.h
+9BA text4 CODE >160:C:\Users\rapha\OneDrive\Documentos\Unesp\FEG Robótica\Projetos\Robo UVC\Uvc-git\robouvc\robouvc.X/geral.h
+9C8 text4 CODE >162:C:\Users\rapha\OneDrive\Documentos\Unesp\FEG Robótica\Projetos\Robo UVC\Uvc-git\robouvc\robouvc.X/geral.h
+9DC text4 CODE >163:C:\Users\rapha\OneDrive\Documentos\Unesp\FEG Robótica\Projetos\Robo UVC\Uvc-git\robouvc\robouvc.X/geral.h
+9DE text4 CODE >165:C:\Users\rapha\OneDrive\Documentos\Unesp\FEG Robótica\Projetos\Robo UVC\Uvc-git\robouvc\robouvc.X/geral.h
+9FA text4 CODE >177:C:\Users\rapha\OneDrive\Documentos\Unesp\FEG Robótica\Projetos\Robo UVC\Uvc-git\robouvc\robouvc.X/geral.h
 C8E text3 CODE >7:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c99\common\awdiv.c
 C8E text3 CODE >13:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c99\common\awdiv.c
 C92 text3 CODE >14:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c99\common\awdiv.c
@@ -372,57 +372,57 @@ F4E text2 CODE >31:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c99\common\a
 F5E text2 CODE >32:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c99\common\awmod.c
 F66 text2 CODE >33:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c99\common\awmod.c
 F6E text2 CODE >34:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c99\common\awmod.c
-E10 text1 CODE >119:C:\Users\rapha\OneDrive\Documentos\UNESP\FEG Robótica\Projetos\Robo UVC\robouvc-main\robouvc.X/geral.h
-E10 text1 CODE >121:C:\Users\rapha\OneDrive\Documentos\UNESP\FEG Robótica\Projetos\Robo UVC\robouvc-main\robouvc.X/geral.h
-E2C text1 CODE >122:C:\Users\rapha\OneDrive\Documentos\UNESP\FEG Robótica\Projetos\Robo UVC\robouvc-main\robouvc.X/geral.h
-E5C text1 CODE >123:C:\Users\rapha\OneDrive\Documentos\UNESP\FEG Robótica\Projetos\Robo UVC\robouvc-main\robouvc.X/geral.h
-E94 text1 CODE >125:C:\Users\rapha\OneDrive\Documentos\UNESP\FEG Robótica\Projetos\Robo UVC\robouvc-main\robouvc.X/geral.h
-EA0 text1 CODE >127:C:\Users\rapha\OneDrive\Documentos\UNESP\FEG Robótica\Projetos\Robo UVC\robouvc-main\robouvc.X/geral.h
-EA6 text1 CODE >128:C:\Users\rapha\OneDrive\Documentos\UNESP\FEG Robótica\Projetos\Robo UVC\robouvc-main\robouvc.X/geral.h
-EAA text1 CODE >129:C:\Users\rapha\OneDrive\Documentos\UNESP\FEG Robótica\Projetos\Robo UVC\robouvc-main\robouvc.X/geral.h
-EB0 text1 CODE >130:C:\Users\rapha\OneDrive\Documentos\UNESP\FEG Robótica\Projetos\Robo UVC\robouvc-main\robouvc.X/geral.h
-EB6 text1 CODE >132:C:\Users\rapha\OneDrive\Documentos\UNESP\FEG Robótica\Projetos\Robo UVC\robouvc-main\robouvc.X/geral.h
-EBE text1 CODE >133:C:\Users\rapha\OneDrive\Documentos\UNESP\FEG Robótica\Projetos\Robo UVC\robouvc-main\robouvc.X/geral.h
-D52 text0 CODE >48:C:\Users\rapha\OneDrive\Documentos\UNESP\FEG Robótica\Projetos\Robo UVC\robouvc-main\robouvc.X\main.c
-D52 text0 CODE >53:C:\Users\rapha\OneDrive\Documentos\UNESP\FEG Robótica\Projetos\Robo UVC\robouvc-main\robouvc.X\main.c
-D6E text0 CODE >55:C:\Users\rapha\OneDrive\Documentos\UNESP\FEG Robótica\Projetos\Robo UVC\robouvc-main\robouvc.X\main.c
-D70 text0 CODE >56:C:\Users\rapha\OneDrive\Documentos\UNESP\FEG Robótica\Projetos\Robo UVC\robouvc-main\robouvc.X\main.c
-D74 text0 CODE >58:C:\Users\rapha\OneDrive\Documentos\UNESP\FEG Robótica\Projetos\Robo UVC\robouvc-main\robouvc.X\main.c
-D76 text0 CODE >59:C:\Users\rapha\OneDrive\Documentos\UNESP\FEG Robótica\Projetos\Robo UVC\robouvc-main\robouvc.X\main.c
-D7A text0 CODE >60:C:\Users\rapha\OneDrive\Documentos\UNESP\FEG Robótica\Projetos\Robo UVC\robouvc-main\robouvc.X\main.c
-D7E text0 CODE >61:C:\Users\rapha\OneDrive\Documentos\UNESP\FEG Robótica\Projetos\Robo UVC\robouvc-main\robouvc.X\main.c
-D82 text0 CODE >62:C:\Users\rapha\OneDrive\Documentos\UNESP\FEG Robótica\Projetos\Robo UVC\robouvc-main\robouvc.X\main.c
-D86 text0 CODE >64:C:\Users\rapha\OneDrive\Documentos\UNESP\FEG Robótica\Projetos\Robo UVC\robouvc-main\robouvc.X\main.c
-D8A text0 CODE >65:C:\Users\rapha\OneDrive\Documentos\UNESP\FEG Robótica\Projetos\Robo UVC\robouvc-main\robouvc.X\main.c
-D8E text0 CODE >66:C:\Users\rapha\OneDrive\Documentos\UNESP\FEG Robótica\Projetos\Robo UVC\robouvc-main\robouvc.X\main.c
-D92 text0 CODE >67:C:\Users\rapha\OneDrive\Documentos\UNESP\FEG Robótica\Projetos\Robo UVC\robouvc-main\robouvc.X\main.c
-D96 text0 CODE >69:C:\Users\rapha\OneDrive\Documentos\UNESP\FEG Robótica\Projetos\Robo UVC\robouvc-main\robouvc.X\main.c
-D98 text0 CODE >70:C:\Users\rapha\OneDrive\Documentos\UNESP\FEG Robótica\Projetos\Robo UVC\robouvc-main\robouvc.X\main.c
-D9A text0 CODE >72:C:\Users\rapha\OneDrive\Documentos\UNESP\FEG Robótica\Projetos\Robo UVC\robouvc-main\robouvc.X\main.c
-D9E text0 CODE >73:C:\Users\rapha\OneDrive\Documentos\UNESP\FEG Robótica\Projetos\Robo UVC\robouvc-main\robouvc.X\main.c
-DA2 text0 CODE >74:C:\Users\rapha\OneDrive\Documentos\UNESP\FEG Robótica\Projetos\Robo UVC\robouvc-main\robouvc.X\main.c
-DA6 text0 CODE >75:C:\Users\rapha\OneDrive\Documentos\UNESP\FEG Robótica\Projetos\Robo UVC\robouvc-main\robouvc.X\main.c
-DAA text0 CODE >81:C:\Users\rapha\OneDrive\Documentos\UNESP\FEG Robótica\Projetos\Robo UVC\robouvc-main\robouvc.X\main.c
-DBE text0 CODE >82:C:\Users\rapha\OneDrive\Documentos\UNESP\FEG Robótica\Projetos\Robo UVC\robouvc-main\robouvc.X\main.c
-DD2 text0 CODE >83:C:\Users\rapha\OneDrive\Documentos\UNESP\FEG Robótica\Projetos\Robo UVC\robouvc-main\robouvc.X\main.c
-DE6 text0 CODE >84:C:\Users\rapha\OneDrive\Documentos\UNESP\FEG Robótica\Projetos\Robo UVC\robouvc-main\robouvc.X\main.c
-DEC text0 CODE >85:C:\Users\rapha\OneDrive\Documentos\UNESP\FEG Robótica\Projetos\Robo UVC\robouvc-main\robouvc.X\main.c
-10D6 cinit CODE >646:C:\Users\rapha\AppData\Local\Temp\xcAs32c.s
-10D6 cinit CODE >648:C:\Users\rapha\AppData\Local\Temp\xcAs32c.s
-10D6 cinit CODE >651:C:\Users\rapha\AppData\Local\Temp\xcAs32c.s
-10D6 cinit CODE >668:C:\Users\rapha\AppData\Local\Temp\xcAs32c.s
-10DA cinit CODE >669:C:\Users\rapha\AppData\Local\Temp\xcAs32c.s
-10DC cinit CODE >670:C:\Users\rapha\AppData\Local\Temp\xcAs32c.s
-10DC cinit CODE >671:C:\Users\rapha\AppData\Local\Temp\xcAs32c.s
-10DE cinit CODE >672:C:\Users\rapha\AppData\Local\Temp\xcAs32c.s
-10E0 cinit CODE >673:C:\Users\rapha\AppData\Local\Temp\xcAs32c.s
-10E2 cinit CODE >679:C:\Users\rapha\AppData\Local\Temp\xcAs32c.s
-10E2 cinit CODE >681:C:\Users\rapha\AppData\Local\Temp\xcAs32c.s
-10E4 cinit CODE >682:C:\Users\rapha\AppData\Local\Temp\xcAs32c.s
-10E6 cinit CODE >684:C:\Users\rapha\AppData\Local\Temp\xcAs32c.s
-10E8 cinit CODE >685:C:\Users\rapha\AppData\Local\Temp\xcAs32c.s
-10EA cinit CODE >686:C:\Users\rapha\AppData\Local\Temp\xcAs32c.s
-10EC cinit CODE >687:C:\Users\rapha\AppData\Local\Temp\xcAs32c.s
+E10 text1 CODE >119:C:\Users\rapha\OneDrive\Documentos\Unesp\FEG Robótica\Projetos\Robo UVC\Uvc-git\robouvc\robouvc.X/geral.h
+E10 text1 CODE >121:C:\Users\rapha\OneDrive\Documentos\Unesp\FEG Robótica\Projetos\Robo UVC\Uvc-git\robouvc\robouvc.X/geral.h
+E2C text1 CODE >122:C:\Users\rapha\OneDrive\Documentos\Unesp\FEG Robótica\Projetos\Robo UVC\Uvc-git\robouvc\robouvc.X/geral.h
+E5C text1 CODE >123:C:\Users\rapha\OneDrive\Documentos\Unesp\FEG Robótica\Projetos\Robo UVC\Uvc-git\robouvc\robouvc.X/geral.h
+E94 text1 CODE >125:C:\Users\rapha\OneDrive\Documentos\Unesp\FEG Robótica\Projetos\Robo UVC\Uvc-git\robouvc\robouvc.X/geral.h
+EA0 text1 CODE >127:C:\Users\rapha\OneDrive\Documentos\Unesp\FEG Robótica\Projetos\Robo UVC\Uvc-git\robouvc\robouvc.X/geral.h
+EA6 text1 CODE >128:C:\Users\rapha\OneDrive\Documentos\Unesp\FEG Robótica\Projetos\Robo UVC\Uvc-git\robouvc\robouvc.X/geral.h
+EAA text1 CODE >129:C:\Users\rapha\OneDrive\Documentos\Unesp\FEG Robótica\Projetos\Robo UVC\Uvc-git\robouvc\robouvc.X/geral.h
+EB0 text1 CODE >130:C:\Users\rapha\OneDrive\Documentos\Unesp\FEG Robótica\Projetos\Robo UVC\Uvc-git\robouvc\robouvc.X/geral.h
+EB6 text1 CODE >132:C:\Users\rapha\OneDrive\Documentos\Unesp\FEG Robótica\Projetos\Robo UVC\Uvc-git\robouvc\robouvc.X/geral.h
+EBE text1 CODE >133:C:\Users\rapha\OneDrive\Documentos\Unesp\FEG Robótica\Projetos\Robo UVC\Uvc-git\robouvc\robouvc.X/geral.h
+D52 text0 CODE >48:C:\Users\rapha\OneDrive\Documentos\Unesp\FEG Robótica\Projetos\Robo UVC\Uvc-git\robouvc\robouvc.X\main.c
+D52 text0 CODE >53:C:\Users\rapha\OneDrive\Documentos\Unesp\FEG Robótica\Projetos\Robo UVC\Uvc-git\robouvc\robouvc.X\main.c
+D6E text0 CODE >55:C:\Users\rapha\OneDrive\Documentos\Unesp\FEG Robótica\Projetos\Robo UVC\Uvc-git\robouvc\robouvc.X\main.c
+D70 text0 CODE >56:C:\Users\rapha\OneDrive\Documentos\Unesp\FEG Robótica\Projetos\Robo UVC\Uvc-git\robouvc\robouvc.X\main.c
+D74 text0 CODE >58:C:\Users\rapha\OneDrive\Documentos\Unesp\FEG Robótica\Projetos\Robo UVC\Uvc-git\robouvc\robouvc.X\main.c
+D76 text0 CODE >59:C:\Users\rapha\OneDrive\Documentos\Unesp\FEG Robótica\Projetos\Robo UVC\Uvc-git\robouvc\robouvc.X\main.c
+D7A text0 CODE >60:C:\Users\rapha\OneDrive\Documentos\Unesp\FEG Robótica\Projetos\Robo UVC\Uvc-git\robouvc\robouvc.X\main.c
+D7E text0 CODE >61:C:\Users\rapha\OneDrive\Documentos\Unesp\FEG Robótica\Projetos\Robo UVC\Uvc-git\robouvc\robouvc.X\main.c
+D82 text0 CODE >62:C:\Users\rapha\OneDrive\Documentos\Unesp\FEG Robótica\Projetos\Robo UVC\Uvc-git\robouvc\robouvc.X\main.c
+D86 text0 CODE >64:C:\Users\rapha\OneDrive\Documentos\Unesp\FEG Robótica\Projetos\Robo UVC\Uvc-git\robouvc\robouvc.X\main.c
+D8A text0 CODE >65:C:\Users\rapha\OneDrive\Documentos\Unesp\FEG Robótica\Projetos\Robo UVC\Uvc-git\robouvc\robouvc.X\main.c
+D8E text0 CODE >66:C:\Users\rapha\OneDrive\Documentos\Unesp\FEG Robótica\Projetos\Robo UVC\Uvc-git\robouvc\robouvc.X\main.c
+D92 text0 CODE >67:C:\Users\rapha\OneDrive\Documentos\Unesp\FEG Robótica\Projetos\Robo UVC\Uvc-git\robouvc\robouvc.X\main.c
+D96 text0 CODE >69:C:\Users\rapha\OneDrive\Documentos\Unesp\FEG Robótica\Projetos\Robo UVC\Uvc-git\robouvc\robouvc.X\main.c
+D98 text0 CODE >70:C:\Users\rapha\OneDrive\Documentos\Unesp\FEG Robótica\Projetos\Robo UVC\Uvc-git\robouvc\robouvc.X\main.c
+D9A text0 CODE >72:C:\Users\rapha\OneDrive\Documentos\Unesp\FEG Robótica\Projetos\Robo UVC\Uvc-git\robouvc\robouvc.X\main.c
+D9E text0 CODE >73:C:\Users\rapha\OneDrive\Documentos\Unesp\FEG Robótica\Projetos\Robo UVC\Uvc-git\robouvc\robouvc.X\main.c
+DA2 text0 CODE >74:C:\Users\rapha\OneDrive\Documentos\Unesp\FEG Robótica\Projetos\Robo UVC\Uvc-git\robouvc\robouvc.X\main.c
+DA6 text0 CODE >75:C:\Users\rapha\OneDrive\Documentos\Unesp\FEG Robótica\Projetos\Robo UVC\Uvc-git\robouvc\robouvc.X\main.c
+DAA text0 CODE >81:C:\Users\rapha\OneDrive\Documentos\Unesp\FEG Robótica\Projetos\Robo UVC\Uvc-git\robouvc\robouvc.X\main.c
+DBE text0 CODE >82:C:\Users\rapha\OneDrive\Documentos\Unesp\FEG Robótica\Projetos\Robo UVC\Uvc-git\robouvc\robouvc.X\main.c
+DD2 text0 CODE >83:C:\Users\rapha\OneDrive\Documentos\Unesp\FEG Robótica\Projetos\Robo UVC\Uvc-git\robouvc\robouvc.X\main.c
+DE6 text0 CODE >84:C:\Users\rapha\OneDrive\Documentos\Unesp\FEG Robótica\Projetos\Robo UVC\Uvc-git\robouvc\robouvc.X\main.c
+DEC text0 CODE >85:C:\Users\rapha\OneDrive\Documentos\Unesp\FEG Robótica\Projetos\Robo UVC\Uvc-git\robouvc\robouvc.X\main.c
+10D6 cinit CODE >646:C:\Users\rapha\AppData\Local\Temp\xcAs7qc.s
+10D6 cinit CODE >648:C:\Users\rapha\AppData\Local\Temp\xcAs7qc.s
+10D6 cinit CODE >651:C:\Users\rapha\AppData\Local\Temp\xcAs7qc.s
+10D6 cinit CODE >668:C:\Users\rapha\AppData\Local\Temp\xcAs7qc.s
+10DA cinit CODE >669:C:\Users\rapha\AppData\Local\Temp\xcAs7qc.s
+10DC cinit CODE >670:C:\Users\rapha\AppData\Local\Temp\xcAs7qc.s
+10DC cinit CODE >671:C:\Users\rapha\AppData\Local\Temp\xcAs7qc.s
+10DE cinit CODE >672:C:\Users\rapha\AppData\Local\Temp\xcAs7qc.s
+10E0 cinit CODE >673:C:\Users\rapha\AppData\Local\Temp\xcAs7qc.s
+10E2 cinit CODE >679:C:\Users\rapha\AppData\Local\Temp\xcAs7qc.s
+10E2 cinit CODE >681:C:\Users\rapha\AppData\Local\Temp\xcAs7qc.s
+10E4 cinit CODE >682:C:\Users\rapha\AppData\Local\Temp\xcAs7qc.s
+10E6 cinit CODE >684:C:\Users\rapha\AppData\Local\Temp\xcAs7qc.s
+10E8 cinit CODE >685:C:\Users\rapha\AppData\Local\Temp\xcAs7qc.s
+10EA cinit CODE >686:C:\Users\rapha\AppData\Local\Temp\xcAs7qc.s
+10EC cinit CODE >687:C:\Users\rapha\AppData\Local\Temp\xcAs7qc.s
 # %SYMTAB Section
 # An enumeration of all symbols in the program.
 # The beginning of the section is indicated by %SYMTAB.
@@ -444,15 +444,15 @@ __Hspace_4 60000E 0 ABS 0 - dist/default/production\robouvc.X.production.o
 _PWMCON0 F6F 0 ABS 0 - dist/default/production\robouvc.X.production.o
 _PWMCON1 F6E 0 ABS 0 - dist/default/production\robouvc.X.production.o
 __Hibigdata 0 0 CODE 0 ibigdata dist/default/production\robouvc.X.production.o
-__mediumconst 0 0 MEDIUMCONST 0 mediumconst C:\Users\rapha\AppData\Local\Temp\xcAs32c.o
+__mediumconst 0 0 MEDIUMCONST 0 mediumconst C:\Users\rapha\AppData\Local\Temp\xcAs7qc.o
 ?_valorConvUART 1E 0 COMRAM 1 cstackCOMRAM dist/default/production\robouvc.X.production.o
 __Heeprom_data 0 0 EEDATA 0 eeprom_data dist/default/production\robouvc.X.production.o
 __Lsmallconst 300 0 SMALLCONST 0 smallconst dist/default/production\robouvc.X.production.o
 _TRMT 7D61 0 ABS 0 - dist/default/production\robouvc.X.production.o
-___sp 0 0 STACK 2 stack C:\Users\rapha\AppData\Local\Temp\xcAs32c.o
+___sp 0 0 STACK 2 stack C:\Users\rapha\AppData\Local\Temp\xcAs7qc.o
 _main D52 0 CODE 0 text0 dist/default/production\robouvc.X.production.o
 btemp 50 0 COMRAM 1 temp dist/default/production\robouvc.X.production.o
-start 98 0 CODE 0 init C:\Users\rapha\AppData\Local\Temp\xcAs32c.o
+start 98 0 CODE 0 init C:\Users\rapha\AppData\Local\Temp\xcAs7qc.o
 ___flmul@aexp 2B 0 COMRAM 1 cstackCOMRAM dist/default/production\robouvc.X.production.o
 ___flmul@bexp 30 0 COMRAM 1 cstackCOMRAM dist/default/production\robouvc.X.production.o
 ___flmul@prod 31 0 COMRAM 1 cstackCOMRAM dist/default/production\robouvc.X.production.o
@@ -473,11 +473,11 @@ ___awmod@sign 1D 0 COMRAM 1 cstackCOMRAM dist/default/production\robouvc.X.produ
 ttemp5 51 0 COMRAM 1 temp dist/default/production\robouvc.X.production.o
 ttemp6 54 0 COMRAM 1 temp dist/default/production\robouvc.X.production.o
 ttemp7 58 0 COMRAM 1 temp dist/default/production\robouvc.X.production.o
-__accesstop 60 0 ABS 0 - C:\Users\rapha\AppData\Local\Temp\xcAs32c.o
-intlevel0 0 0 CODE 0 text C:\Users\rapha\AppData\Local\Temp\xcAs32c.o
-intlevel1 0 0 CODE 0 text C:\Users\rapha\AppData\Local\Temp\xcAs32c.o
-intlevel2 0 0 CODE 0 text C:\Users\rapha\AppData\Local\Temp\xcAs32c.o
-intlevel3 0 0 CODE 0 text C:\Users\rapha\AppData\Local\Temp\xcAs32c.o
+__accesstop 60 0 ABS 0 - C:\Users\rapha\AppData\Local\Temp\xcAs7qc.o
+intlevel0 0 0 CODE 0 text C:\Users\rapha\AppData\Local\Temp\xcAs7qc.o
+intlevel1 0 0 CODE 0 text C:\Users\rapha\AppData\Local\Temp\xcAs7qc.o
+intlevel2 0 0 CODE 0 text C:\Users\rapha\AppData\Local\Temp\xcAs7qc.o
+intlevel3 0 0 CODE 0 text C:\Users\rapha\AppData\Local\Temp\xcAs7qc.o
 ?_bitExtract 10 0 COMRAM 1 cstackCOMRAM dist/default/production\robouvc.X.production.o
 __LbssCOMRAM 0 0 ABS 0 bssCOMRAM dist/default/production\robouvc.X.production.o
 __LnvFARRAM 0 0 FARRAM 0 nvFARRAM dist/default/production\robouvc.X.production.o
@@ -493,8 +493,8 @@ _ADRESL FC3 0 ABS 0 - dist/default/production\robouvc.X.production.o
 _ANSEL0 FB8 0 ABS 0 - dist/default/production\robouvc.X.production.o
 _ANSEL1 FB9 0 ABS 0 - dist/default/production\robouvc.X.production.o
 ___awdiv@dividend 10 0 COMRAM 1 cstackCOMRAM dist/default/production\robouvc.X.production.o
-___inthi_sp 0 0 STACK 2 stack C:\Users\rapha\AppData\Local\Temp\xcAs32c.o
-___intlo_sp 0 0 STACK 2 stack C:\Users\rapha\AppData\Local\Temp\xcAs32c.o
+___inthi_sp 0 0 STACK 2 stack C:\Users\rapha\AppData\Local\Temp\xcAs7qc.o
+___intlo_sp 0 0 STACK 2 stack C:\Users\rapha\AppData\Local\Temp\xcAs7qc.o
 __end_of_UARTSendString BC8 0 CODE 0 text14 dist/default/production\robouvc.X.production.o
 __Hintcode_body 0 0 ABS 0 intcode_body dist/default/production\robouvc.X.production.o
 i2_UARTSendChar 111C 0 CODE 0 text19 dist/default/production\robouvc.X.production.o
@@ -531,7 +531,7 @@ __end_ofi2_UARTSendChar 1128 0 CODE 0 text19 dist/default/production\robouvc.X.p
 ___rparam_used 1 0 ABS 0 - dist/default/production\robouvc.X.production.o
 __pcstackBANK0 60 0 BANK0 1 cstackBANK0 dist/default/production\robouvc.X.production.o
 __size_of_configADtest 0 0 ABS 0 - dist/default/production\robouvc.X.production.o
-isa$xinst 0 0 ABS 0 - C:\Users\rapha\AppData\Local\Temp\xcAs32c.o
+isa$xinst 0 0 ABS 0 - C:\Users\rapha\AppData\Local\Temp\xcAs7qc.o
 i2UARTSendChar@c 1 0 COMRAM 1 cstackCOMRAM dist/default/production\robouvc.X.production.o
 __Hbank0 0 0 ABS 0 bank0 dist/default/production\robouvc.X.production.o
 __Hbank1 0 0 ABS 0 bank1 dist/default/production\robouvc.X.production.o
@@ -559,7 +559,7 @@ __size_of___xxtofl 0 0 ABS 0 - dist/default/production\robouvc.X.production.o
 __Hbigbss 0 0 BIGRAM 1 bigbss dist/default/production\robouvc.X.production.o
 __Hbigram 0 0 ABS 0 bigram dist/default/production\robouvc.X.production.o
 ?_readAD_AN 37 0 COMRAM 1 cstackCOMRAM dist/default/production\robouvc.X.production.o
-__smallconst 300 0 SMALLCONST 0 smallconst C:\Users\rapha\AppData\Local\Temp\xcAs32c.o
+__smallconst 300 0 SMALLCONST 0 smallconst C:\Users\rapha\AppData\Local\Temp\xcAs7qc.o
 ___xxtofl@arg 1A 0 COMRAM 1 cstackCOMRAM dist/default/production\robouvc.X.production.o
 ___xxtofl@exp 19 0 COMRAM 1 cstackCOMRAM dist/default/production\robouvc.X.production.o
 ___xxtofl@val 10 0 COMRAM 1 cstackCOMRAM dist/default/production\robouvc.X.production.o
@@ -683,11 +683,11 @@ _configBits 1130 0 CODE 0 text12 dist/default/production\robouvc.X.production.o
 __Lfarbss 0 0 FARRAM 0 farbss dist/default/production\robouvc.X.production.o
 _bitExtract 1016 0 CODE 0 text8 dist/default/production\robouvc.X.production.o
 __Lfardata 0 0 FARRAM 0 fardata dist/default/production\robouvc.X.production.o
-isa$std 1 0 ABS 0 - C:\Users\rapha\AppData\Local\Temp\xcAs32c.o
+isa$std 1 0 ABS 0 - C:\Users\rapha\AppData\Local\Temp\xcAs7qc.o
 __end_of_UARTSendChar 111C 0 CODE 0 text15 dist/default/production\robouvc.X.production.o
 _getAD_AN 8E8 0 CODE 0 text4 dist/default/production\robouvc.X.production.o
-stackhi 2FF 0 ABS 0 - C:\Users\rapha\AppData\Local\Temp\xcAs32c.o
-stacklo 66 0 ABS 0 - C:\Users\rapha\AppData\Local\Temp\xcAs32c.o
+stackhi 2FF 0 ABS 0 - C:\Users\rapha\AppData\Local\Temp\xcAs7qc.o
+stacklo 66 0 ABS 0 - C:\Users\rapha\AppData\Local\Temp\xcAs7qc.o
 __Lintcode 8 0 CODE 0 intcode dist/default/production\robouvc.X.production.o
 __Lintret 0 0 ABS 0 intret dist/default/production\robouvc.X.production.o
 __Lirdata 0 0 CODE 0 irdata dist/default/production\robouvc.X.production.o
@@ -751,7 +751,7 @@ __Ltext19 0 0 ABS 0 text19 dist/default/production\robouvc.X.production.o
 __Ltext20 0 0 ABS 0 text20 dist/default/production\robouvc.X.production.o
 __Ltext21 0 0 ABS 0 text21 dist/default/production\robouvc.X.production.o
 __end_of_configBits 1132 0 CODE 0 text12 dist/default/production\robouvc.X.production.o
-__ramtop 300 0 RAM 0 ramtop C:\Users\rapha\AppData\Local\Temp\xcAs32c.o
+__ramtop 300 0 RAM 0 ramtop C:\Users\rapha\AppData\Local\Temp\xcAs7qc.o
 __end_ofi2_UARTWriteTest 1110 0 CODE 0 text20 dist/default/production\robouvc.X.production.o
 __end_of_bitExtract 1070 0 CODE 0 text8 dist/default/production\robouvc.X.production.o
 __Lpowerup 98 0 CODE 0 powerup dist/default/production\robouvc.X.production.o
