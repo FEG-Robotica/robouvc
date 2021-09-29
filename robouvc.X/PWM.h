@@ -22,24 +22,24 @@ void configPWM(){
 
 void setDutyPWM0(unsigned int porcVelo) {
     unsigned int velo = porcVelo*VELOCIDADE_MAXIMA;
-    PDC0L = velo & 0b11111111; //setar velocidade no PWM2 motor esquerdo
+    PDC0L = velo & 0b11111111; 
     PDC0H = (velo >> 8) & 0b11111111;
 }
 
 void setDutyPWM2(unsigned int porcVelo) {
     unsigned int velo = porcVelo*VELOCIDADE_MAXIMA;
-    PDC1L = velo & 0b11111111; //setar velocidade no PWM2 motor esquerdo
+    PDC1L = velo & 0b11111111; 
     PDC1H = (velo >> 8) & 0b11111111;
 }
 
 void setDutyPWM4(unsigned int porcVelo) {
     unsigned int velo = porcVelo*VELOCIDADE_MAXIMA;
-    PDC2L = velo & 0b11111111; //setar velocidade no PWM2 motor esquerdo
+    PDC2L = velo & 0b11111111; 
     PDC2H = (velo >> 8) & 0b11111111;
 }
 
 void setDutyPWM6(unsigned int porcVelo) {
     unsigned int velo = porcVelo*VELOCIDADE_MAXIMA;
-    PDC3L = velo & 0b11111111; //setar velocidade no PWM2 motor esquerdo
+    PDC3L = velo & 0b11111111; 
     PDC3H = (velo >> 8) & 0b11111111;
 }

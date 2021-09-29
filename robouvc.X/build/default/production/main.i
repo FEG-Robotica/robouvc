@@ -5128,6 +5128,306 @@ extern __attribute__((nonreentrant)) void _delay3(unsigned char);
 # 9 "main.c" 2
 
 
+# 1 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\c99\\string.h" 1 3
+# 25 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\c99\\string.h" 3
+# 1 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\c99\\bits/alltypes.h" 1 3
+# 411 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\c99\\bits/alltypes.h" 3
+typedef struct __locale_struct * locale_t;
+# 25 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\c99\\string.h" 2 3
+
+
+void *memcpy (void *restrict, const void *restrict, size_t);
+void *memmove (void *, const void *, size_t);
+void *memset (void *, int, size_t);
+int memcmp (const void *, const void *, size_t);
+void *memchr (const void *, int, size_t);
+
+char *strcpy (char *restrict, const char *restrict);
+char *strncpy (char *restrict, const char *restrict, size_t);
+
+char *strcat (char *restrict, const char *restrict);
+char *strncat (char *restrict, const char *restrict, size_t);
+
+int strcmp (const char *, const char *);
+int strncmp (const char *, const char *, size_t);
+
+int strcoll (const char *, const char *);
+size_t strxfrm (char *restrict, const char *restrict, size_t);
+
+char *strchr (const char *, int);
+char *strrchr (const char *, int);
+
+size_t strcspn (const char *, const char *);
+size_t strspn (const char *, const char *);
+char *strpbrk (const char *, const char *);
+char *strstr (const char *, const char *);
+char *strtok (char *restrict, const char *restrict);
+
+size_t strlen (const char *);
+
+char *strerror (int);
+# 65 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\c99\\string.h" 3
+char *strtok_r (char *restrict, const char *restrict, char **restrict);
+int strerror_r (int, char *, size_t);
+char *stpcpy(char *restrict, const char *restrict);
+char *stpncpy(char *restrict, const char *restrict, size_t);
+size_t strnlen (const char *, size_t);
+char *strdup (const char *);
+char *strndup (const char *, size_t);
+char *strsignal(int);
+char *strerror_l (int, locale_t);
+int strcoll_l (const char *, const char *, locale_t);
+size_t strxfrm_l (char *restrict, const char *restrict, size_t, locale_t);
+
+
+
+
+void *memccpy (void *restrict, const void *restrict, int, size_t);
+# 11 "main.c" 2
+
+# 1 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\c99\\stdio.h" 1 3
+# 24 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\c99\\stdio.h" 3
+# 1 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\c99\\bits/alltypes.h" 1 3
+
+
+
+
+
+typedef void * va_list[1];
+
+
+
+
+typedef void * __isoc_va_list[1];
+# 137 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\c99\\bits/alltypes.h" 3
+typedef long ssize_t;
+# 246 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\c99\\bits/alltypes.h" 3
+typedef long long off_t;
+# 399 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\c99\\bits/alltypes.h" 3
+typedef struct _IO_FILE FILE;
+# 24 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\c99\\stdio.h" 2 3
+# 52 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\c99\\stdio.h" 3
+typedef union _G_fpos64_t {
+ char __opaque[16];
+ double __align;
+} fpos_t;
+
+extern FILE *const stdin;
+extern FILE *const stdout;
+extern FILE *const stderr;
+
+
+
+
+
+FILE *fopen(const char *restrict, const char *restrict);
+FILE *freopen(const char *restrict, const char *restrict, FILE *restrict);
+int fclose(FILE *);
+
+int remove(const char *);
+int rename(const char *, const char *);
+
+int feof(FILE *);
+int ferror(FILE *);
+int fflush(FILE *);
+void clearerr(FILE *);
+
+int fseek(FILE *, long, int);
+long ftell(FILE *);
+void rewind(FILE *);
+
+int fgetpos(FILE *restrict, fpos_t *restrict);
+int fsetpos(FILE *, const fpos_t *);
+
+size_t fread(void *restrict, size_t, size_t, FILE *restrict);
+size_t fwrite(const void *restrict, size_t, size_t, FILE *restrict);
+
+int fgetc(FILE *);
+int getc(FILE *);
+int getchar(void);
+int ungetc(int, FILE *);
+
+int fputc(int, FILE *);
+int putc(int, FILE *);
+int putchar(int);
+
+char *fgets(char *restrict, int, FILE *restrict);
+
+char *gets(char *);
+
+
+int fputs(const char *restrict, FILE *restrict);
+int puts(const char *);
+
+#pragma printf_check(printf) const
+#pragma printf_check(vprintf) const
+#pragma printf_check(sprintf) const
+#pragma printf_check(snprintf) const
+#pragma printf_check(vsprintf) const
+#pragma printf_check(vsnprintf) const
+
+int printf(const char *restrict, ...);
+int fprintf(FILE *restrict, const char *restrict, ...);
+int sprintf(char *restrict, const char *restrict, ...);
+int snprintf(char *restrict, size_t, const char *restrict, ...);
+
+int vprintf(const char *restrict, __isoc_va_list);
+int vfprintf(FILE *restrict, const char *restrict, __isoc_va_list);
+int vsprintf(char *restrict, const char *restrict, __isoc_va_list);
+int vsnprintf(char *restrict, size_t, const char *restrict, __isoc_va_list);
+
+int scanf(const char *restrict, ...);
+int fscanf(FILE *restrict, const char *restrict, ...);
+int sscanf(const char *restrict, const char *restrict, ...);
+int vscanf(const char *restrict, __isoc_va_list);
+int vfscanf(FILE *restrict, const char *restrict, __isoc_va_list);
+int vsscanf(const char *restrict, const char *restrict, __isoc_va_list);
+
+void perror(const char *);
+
+int setvbuf(FILE *restrict, char *restrict, int, size_t);
+void setbuf(FILE *restrict, char *restrict);
+
+char *tmpnam(char *);
+FILE *tmpfile(void);
+
+
+
+
+FILE *fmemopen(void *restrict, size_t, const char *restrict);
+FILE *open_memstream(char **, size_t *);
+FILE *fdopen(int, const char *);
+FILE *popen(const char *, const char *);
+int pclose(FILE *);
+int fileno(FILE *);
+int fseeko(FILE *, off_t, int);
+off_t ftello(FILE *);
+int dprintf(int, const char *restrict, ...);
+int vdprintf(int, const char *restrict, __isoc_va_list);
+void flockfile(FILE *);
+int ftrylockfile(FILE *);
+void funlockfile(FILE *);
+int getc_unlocked(FILE *);
+int getchar_unlocked(void);
+int putc_unlocked(int, FILE *);
+int putchar_unlocked(int);
+ssize_t getdelim(char **restrict, size_t *restrict, int, FILE *restrict);
+ssize_t getline(char **restrict, size_t *restrict, FILE *restrict);
+int renameat(int, const char *, int, const char *);
+char *ctermid(char *);
+
+
+
+
+
+
+
+char *tempnam(const char *, const char *);
+# 12 "main.c" 2
+
+
+# 1 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\c99\\time.h" 1 3
+# 33 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\c99\\time.h" 3
+# 1 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\c99\\bits/alltypes.h" 1 3
+# 76 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\c99\\bits/alltypes.h" 3
+typedef long long time_t;
+# 293 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\c99\\bits/alltypes.h" 3
+typedef void * timer_t;
+
+
+
+
+typedef int clockid_t;
+
+
+
+
+typedef long clock_t;
+# 313 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\c99\\bits/alltypes.h" 3
+struct timespec { time_t tv_sec; long tv_nsec; };
+
+
+
+
+
+typedef int pid_t;
+# 33 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\c99\\time.h" 2 3
+
+
+
+
+
+
+
+struct tm {
+ int tm_sec;
+ int tm_min;
+ int tm_hour;
+ int tm_mday;
+ int tm_mon;
+ int tm_year;
+ int tm_wday;
+ int tm_yday;
+ int tm_isdst;
+ long __tm_gmtoff;
+ const char *__tm_zone;
+};
+
+clock_t clock (void);
+time_t time (time_t *);
+double difftime (time_t, time_t);
+time_t mktime (struct tm *);
+size_t strftime (char *restrict, size_t, const char *restrict, const struct tm *restrict);
+struct tm *gmtime (const time_t *);
+struct tm *localtime (const time_t *);
+char *asctime (const struct tm *);
+char *ctime (const time_t *);
+int timespec_get(struct timespec *, int);
+# 73 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\c99\\time.h" 3
+size_t strftime_l (char * restrict, size_t, const char * restrict, const struct tm * restrict, locale_t);
+
+struct tm *gmtime_r (const time_t *restrict, struct tm *restrict);
+struct tm *localtime_r (const time_t *restrict, struct tm *restrict);
+char *asctime_r (const struct tm *restrict, char *restrict);
+char *ctime_r (const time_t *, char *);
+
+void tzset (void);
+
+struct itimerspec {
+ struct timespec it_interval;
+ struct timespec it_value;
+};
+# 102 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\c99\\time.h" 3
+int nanosleep (const struct timespec *, struct timespec *);
+int clock_getres (clockid_t, struct timespec *);
+int clock_gettime (clockid_t, struct timespec *);
+int clock_settime (clockid_t, const struct timespec *);
+int clock_nanosleep (clockid_t, int, const struct timespec *, struct timespec *);
+int clock_getcpuclockid (pid_t, clockid_t *);
+
+struct sigevent;
+int timer_create (clockid_t, struct sigevent *restrict, timer_t *restrict);
+int timer_delete (timer_t);
+int timer_settime (timer_t, int, const struct itimerspec *restrict, struct itimerspec *restrict);
+int timer_gettime (timer_t, struct itimerspec *);
+int timer_getoverrun (timer_t);
+
+extern char *tzname[2];
+
+
+
+
+
+char *strptime (const char *restrict, const char *restrict, struct tm *restrict);
+extern int daylight;
+extern long timezone;
+extern int getdate_err;
+struct tm *getdate (const char *);
+# 14 "main.c" 2
+
+# 1 "./defines.h" 1
+# 15 "main.c" 2
+
 # 1 "./PWM.h" 1
 
 
@@ -5174,7 +5474,7 @@ void setDutyPWM6(unsigned int porcVelo) {
     PDC3L = velo & 0b11111111;
     PDC3H = (velo >> 8) & 0b11111111;
 }
-# 11 "main.c" 2
+# 16 "main.c" 2
 
 # 1 "./bluetooth.h" 1
 
@@ -5183,7 +5483,7 @@ void setDutyPWM6(unsigned int porcVelo) {
 
 
 
-
+char* comando = "";
 
 void configUSART() {
     SPBRG = 0x81;
@@ -5203,6 +5503,10 @@ void configUSART() {
 
     PIR1bits.RCIF = 0;
     PIE1bits.RCIE = 1;
+}
+
+void setEstrategia(char* c) {
+    comando = c;
 }
 
 char UARTReadChar() {
@@ -5230,7 +5534,7 @@ void UARTSendString(char* str, const int max_length) {
 
     }
 }
-# 12 "main.c" 2
+# 17 "main.c" 2
 
 # 1 "./ADC.h" 1
 
@@ -5313,10 +5617,7 @@ int getAD_AN(int porta) {
     return (int) ANread;
 # 90 "./ADC.h"
 }
-# 13 "main.c" 2
-
-# 1 "./defines.h" 1
-# 14 "main.c" 2
+# 18 "main.c" 2
 
 # 1 "./geral.h" 1
 
@@ -5328,6 +5629,8 @@ int getAD_AN(int porta) {
 
 # 1 "./defines.h" 1
 # 8 "./geral.h" 2
+
+
 
 
 void configBits() {
@@ -5395,6 +5698,39 @@ int bitExtract(int numero, int k, int p) {
     return (((1 << k) - 1) & (numero >> p));
 }
 
+int myStrncmp(const char *str1, const char *str2) {
+    if (strncmp(str1, str2, strlen(str1)) == 0) {
+        return 1;
+    }
+    else {
+        return 0;
+    }
+}
+
+void lampadasEstado(int lampada){
+
+    switch(lampada){
+        case 0:
+            RC0 = ~RC0;
+            break;
+        case 1:
+            RC1 = ~RC1;
+            break;
+        case 2:
+            RC2 = ~RC2;
+            break;
+        case 3:
+            RC3 = ~RC3;
+            break;
+        default:
+            RC0 = ~RC0;
+            RC1 = ~RC1;
+            RC2 = ~RC2;
+            RC3 = ~RC3;
+            break;
+    }
+}
+
 
 
 
@@ -5414,7 +5750,7 @@ void testeMotores(){
         setDutyPWM0(i);
         _delay((unsigned long)((20)*(20000000/4000.0)));
     }
-    UARTSendString("PWMA Teste finalizado",16);
+    UARTSendString("PWMA Teste Fim",16);
     setDutyPWM0(0);
 
 
@@ -5527,14 +5863,46 @@ void testeAD(){
 
     _delay((unsigned long)((500)*(20000000/4000.0)));
 }
-# 15 "main.c" 2
+# 19 "main.c" 2
+
+# 1 "./Timer0.h" 1
+
+
+
+
+
+
+
+unsigned long millis = 0;
+
+void initTimer0(int tempoInicial){
+    T0CON = 0b11010100;
+    TMR0L = tempoInicial;
+}
+
+void desligaTimer0(){
+    TMR0ON = 0;
+}
+
+void ligaTimer0(){
+    TMR0ON = 1;
+}
+
+void resetaMillis(){
+    millis = 0;
+}
+# 20 "main.c" 2
 
 
 void __attribute__((picinterrupt(("")))) ISR(void) {
 
+    if(TMR0IF){
+        TMR0L = 0b01100011;
+        millis++;
+        TMR0IF = 0;
+    }
 
     if (PIR1bits.RCIF) {
-
 
         if (RCSTAbits.FERR || RCSTAbits.OERR) {
             RCSTAbits.OERR = 1;
@@ -5542,9 +5910,39 @@ void __attribute__((picinterrupt(("")))) ISR(void) {
             RCSTAbits.CREN = 1;
         }
 
+        if (UARTReadChar() == '0') {
+            desligaTimer0();
+            UARTSendString("Timer0 off", 16);
+        }
+
+        if (UARTReadChar() == '1') {
+            ligaTimer0();
+            UARTSendString("Timer0 on", 16);
+        }
 
         if (UARTReadChar() == 'f') {
-            UARTSendString("frente", 16);
+            setEstrategia("lampadasON");
+            UARTSendString("Alterando Lampadas", 16);
+        }
+
+        if (UARTReadChar() == 'a') {
+            setEstrategia("lampada1");
+            UARTSendString("Alterando 1", 16);
+        }
+
+        if (UARTReadChar() == 'b') {
+            setEstrategia("lampada2");
+            UARTSendString("Alterando 2", 16);
+        }
+
+        if (UARTReadChar() == 'c') {
+            setEstrategia("lampada3");
+            UARTSendString("Alterando 3", 16);
+        }
+
+        if (UARTReadChar() == 'd') {
+            setEstrategia("lampada4");
+            UARTSendString("Alterando 4", 16);
         }
 
         PIR1bits.RCIF = 0;
@@ -5569,22 +5967,30 @@ void main(void) {
     TRISE = 0b00000111;
 
     PORTB = 0b00000000;
-    PORTC = 0b00000000;
+    PORTC = 0b11111111;
     PORTD = 0b00000000;
     PORTE = 0b00000000;
 
     INTCONbits.GIE = 1;
     INTCONbits.PEIE = 1;
+    INTCONbits.TMR0IE = 1;
 
     configBits();
     configUSART();
     configPWM();
     configAD();
 
+    initTimer0(99);
+
     int AN0,AN1,AN2,AN3,AN4,AN5,AN6;
 
     while(1){
-        testeMotores();
+
+        if(millis > 1000){
+            RC0 = ~RC0;
+            millis = 0;
+        }
+# 144 "main.c"
     }
 
     return;

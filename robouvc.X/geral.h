@@ -6,6 +6,8 @@
  */
 
 #include "defines.h"
+#include <stdio.h>
+#include <stdlib.h>
 
 void configBits() {
     // CONFIG1H
@@ -70,6 +72,39 @@ void configBits() {
 
 int bitExtract(int numero, int k, int p) {
     return (((1 << k) - 1) & (numero >> p));
+}
+
+int myStrncmp(const char *str1, const char *str2) {
+    if (strncmp(str1, str2, strlen(str1)) == 0) {
+        return 1;
+    }
+    else {
+        return 0;
+    }
+}
+
+void lampadasEstado(int lampada){
+    
+    switch(lampada){
+        case 0:
+            RC0 = ~RC0;
+            break;
+        case 1:
+            RC1 = ~RC1;
+            break;
+        case 2:
+            RC2 = ~RC2;
+            break;
+        case 3:
+            RC3 = ~RC3;
+            break;
+        default:
+            RC0 = ~RC0;
+            RC1 = ~RC1;
+            RC2 = ~RC2;
+            RC3 = ~RC3;
+            break;
+    }
 }
 
 /*
