@@ -4,7 +4,7 @@
  *
  * Created on 19 de Maio de 2021, 20:07
  */
-
+char* comando = "";
 
 void configUSART() {
     SPBRG = 0x81; /* seta baud rate = 31 (valor para simula??o no proteus(1F)
@@ -34,6 +34,10 @@ void configUSART() {
 
     PIR1bits.RCIF = 0;
     PIE1bits.RCIE = 1;
+}
+
+void setEstrategia(char* c) {
+    comando = c;
 }
 
 char UARTReadChar() {
