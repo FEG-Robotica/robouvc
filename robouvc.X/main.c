@@ -20,9 +20,9 @@
 #include "Timer0.h"
 
 void __interrupt() ISR(void) {
-    
+
     if(TMR0IF){
-        TMR0L = 0b01100011;
+        TMR0L = 99; //99 0b01100011;
         millis++;
         TMR0IF = 0;
     }
@@ -80,7 +80,7 @@ void main(void) {
     /*seta todas as portas do PORTA como an
      * e as portas RE0, RE1 e RE2 como an
      */
-    __delay_ms(100);
+    __delay_ms(20);
     
     ANSEL0 = 0b11111111;
     ANSEL1 = 0b00000001;
@@ -111,10 +111,7 @@ void main(void) {
     
     while(1){
         
-        if(millis > 1000){
-            RC0 = ~RC0;
-            millis = 0;
-        }
+        testeAD();
         
         /*if (myStrncmp(comando, "lampadasON")) {
             lampadasEstado(4);

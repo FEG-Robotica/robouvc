@@ -203,6 +203,7 @@ void testeLampadas(){
 }
 
 void testeAD(){
+    
     UARTSendString("AN0: ",MAX_LENGTH_UART);
     UARTSendString(valorConvUART(getAD_AN(0)), MAX_LENGTH_UART);
     UARTSendString("\r",MAX_LENGTH_UART);

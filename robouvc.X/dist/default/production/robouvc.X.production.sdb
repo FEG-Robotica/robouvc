@@ -19,14 +19,19 @@
 [v _UARTReadChar UARTReadChar `(uc  1 e 1 0 ]
 "48
 [v _UARTWriteTest UARTWriteTest `(v  1 e 1 0 ]
+[v i2_UARTWriteTest UARTWriteTest `(v  1 e 1 0 ]
 "52
 [v _UARTSendChar UARTSendChar `(v  1 e 1 0 ]
+[v i2_UARTSendChar UARTSendChar `(v  1 e 1 0 ]
 "57
 [v _UARTSendString UARTSendString `(v  1 e 1 0 ]
+[v i2_UARTSendString UARTSendString `(v  1 e 1 0 ]
 "12 D:\usuarios\Hiro\Documents\Robótica\RoboUVC\robouvc\robouvc.X/geral.h
 [v _configBits configBits `(v  1 e 1 0 ]
 "73
 [v _bitExtract bitExtract `(i  1 e 2 0 ]
+"205
+[v _testeAD testeAD `(v  1 e 1 0 ]
 "9 D:\usuarios\Hiro\Documents\Robótica\RoboUVC\robouvc\robouvc.X/PWM.h
 [v _configPWM configPWM `(v  1 e 1 0 ]
 "23
@@ -39,9 +44,9 @@
 [v _setDutyPWM6 setDutyPWM6 `(v  1 e 1 0 ]
 "10 D:\usuarios\Hiro\Documents\Robótica\RoboUVC\robouvc\robouvc.X/Timer0.h
 [v _initTimer0 initTimer0 `(v  1 e 1 0 ]
-"15
+"17
 [v _desligaTimer0 desligaTimer0 `(v  1 e 1 0 ]
-"19
+"21
 [v _ligaTimer0 ligaTimer0 `(v  1 e 1 0 ]
 "7 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\awdiv.c
 [v ___awdiv __awdiv `(i  1 e 2 0 ]
@@ -427,13 +432,152 @@
 "78 D:\usuarios\Hiro\Documents\Robótica\RoboUVC\robouvc\robouvc.X\main.c
 [v _main main `(v  1 e 1 0 ]
 {
-"147
+"144
+} 0
+"205 D:\usuarios\Hiro\Documents\Robótica\RoboUVC\robouvc\robouvc.X/geral.h
+[v _testeAD testeAD `(v  1 e 1 0 ]
+{
+"242
+} 0
+"32 D:\usuarios\Hiro\Documents\Robótica\RoboUVC\robouvc\robouvc.X/ADC.h
+[v _valorConvUART valorConvUART `(*.39Cuc  1 e 2 0 ]
+{
+"38
+[v valorConvUART@string string `[5]uc  1 a 5 12 ]
+"36
+[v valorConvUART@unidade unidade `i  1 a 2 8 ]
+"35
+[v valorConvUART@dezena dezena `i  1 a 2 6 ]
+"34
+[v valorConvUART@centena centena `i  1 a 2 4 ]
+"32
+[v valorConvUART@valor valor `i  1 p 2 64 ]
+"46
+} 0
+"7 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\awmod.c
+[v ___awmod __awmod `(i  1 e 2 0 ]
+{
+"10
+[v ___awmod@sign sign `uc  1 a 1 28 ]
+[v ___awmod@counter counter `uc  1 a 1 27 ]
+"7
+[v ___awmod@dividend dividend `i  1 p 2 23 ]
+[v ___awmod@divisor divisor `i  1 p 2 25 ]
+"34
+} 0
+"7 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\awdiv.c
+[v ___awdiv __awdiv `(i  1 e 2 0 ]
+{
+"10
+[v ___awdiv@quotient quotient `i  1 a 2 21 ]
+"11
+[v ___awdiv@sign sign `uc  1 a 1 20 ]
+[v ___awdiv@counter counter `uc  1 a 1 19 ]
+"7
+[v ___awdiv@dividend dividend `i  1 p 2 15 ]
+[v ___awdiv@divisor divisor `i  1 p 2 17 ]
+"41
+} 0
+"62 D:\usuarios\Hiro\Documents\Robótica\RoboUVC\robouvc\robouvc.X/ADC.h
+[v _getAD_AN getAD_AN `(i  1 e 2 0 ]
+{
+"75
+[v getAD_AN@ANread ANread `f  1 a 4 0 ]
+"62
+[v getAD_AN@porta porta `i  1 p 2 62 ]
+"90
+} 0
+"51
+[v _readAD_AN readAD_AN `(f  1 e 4 0 ]
+{
+"60
+} 0
+"10 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\xxtofl.c
+[v ___xxtofl __xxtofl `(d  1 e 4 0 ]
+{
+[v ___xxtofl@sign sign `uc  1 a 1 wreg ]
+"13
+[v ___xxtofl@arg arg `ul  1 a 4 25 ]
+"12
+[v ___xxtofl@exp exp `uc  1 a 1 24 ]
+"10
+[v ___xxtofl@sign sign `uc  1 a 1 wreg ]
+[v ___xxtofl@val val `l  1 p 4 15 ]
+"15
+[v ___xxtofl@sign sign `uc  1 a 1 23 ]
+"44
+} 0
+"8 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcmul.c
+[v ___flmul __flmul `(d  1 e 4 0 ]
+{
+[s S1095 . 4 `uc 1 a 1 0 `uc 1 b 1 1 `uc 1 c 1 2 `uc 1 d 1 3 ]
+"13
+[s S1100 . 4 `s 1 wordA 2 0 `s 1 wordB 2 2 ]
+[u S1103 . 4 `l 1 i 4 0 `d 1 f 4 0 `S1095 1 fAsBytes 4 0 `S1100 1 fAsWords 4 0 ]
+[v ___flmul@prod prod `S1103  1 a 4 48 ]
+"12
+[v ___flmul@grs grs `ul  1 a 4 43 ]
+[s S1171 . 2 `uc 1 a 1 0 `uc 1 b 1 1 ]
+"14
+[u S1174 . 2 `s 1 i 2 0 `us 1 n 2 0 `S1171 1 nAsBytes 2 0 ]
+[v ___flmul@temp temp `S1174  1 a 2 52 ]
+"10
+[v ___flmul@bexp bexp `uc  1 a 1 47 ]
+"11
+[v ___flmul@aexp aexp `uc  1 a 1 42 ]
+"9
+[v ___flmul@sign sign `uc  1 a 1 41 ]
+"8
+[v ___flmul@b b `d  1 p 4 29 ]
+[v ___flmul@a a `d  1 p 4 33 ]
+"205
+} 0
+"73 D:\usuarios\Hiro\Documents\Robótica\RoboUVC\robouvc\robouvc.X/geral.h
+[v _bitExtract bitExtract `(i  1 e 2 0 ]
+{
+[v bitExtract@numero numero `i  1 p 2 15 ]
+[v bitExtract@k k `i  1 p 2 17 ]
+[v bitExtract@p p `i  1 p 2 19 ]
+"75
+} 0
+"43 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\fltol.c
+[v ___fltol __fltol `(l  1 e 4 0 ]
+{
+"45
+[v ___fltol@exp1 exp1 `uc  1 a 1 24 ]
+[v ___fltol@sign1 sign1 `uc  1 a 1 23 ]
+"43
+[v ___fltol@f1 f1 `d  1 p 4 15 ]
+"70
+} 0
+"57 D:\usuarios\Hiro\Documents\Robótica\RoboUVC\robouvc\robouvc.X/bluetooth.h
+[v _UARTSendString UARTSendString `(v  1 e 1 0 ]
+{
+"58
+[v UARTSendString@i i `i  1 a 2 23 ]
+"57
+[v UARTSendString@str str `*.35uc  1 p 2 17 ]
+[v UARTSendString@max_length max_length `Ci  1 p 2 19 ]
+"67
+} 0
+"52
+[v _UARTSendChar UARTSendChar `(v  1 e 1 0 ]
+{
+[v UARTSendChar@c c `uc  1 a 1 wreg ]
+[v UARTSendChar@c c `uc  1 a 1 wreg ]
+[v UARTSendChar@c c `uc  1 a 1 15 ]
+"55
+} 0
+"48
+[v _UARTWriteTest UARTWriteTest `(v  1 e 1 0 ]
+{
+"50
 } 0
 "10 D:\usuarios\Hiro\Documents\Robótica\RoboUVC\robouvc\robouvc.X/Timer0.h
 [v _initTimer0 initTimer0 `(v  1 e 1 0 ]
 {
 [v initTimer0@tempoInicial tempoInicial `i  1 p 2 15 ]
-"13
+"15
 } 0
 "9 D:\usuarios\Hiro\Documents\Robótica\RoboUVC\robouvc\robouvc.X/bluetooth.h
 [v _configUSART configUSART `(v  1 e 1 0 ]
@@ -460,46 +604,44 @@
 {
 "75
 } 0
-"39 D:\usuarios\Hiro\Documents\Robótica\RoboUVC\robouvc\robouvc.X/bluetooth.h
+"57 D:\usuarios\Hiro\Documents\Robótica\RoboUVC\robouvc\robouvc.X/bluetooth.h
+[v i2_UARTSendString UARTSendString `(v  1 e 1 0 ]
+{
+[v i2UARTSendString@i UARTSendString `i  1 a 2 7 ]
+[v i2UARTSendString@str str `*.35uc  1 p 2 1 ]
+[v i2UARTSendString@max_length max_length `Ci  1 p 2 3 ]
+"67
+} 0
+"52
+[v i2_UARTSendChar UARTSendChar `(v  1 e 1 0 ]
+{
+[v i2UARTSendChar@c c `uc  1 a 1 wreg ]
+[v i2UARTSendChar@c c `uc  1 a 1 wreg ]
+[v i2UARTSendChar@c c `uc  1 a 1 0 ]
+"55
+} 0
+"48
+[v i2_UARTWriteTest UARTWriteTest `(v  1 e 1 0 ]
+{
+"50
+} 0
+"39
 [v _setEstrategia setEstrategia `(v  1 e 1 0 ]
 {
 [v setEstrategia@c c `*.25uc  1 p 2 0 ]
 "41
 } 0
-"19 D:\usuarios\Hiro\Documents\Robótica\RoboUVC\robouvc\robouvc.X/Timer0.h
+"21 D:\usuarios\Hiro\Documents\Robótica\RoboUVC\robouvc\robouvc.X/Timer0.h
 [v _ligaTimer0 ligaTimer0 `(v  1 e 1 0 ]
 {
-"21
+"23
 } 0
-"15
+"17
 [v _desligaTimer0 desligaTimer0 `(v  1 e 1 0 ]
 {
-"17
+"19
 } 0
-"57 D:\usuarios\Hiro\Documents\Robótica\RoboUVC\robouvc\robouvc.X/bluetooth.h
-[v _UARTSendString UARTSendString `(v  1 e 1 0 ]
-{
-"58
-[v UARTSendString@i i `i  1 a 2 7 ]
-"57
-[v UARTSendString@str str `*.35uc  1 p 2 1 ]
-[v UARTSendString@max_length max_length `Ci  1 p 2 3 ]
-"67
-} 0
-"52
-[v _UARTSendChar UARTSendChar `(v  1 e 1 0 ]
-{
-[v UARTSendChar@c c `uc  1 a 1 wreg ]
-[v UARTSendChar@c c `uc  1 a 1 wreg ]
-[v UARTSendChar@c c `uc  1 a 1 0 ]
-"55
-} 0
-"48
-[v _UARTWriteTest UARTWriteTest `(v  1 e 1 0 ]
-{
-"50
-} 0
-"43
+"43 D:\usuarios\Hiro\Documents\Robótica\RoboUVC\robouvc\robouvc.X/bluetooth.h
 [v _UARTReadChar UARTReadChar `(uc  1 e 1 0 ]
 {
 "44

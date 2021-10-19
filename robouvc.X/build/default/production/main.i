@@ -5437,7 +5437,7 @@ struct tm *getdate (const char *);
 
 
 
-void configPWM(){
+void configPWM() {
 
     PTCON0 = 0b00000000;
     PTCON1 = 0b10000000;
@@ -5827,6 +5827,7 @@ void testeLampadas(){
 }
 
 void testeAD(){
+
     UARTSendString("AN0: ",16);
     UARTSendString(valorConvUART(getAD_AN(0)), 16);
     UARTSendString("\r",16);
@@ -5876,6 +5877,8 @@ void testeAD(){
 unsigned long millis = 0;
 
 void initTimer0(int tempoInicial){
+
+
     T0CON = 0b11010100;
     TMR0L = tempoInicial;
 }
@@ -5897,7 +5900,7 @@ void resetaMillis(){
 void __attribute__((picinterrupt(("")))) ISR(void) {
 
     if(TMR0IF){
-        TMR0L = 0b01100011;
+        TMR0L = 99;
         millis++;
         TMR0IF = 0;
     }
@@ -5955,7 +5958,7 @@ void main(void) {
 
 
 
-    _delay((unsigned long)((100)*(20000000/4000.0)));
+    _delay((unsigned long)((20)*(20000000/4000.0)));
 
     ANSEL0 = 0b11111111;
     ANSEL1 = 0b00000001;
@@ -5986,11 +5989,8 @@ void main(void) {
 
     while(1){
 
-        if(millis > 1000){
-            RC0 = ~RC0;
-            millis = 0;
-        }
-# 144 "main.c"
+        testeAD();
+# 141 "main.c"
     }
 
     return;
