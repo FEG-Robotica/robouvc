@@ -15,7 +15,7 @@
      <ITEM name="Version">100</ITEM>
     </PROPERTIES>
    </POPUP>
-   <POPUP w="350" x="88" flags="00000032" y="149" h="200" pid="1" iid="-1">
+   <POPUP w="350" x="88" flags="00000033" y="149" h="200" pid="1" iid="-1">
     <PROPERTIES>
      <ITEM name="Address Column Width">83</ITEM>
      <ITEM name="AutoResize">No</ITEM>
@@ -35,7 +35,7 @@
    <POPUP w="695" x="118" flags="00000000" y="180" h="453" pid="0" iid="10">
     <PROPERTIES/>
    </POPUP>
-   <POPUP w="450" x="791" flags="00000022" y="138" h="250" pid="0" iid="24">
+   <POPUP w="450" x="791" flags="00008023" y="138" h="250" pid="0" iid="24">
     <PROPERTIES>
      <ITEM name="AutoEcho">0</ITEM>
      <ITEM name="HexMode">0</ITEM>

@@ -927,7 +927,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f4431.h: 7616: __asm("TOSU equ 0FFFh");
 [; <" TOSU equ 0FFFh ;# ">
 "9 ./PWM.h
-[; ;./PWM.h: 9: void configPWM(){
+[; ;./PWM.h: 9: void configPWM() {
 [v _configPWM `(v ~T0 @X0 1 ef ]
 {
 [e :U _configPWM ]
@@ -1678,20 +1678,20 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;./geral.h: 134: void testeAD(){
 [e ( _setDutyPWM6 (1 -> _i `ui ]
 "135
-[; ;./geral.h: 135:     UARTSendString("AN0: ",16);
+[; ;./geral.h: 135: 
 [e ( __delay (1 -> * -> -> 20 `i `d / -> -> 20000000 `l `d .4000.0 `ul ]
 "136
-[; ;./geral.h: 136:     UARTSendString(valorConvUART(getAD_AN(0)), 16);
+[; ;./geral.h: 136:     UARTSendString("AN0: ",16);
 }
 [e ++ _i -> 1 `i ]
 [e $ <= _i -> 100 `i 363  ]
 [e :U 364 ]
 }
 "137
-[; ;./geral.h: 137:     UARTSendString("\r",16);
+[; ;./geral.h: 137:     UARTSendString(valorConvUART(getAD_AN(0)), 16);
 [e ( _setDutyPWM6 (1 -> -> 0 `i `ui ]
 "140
-[; ;./geral.h: 140:     UARTSendString(valorConvUART(getAD_AN(1)), 16);
+[; ;./geral.h: 140:     UARTSendString("AN1: ",16);
 {
 [e = _i -> 0 `i ]
 [e $ <= _i -> 100 `i 366  ]
@@ -1699,23 +1699,23 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e :U 366 ]
 {
 "141
-[; ;./geral.h: 141:     UARTSendString("\r",16);
+[; ;./geral.h: 141:     UARTSendString(valorConvUART(getAD_AN(1)), 16);
 [e ( _setDutyPWM2 (1 -> _i `ui ]
 "142
-[; ;./geral.h: 142: 
+[; ;./geral.h: 142:     UARTSendString("\r",16);
 [e ( __delay (1 -> * -> -> 20 `i `d / -> -> 20000000 `l `d .4000.0 `ul ]
 "143
-[; ;./geral.h: 143:     UARTSendString("AN2: ",16);
+[; ;./geral.h: 143: 
 }
 [e ++ _i -> 1 `i ]
 [e $ <= _i -> 100 `i 366  ]
 [e :U 367 ]
 }
 "144
-[; ;./geral.h: 144:     UARTSendString(valorConvUART(getAD_AN(2)), 16);
+[; ;./geral.h: 144:     UARTSendString("AN2: ",16);
 [e ( _setDutyPWM2 (1 -> -> 0 `i `ui ]
 "147
-[; ;./geral.h: 147:     UARTSendString("AN3: ",16);
+[; ;./geral.h: 147: 
 {
 [e = _i -> 0 `i ]
 [e $ <= _i -> 100 `i 369  ]
@@ -1723,23 +1723,23 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e :U 369 ]
 {
 "148
-[; ;./geral.h: 148:     UARTSendString(valorConvUART(getAD_AN(3)), 16);
+[; ;./geral.h: 148:     UARTSendString("AN3: ",16);
 [e ( _setDutyPWM2 (1 -> _i `ui ]
 "149
-[; ;./geral.h: 149:     UARTSendString("\r",16);
+[; ;./geral.h: 149:     UARTSendString(valorConvUART(getAD_AN(3)), 16);
 [e ( __delay (1 -> * -> -> 20 `i `d / -> -> 20000000 `l `d .4000.0 `ul ]
 "150
-[; ;./geral.h: 150: 
+[; ;./geral.h: 150:     UARTSendString("\r",16);
 }
 [e ++ _i -> 1 `i ]
 [e $ <= _i -> 100 `i 369  ]
 [e :U 370 ]
 }
 "151
-[; ;./geral.h: 151:     UARTSendString("AN4: ",16);
+[; ;./geral.h: 151: 
 [e ( _setDutyPWM4 (1 -> -> 0 `i `ui ]
 "154
-[; ;./geral.h: 154: 
+[; ;./geral.h: 154:     UARTSendString("\r",16);
 {
 [e = _i -> 0 `i ]
 [e $ <= _i -> 100 `i 372  ]
@@ -1747,29 +1747,29 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e :U 372 ]
 {
 "155
-[; ;./geral.h: 155:     UARTSendString("AN5: ",16);
+[; ;./geral.h: 155: 
 [e ( _setDutyPWM0 (1 -> _i `ui ]
 "156
-[; ;./geral.h: 156:     UARTSendString(valorConvUART(getAD_AN(5)), 16);
+[; ;./geral.h: 156:     UARTSendString("AN5: ",16);
 [e ( _setDutyPWM2 (1 -> _i `ui ]
 "157
-[; ;./geral.h: 157:     UARTSendString("\r",16);
+[; ;./geral.h: 157:     UARTSendString(valorConvUART(getAD_AN(5)), 16);
 [e ( __delay (1 -> * -> -> 20 `i `d / -> -> 20000000 `l `d .4000.0 `ul ]
 "158
-[; ;./geral.h: 158: 
+[; ;./geral.h: 158:     UARTSendString("\r",16);
 }
 [e ++ _i -> 1 `i ]
 [e $ <= _i -> 100 `i 372  ]
 [e :U 373 ]
 }
 "159
-[; ;./geral.h: 159:     UARTSendString("AN6: ",16);
+[; ;./geral.h: 159: 
 [e ( _setDutyPWM0 (1 -> -> 0 `i `ui ]
 "160
-[; ;./geral.h: 160:     UARTSendString(valorConvUART(getAD_AN(6)), 16);
+[; ;./geral.h: 160:     UARTSendString("AN6: ",16);
 [e ( _setDutyPWM2 (1 -> -> 0 `i `ui ]
 "163
-[; ;./geral.h: 163:     UARTSendString("AN7: ",16);
+[; ;./geral.h: 163: 
 {
 [e = _i -> 0 `i ]
 [e $ <= _i -> 100 `i 375  ]
@@ -1777,26 +1777,26 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e :U 375 ]
 {
 "164
-[; ;./geral.h: 164:     UARTSendString(valorConvUART(getAD_AN(7)), 16);
+[; ;./geral.h: 164:     UARTSendString("AN7: ",16);
 [e ( _setDutyPWM0 (1 -> _i `ui ]
 "165
-[; ;./geral.h: 165:     UARTSendString("\r",16);
+[; ;./geral.h: 165:     UARTSendString(valorConvUART(getAD_AN(7)), 16);
 [e ( _setDutyPWM4 (1 -> _i `ui ]
 "166
-[; ;./geral.h: 166:     UARTSendString("----------",16);
+[; ;./geral.h: 166:     UARTSendString("\r",16);
 [e ( __delay (1 -> * -> -> 20 `i `d / -> -> 20000000 `l `d .4000.0 `ul ]
 "167
-[; ;./geral.h: 167:     UARTSendString("\r",16);
+[; ;./geral.h: 167:     UARTSendString("----------",16);
 }
 [e ++ _i -> 1 `i ]
 [e $ <= _i -> 100 `i 375  ]
 [e :U 376 ]
 }
 "168
-[; ;./geral.h: 168: 
+[; ;./geral.h: 168:     UARTSendString("\r",16);
 [e ( _setDutyPWM0 (1 -> -> 0 `i `ui ]
 "169
-[; ;./geral.h: 169:     _delay((unsigned long)((500)*(20000000/4000.0)));
+[; ;./geral.h: 169: 
 [e ( _setDutyPWM4 (1 -> -> 0 `i `ui ]
 "172
 {
@@ -1885,61 +1885,61 @@ Version 4.0 HI-TECH Software Intermediate Code
 {
 [e :U _testeAD ]
 [f ]
-"206
-[e ( _UARTSendString (2 , :s 4C -> 16 `i ]
 "207
-[e ( _UARTSendString (2 , -> ( _valorConvUART (1 ( _getAD_AN (1 -> 0 `i `*uc -> 16 `i ]
+[e ( _UARTSendString (2 , :s 4C -> 16 `i ]
 "208
+[e ( _UARTSendString (2 , -> ( _valorConvUART (1 ( _getAD_AN (1 -> 0 `i `*uc -> 16 `i ]
+"209
 [e ( _UARTSendString (2 , :s 5C -> 16 `i ]
-"210
-[e ( _UARTSendString (2 , :s 6C -> 16 `i ]
 "211
-[e ( _UARTSendString (2 , -> ( _valorConvUART (1 ( _getAD_AN (1 -> 1 `i `*uc -> 16 `i ]
+[e ( _UARTSendString (2 , :s 6C -> 16 `i ]
 "212
+[e ( _UARTSendString (2 , -> ( _valorConvUART (1 ( _getAD_AN (1 -> 1 `i `*uc -> 16 `i ]
+"213
 [e ( _UARTSendString (2 , :s 7C -> 16 `i ]
-"214
-[e ( _UARTSendString (2 , :s 8C -> 16 `i ]
 "215
-[e ( _UARTSendString (2 , -> ( _valorConvUART (1 ( _getAD_AN (1 -> 2 `i `*uc -> 16 `i ]
+[e ( _UARTSendString (2 , :s 8C -> 16 `i ]
 "216
+[e ( _UARTSendString (2 , -> ( _valorConvUART (1 ( _getAD_AN (1 -> 2 `i `*uc -> 16 `i ]
+"217
 [e ( _UARTSendString (2 , :s 9C -> 16 `i ]
-"218
-[e ( _UARTSendString (2 , :s 10C -> 16 `i ]
 "219
-[e ( _UARTSendString (2 , -> ( _valorConvUART (1 ( _getAD_AN (1 -> 3 `i `*uc -> 16 `i ]
+[e ( _UARTSendString (2 , :s 10C -> 16 `i ]
 "220
+[e ( _UARTSendString (2 , -> ( _valorConvUART (1 ( _getAD_AN (1 -> 3 `i `*uc -> 16 `i ]
+"221
 [e ( _UARTSendString (2 , :s 11C -> 16 `i ]
-"222
-[e ( _UARTSendString (2 , :s 12C -> 16 `i ]
 "223
-[e ( _UARTSendString (2 , -> ( _valorConvUART (1 ( _getAD_AN (1 -> 4 `i `*uc -> 16 `i ]
+[e ( _UARTSendString (2 , :s 12C -> 16 `i ]
 "224
+[e ( _UARTSendString (2 , -> ( _valorConvUART (1 ( _getAD_AN (1 -> 4 `i `*uc -> 16 `i ]
+"225
 [e ( _UARTSendString (2 , :s 13C -> 16 `i ]
-"226
-[e ( _UARTSendString (2 , :s 14C -> 16 `i ]
 "227
-[e ( _UARTSendString (2 , -> ( _valorConvUART (1 ( _getAD_AN (1 -> 5 `i `*uc -> 16 `i ]
+[e ( _UARTSendString (2 , :s 14C -> 16 `i ]
 "228
+[e ( _UARTSendString (2 , -> ( _valorConvUART (1 ( _getAD_AN (1 -> 5 `i `*uc -> 16 `i ]
+"229
 [e ( _UARTSendString (2 , :s 15C -> 16 `i ]
-"230
-[e ( _UARTSendString (2 , :s 16C -> 16 `i ]
 "231
-[e ( _UARTSendString (2 , -> ( _valorConvUART (1 ( _getAD_AN (1 -> 6 `i `*uc -> 16 `i ]
+[e ( _UARTSendString (2 , :s 16C -> 16 `i ]
 "232
+[e ( _UARTSendString (2 , -> ( _valorConvUART (1 ( _getAD_AN (1 -> 6 `i `*uc -> 16 `i ]
+"233
 [e ( _UARTSendString (2 , :s 17C -> 16 `i ]
-"234
-[e ( _UARTSendString (2 , :s 18C -> 16 `i ]
 "235
-[e ( _UARTSendString (2 , -> ( _valorConvUART (1 ( _getAD_AN (1 -> 7 `i `*uc -> 16 `i ]
+[e ( _UARTSendString (2 , :s 18C -> 16 `i ]
 "236
-[e ( _UARTSendString (2 , :s 19C -> 16 `i ]
+[e ( _UARTSendString (2 , -> ( _valorConvUART (1 ( _getAD_AN (1 -> 7 `i `*uc -> 16 `i ]
 "237
-[e ( _UARTSendString (2 , :s 20C -> 16 `i ]
+[e ( _UARTSendString (2 , :s 19C -> 16 `i ]
 "238
+[e ( _UARTSendString (2 , :s 20C -> 16 `i ]
+"239
 [e ( _UARTSendString (2 , :s 21C -> 16 `i ]
-"240
-[e ( __delay (1 -> * -> -> 500 `i `d / -> -> 20000000 `l `d .4000.0 `ul ]
 "241
+[e ( __delay (1 -> * -> -> 500 `i `d / -> -> 20000000 `l `d .4000.0 `ul ]
+"242
 [e :UE 388 ]
 }
 "8 ./Timer0.h
@@ -1955,53 +1955,53 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e :U _initTimer0 ]
 [v _tempoInicial `i ~T0 @X0 1 r1 ]
 [f ]
-"11
-[; ;./Timer0.h: 11:     T0CON = 0b11010100;
-[e = _T0CON -> -> 212 `i `uc ]
-"12
-[; ;./Timer0.h: 12:     TMR0L = tempoInicial;
-[e = _TMR0L -> _tempoInicial `uc ]
 "13
-[; ;./Timer0.h: 13: }
+[; ;./Timer0.h: 13:     T0CON = 0b11010100;
+[e = _T0CON -> -> 212 `i `uc ]
+"14
+[; ;./Timer0.h: 14:     TMR0L = tempoInicial;
+[e = _TMR0L -> _tempoInicial `uc ]
+"15
+[; ;./Timer0.h: 15: }
 [e :UE 389 ]
 }
-"15
-[; ;./Timer0.h: 15: void desligaTimer0(){
+"17
+[; ;./Timer0.h: 17: void desligaTimer0(){
 [v _desligaTimer0 `(v ~T0 @X0 1 ef ]
 {
 [e :U _desligaTimer0 ]
 [f ]
-"16
-[; ;./Timer0.h: 16:     TMR0ON = 0;
+"18
+[; ;./Timer0.h: 18:     TMR0ON = 0;
 [e = _TMR0ON -> -> 0 `i `b ]
-"17
-[; ;./Timer0.h: 17: }
+"19
+[; ;./Timer0.h: 19: }
 [e :UE 390 ]
 }
-"19
-[; ;./Timer0.h: 19: void ligaTimer0(){
+"21
+[; ;./Timer0.h: 21: void ligaTimer0(){
 [v _ligaTimer0 `(v ~T0 @X0 1 ef ]
 {
 [e :U _ligaTimer0 ]
 [f ]
-"20
-[; ;./Timer0.h: 20:     TMR0ON = 1;
+"22
+[; ;./Timer0.h: 22:     TMR0ON = 1;
 [e = _TMR0ON -> -> 1 `i `b ]
-"21
-[; ;./Timer0.h: 21: }
+"23
+[; ;./Timer0.h: 23: }
 [e :UE 391 ]
 }
-"23
-[; ;./Timer0.h: 23: void resetaMillis(){
+"25
+[; ;./Timer0.h: 25: void resetaMillis(){
 [v _resetaMillis `(v ~T0 @X0 1 ef ]
 {
 [e :U _resetaMillis ]
 [f ]
-"24
-[; ;./Timer0.h: 24:     millis = 0;
+"26
+[; ;./Timer0.h: 26:     millis = 0;
 [e = _millis -> -> -> 0 `i `l `ul ]
-"25
-[; ;./Timer0.h: 25: }
+"27
+[; ;./Timer0.h: 27: }
 [e :UE 392 ]
 }
 [v $root$_ISR `(v ~T0 @X0 0 e ]
@@ -2016,7 +2016,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e $ ! _TMR0IF 394  ]
 {
 "25
-[; ;main.c: 25:         TMR0L = 0b01100011;
+[; ;main.c: 25:         TMR0L = 99;
 [e = _TMR0L -> -> 99 `i `uc ]
 "26
 [; ;main.c: 26:         millis++;
@@ -2166,8 +2166,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e :U _main ]
 [f ]
 "83
-[; ;main.c: 83:     _delay((unsigned long)((100)*(20000000/4000.0)));
-[e ( __delay (1 -> * -> -> 100 `i `d / -> -> 20000000 `l `d .4000.0 `ul ]
+[; ;main.c: 83:     _delay((unsigned long)((20)*(20000000/4000.0)));
+[e ( __delay (1 -> * -> -> 20 `i `d / -> -> 20000000 `l `d .4000.0 `ul ]
 "85
 [; ;main.c: 85:     ANSEL0 = 0b11111111;
 [e = _ANSEL0 -> -> 255 `i `uc ]
@@ -2239,30 +2239,19 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e :U 406 ]
 {
 "114
-[; ;main.c: 114:         if(millis > 1000){
-[e $ ! > _millis -> -> -> 1000 `i `l `ul 408  ]
-{
-"115
-[; ;main.c: 115:             RC0 = ~RC0;
-[e = _RC0 -> ~ -> _RC0 `ui `b ]
-"116
-[; ;main.c: 116:             millis = 0;
-[e = _millis -> -> -> 0 `i `l `ul ]
-"117
-[; ;main.c: 117:         }
-}
-[e :U 408 ]
-"144
-[; ;main.c: 144:     }
+[; ;main.c: 114:         testeAD();
+[e ( _testeAD ..  ]
+"141
+[; ;main.c: 141:     }
 }
 [e :U 405 ]
 [e $U 406  ]
 [e :U 407 ]
-"146
-[; ;main.c: 146:     return;
+"143
+[; ;main.c: 143:     return;
 [e $UE 404  ]
-"147
-[; ;main.c: 147: }
+"144
+[; ;main.c: 144: }
 [e :UE 404 ]
 }
 [a 25C 65 108 116 101 114 97 110 100 111 32 76 97 109 112 97 100 97 115 0 ]
