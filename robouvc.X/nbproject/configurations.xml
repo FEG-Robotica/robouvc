@@ -10,6 +10,7 @@
       <itemPath>ADC.h</itemPath>
       <itemPath>defines.h</itemPath>
       <itemPath>Timer0.h</itemPath>
+      <itemPath>Seguidor.h</itemPath>
     </logicalFolder>
     <logicalFolder name="LinkerScript"
                    displayName="Linker Files"

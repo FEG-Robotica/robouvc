@@ -5,7 +5,6 @@
  * Created on 19 de Maio de 2021, 19:36
  */
 
-#include "defines.h"
 #include <stdio.h>
 #include <stdlib.h>
 
@@ -125,6 +124,7 @@ void testeMotores(){
     for(i = 0; i <= 100; i++){
         setDutyPWM0(i);
         __delay_ms(20);
+        if(myStrncmp(comando, "idle")) break;
     }
     UARTSendString("PWMA Teste Fim",MAX_LENGTH_UART);
     setDutyPWM0(0);
@@ -133,6 +133,7 @@ void testeMotores(){
     for(i = 0; i <= 100; i++){
         setDutyPWM6(i);
         __delay_ms(20);
+        if(myStrncmp(comando, "idle")) break;
     }
     setDutyPWM6(0);
     
@@ -140,6 +141,7 @@ void testeMotores(){
     for(i = 0; i <= 100; i++){
         setDutyPWM2(i);
         __delay_ms(20);
+        if(myStrncmp(comando, "idle")) break;
     }
     setDutyPWM2(0);
     
@@ -147,6 +149,7 @@ void testeMotores(){
     for(i = 0; i <= 100; i++){
         setDutyPWM2(i);
         __delay_ms(20);
+        if(myStrncmp(comando, "idle")) break;
     }
     setDutyPWM4(0);
     
@@ -155,6 +158,7 @@ void testeMotores(){
         setDutyPWM0(i);
         setDutyPWM2(i);
         __delay_ms(20);
+        if(myStrncmp(comando, "idle")) break;
     }
     setDutyPWM0(0);
     setDutyPWM2(0);
@@ -164,6 +168,7 @@ void testeMotores(){
         setDutyPWM0(i);
         setDutyPWM4(i);
         __delay_ms(20);
+        if(myStrncmp(comando, "idle")) break;
     }
     setDutyPWM0(0);
     setDutyPWM4(0);
@@ -173,6 +178,7 @@ void testeMotores(){
         setDutyPWM6(i);
         setDutyPWM2(i);
         __delay_ms(20);
+        if(myStrncmp(comando, "idle")) break;
     }
     setDutyPWM6(0);
     setDutyPWM2(0);
@@ -182,6 +188,7 @@ void testeMotores(){
         setDutyPWM6(i);
         setDutyPWM4(i);
         __delay_ms(20);
+        if(myStrncmp(comando, "idle")) break;
     }
     setDutyPWM6(0);
     setDutyPWM4(0);
@@ -198,6 +205,7 @@ void testeLampadas(){
         RC1 = bitExtract(i, 1, 1);
         RC2 = bitExtract(i, 1, 2);
         RC3 = bitExtract(i, 1, 3);
+        if(myStrncmp(comando, "idle")) break;
         __delay_ms(500);
     }
 }
@@ -239,5 +247,21 @@ void testeAD(){
     UARTSendString("\r",MAX_LENGTH_UART);
     
     __delay_ms(500);
+}
+
+void testeADbit(){
+            for (int i = 0; i < 7; i++) {
+                char string[2] = {'\0'};
+                
+                string[0] = i + '0';
+                
+                UARTSendString(string,MAX_LENGTH_UART);
+                UARTSendString("\r", MAX_LENGTH_UART);
+                UARTSendString(valorConvUARTbit(getAD_ANbit(i)), MAX_LENGTH_UART);
+                UARTSendString("\r", MAX_LENGTH_UART);
+                UARTSendString("----------",MAX_LENGTH_UART);
+                UARTSendString("\r",MAX_LENGTH_UART);
+            }
+    __delay_ms(2000);
 }
 
