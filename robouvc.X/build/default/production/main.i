@@ -5425,7 +5425,134 @@ extern int getdate_err;
 struct tm *getdate (const char *);
 # 14 "main.c" 2
 
-# 1 "./defines.h" 1
+# 1 "./ADC.h" 1
+
+
+
+
+
+
+
+void configAD() {
+
+    ADCON1bits.VCFG0 = 0;
+    ADCON1bits.VCFG1 = 0;
+
+
+
+    ADCON0bits.ACONV = 0;
+    ADCON0bits.ACSCH = 0;
+
+    ADCON0bits.ACMOD = 0b00;
+
+    ADCON2bits.ADFM = 1;
+
+    ADCON2bits.ACQT = 0b0110;
+    ADCON2bits.ADCS = 0b101;
+
+
+
+
+
+    ADCON3 = 0b00000000;
+}
+
+const char* valorConvUART(int valor) {
+
+    int centena = valor / 100;
+    int dezena = (valor / 10) % 10;
+    int unidade = (valor % 100) % 10;
+
+    char string[5] = {'\0'};
+
+    string[0] = centena + '0';
+    string[1] = '.';
+    string[2] = dezena + '0';
+    string[3] = unidade + '0';
+
+    return string;
+}
+
+const char* valorConvUARTbit(int valor) {
+
+    int milhar = valor/1000;
+    int centena = (valor/100) % 10;
+    int dezena = (valor/10) % 10;
+    int unidade = (valor % 100) % 10;
+
+    char string[5] = {'\0'};
+
+    string[0] = milhar + '0';
+    string[1] = centena + '0';
+    string[2] = dezena + '0';
+    string[3] = unidade + '0';
+
+    return string;
+}
+
+
+int vdig_AN;
+float vanal_AN;
+
+float readAD_AN() {
+
+    vdig_AN = ADRESH;
+    vdig_AN = vdig_AN << 8;
+    vdig_AN += ADRESL;
+
+    vanal_AN = 4.88 * vdig_AN * 0.1;
+
+    return vanal_AN;
+}
+
+int readAD_ANbit(){
+
+    vdig_AN = ADRESH;
+    vdig_AN = vdig_AN << 8;
+    vdig_AN += ADRESL;
+
+    return vdig_AN;
+}
+
+int getAD_AN(int porta) {
+
+    ADCON0bits.ACMOD = bitExtract(porta, 2, 0);
+
+    ADCHSbits.GASEL0 = bitExtract(porta, 1, 2);
+    ADCHSbits.GBSEL0 = bitExtract(porta, 1, 2);
+    ADCHSbits.GCSEL0 = bitExtract(porta, 1, 2);
+    ADCHSbits.GDSEL0 = bitExtract(porta, 1, 2);
+
+    ADCON0bits.ADON = 1;
+    ADCON0bits.GODONE = 1;
+    while (ADCON0bits.GODONE);
+
+    float ANread = readAD_AN();
+    ADCON0bits.ADON = 0;
+
+    return (int) ANread;
+# 117 "./ADC.h"
+}
+
+int getAD_ANbit(int porta) {
+
+    ADCON0bits.ACMOD = bitExtract(porta, 2, 0);
+
+    ADCHSbits.GASEL0 = bitExtract(porta, 1, 2);
+    ADCHSbits.GBSEL0 = bitExtract(porta, 1, 2);
+    ADCHSbits.GCSEL0 = bitExtract(porta, 1, 2);
+    ADCHSbits.GDSEL0 = bitExtract(porta, 1, 2);
+
+    ADCON0bits.ADON = 1;
+    ADCON0bits.GODONE = 1;
+    while (ADCON0bits.GODONE);
+
+    int ANread = readAD_ANbit();
+    ADCON0bits.ADON = 0;
+
+    return (int) ANread;
+# 147 "./ADC.h"
+}
 # 15 "main.c" 2
 
 # 1 "./PWM.h" 1
@@ -5536,103 +5663,11 @@ void UARTSendString(char* str, const int max_length) {
 }
 # 17 "main.c" 2
 
-# 1 "./ADC.h" 1
-
-
-
-
-
-
-
-void configAD() {
-
-    ADCON1bits.VCFG0 = 0;
-    ADCON1bits.VCFG1 = 0;
-
-
-
-    ADCON0bits.ACONV = 0;
-    ADCON0bits.ACSCH = 0;
-
-    ADCON0bits.ACMOD = 0b00;
-
-    ADCON2bits.ADFM = 1;
-
-    ADCON2bits.ACQT = 0b0110;
-    ADCON2bits.ADCS = 0b101;
-
-
-
-
-
-    ADCON3 = 0b00000000;
-}
-
-const char* valorConvUART(int valor) {
-
-    int centena = valor / 100;
-    int dezena = (valor / 10) % 10;
-    int unidade = (valor % 100) % 10;
-
-    char string[5] = {'\0'};
-
-    string[0] = centena + '0';
-    string[1] = '.';
-    string[2] = dezena + '0';
-    string[3] = unidade + '0';
-
-    return string;
-}
-
-int vdig_AN;
-float vanal_AN;
-
-float readAD_AN() {
-
-    vdig_AN = ADRESH;
-    vdig_AN = vdig_AN << 8;
-    vdig_AN += ADRESL;
-
-    vanal_AN = 4.88 * vdig_AN * 0.1;
-
-    return vanal_AN;
-}
-
-int getAD_AN(int porta) {
-
-    ADCON0bits.ACMOD = bitExtract(porta, 2, 0);
-
-    ADCHSbits.GASEL0 = bitExtract(porta, 1, 2);
-    ADCHSbits.GBSEL0 = bitExtract(porta, 1, 2);
-    ADCHSbits.GCSEL0 = bitExtract(porta, 1, 2);
-    ADCHSbits.GDSEL0 = bitExtract(porta, 1, 2);
-
-    ADCON0bits.ADON = 1;
-    ADCON0bits.GODONE = 1;
-    while (ADCON0bits.GODONE);
-
-    float ANread = readAD_AN();
-    ADCON0bits.ADON = 0;
-
-    return (int) ANread;
-# 90 "./ADC.h"
-}
+# 1 "./defines.h" 1
 # 18 "main.c" 2
 
 # 1 "./geral.h" 1
-
-
-
-
-
-
-
-# 1 "./defines.h" 1
-# 8 "./geral.h" 2
-
-
-
-
+# 11 "./geral.h"
 void configBits() {
 
 #pragma config OSC = HS
@@ -5749,6 +5784,7 @@ void testeMotores(){
     for(i = 0; i <= 100; i++){
         setDutyPWM0(i);
         _delay((unsigned long)((20)*(20000000/4000.0)));
+        if(myStrncmp(comando, "idle")) break;
     }
     UARTSendString("PWMA Teste Fim",16);
     setDutyPWM0(0);
@@ -5757,6 +5793,7 @@ void testeMotores(){
     for(i = 0; i <= 100; i++){
         setDutyPWM6(i);
         _delay((unsigned long)((20)*(20000000/4000.0)));
+        if(myStrncmp(comando, "idle")) break;
     }
     setDutyPWM6(0);
 
@@ -5764,6 +5801,7 @@ void testeMotores(){
     for(i = 0; i <= 100; i++){
         setDutyPWM2(i);
         _delay((unsigned long)((20)*(20000000/4000.0)));
+        if(myStrncmp(comando, "idle")) break;
     }
     setDutyPWM2(0);
 
@@ -5771,6 +5809,7 @@ void testeMotores(){
     for(i = 0; i <= 100; i++){
         setDutyPWM2(i);
         _delay((unsigned long)((20)*(20000000/4000.0)));
+        if(myStrncmp(comando, "idle")) break;
     }
     setDutyPWM4(0);
 
@@ -5779,6 +5818,7 @@ void testeMotores(){
         setDutyPWM0(i);
         setDutyPWM2(i);
         _delay((unsigned long)((20)*(20000000/4000.0)));
+        if(myStrncmp(comando, "idle")) break;
     }
     setDutyPWM0(0);
     setDutyPWM2(0);
@@ -5788,6 +5828,7 @@ void testeMotores(){
         setDutyPWM0(i);
         setDutyPWM4(i);
         _delay((unsigned long)((20)*(20000000/4000.0)));
+        if(myStrncmp(comando, "idle")) break;
     }
     setDutyPWM0(0);
     setDutyPWM4(0);
@@ -5797,6 +5838,7 @@ void testeMotores(){
         setDutyPWM6(i);
         setDutyPWM2(i);
         _delay((unsigned long)((20)*(20000000/4000.0)));
+        if(myStrncmp(comando, "idle")) break;
     }
     setDutyPWM6(0);
     setDutyPWM2(0);
@@ -5806,6 +5848,7 @@ void testeMotores(){
         setDutyPWM6(i);
         setDutyPWM4(i);
         _delay((unsigned long)((20)*(20000000/4000.0)));
+        if(myStrncmp(comando, "idle")) break;
     }
     setDutyPWM6(0);
     setDutyPWM4(0);
@@ -5822,6 +5865,7 @@ void testeLampadas(){
         RC1 = bitExtract(i, 1, 1);
         RC2 = bitExtract(i, 1, 2);
         RC3 = bitExtract(i, 1, 3);
+        if(myStrncmp(comando, "idle")) break;
         _delay((unsigned long)((500)*(20000000/4000.0)));
     }
 }
@@ -5864,6 +5908,22 @@ void testeAD(){
 
     _delay((unsigned long)((500)*(20000000/4000.0)));
 }
+
+void testeADbit(){
+            for (int i = 0; i < 7; i++) {
+                char string[2] = {'\0'};
+
+                string[0] = i + '0';
+
+                UARTSendString(string,16);
+                UARTSendString("\r", 16);
+                UARTSendString(valorConvUARTbit(getAD_ANbit(i)), 16);
+                UARTSendString("\r", 16);
+                UARTSendString("----------",16);
+                UARTSendString("\r",16);
+            }
+    _delay((unsigned long)((2000)*(20000000/4000.0)));
+}
 # 19 "main.c" 2
 
 # 1 "./Timer0.h" 1
@@ -5896,10 +5956,128 @@ void resetaMillis(){
 }
 # 20 "main.c" 2
 
+# 1 "./Seguidor.h" 1
+
+
+
+
+
+
+
+double sensor[7];
+double leitura[7];
+double posin = 0;
+double pos = 0;
+double setpoint = 3.0;
+double erro = 0;
+double P = 0;
+double I = 0;
+double D = 0;
+double PID = 0;
+double kp = 0;
+double ki = 0;
+double kd = 0;
+double dt = 0.0;
+double de = 0.0;
+double tf = 0.0;
+double erroi = 0.0;
+int bspeed = 20;
+
+void configDA()
+{
+    int i;
+    for (i = 0; i < 7; i++)
+    {
+        sensor[i] = getAD_AN(i);
+        if (sensor[i] > 850)
+        {
+            leitura[i] = 1;
+        } else {
+            leitura[i] = 0;
+        }
+    }
+}
+
+double posicao() {
+    int i;
+    double pos = 0, local, total = 0;
+    for (i = 1; i < 6; i++) {
+        if (leitura[i] == 1) {
+            pos += 1;
+            total += 1;
+        }
+    }
+    if (total != 0) {
+        local = pos / total;
+        return local;
+    } else {
+        return posin;
+    }
+}
+
+void lados(char lado, int porcVelo) {
+    PORTBbits.RB6 = 1;
+    PORTBbits.RB7 = 1;
+
+
+    if (lado == 'e') {
+        setDutyPWM0(porcVelo);
+        setDutyPWM6(0);
+    }
+    if (lado == 'd') {
+        setDutyPWM2(porcVelo);
+        setDutyPWM4(0);
+    }
+}
+
+void moverMotor(double PID)
+{
+    if (PID == 0) {
+        lados('e', bspeed);
+        lados('d', bspeed);
+    } else {
+        lados('e', bspeed + PID);
+        lados('d', bspeed - PID);
+    }
+}
+
+void setPID(){
+
+    configDA();
+
+    pos = posicao();
+
+    posin = pos;
+
+    erro = setpoint - pos;
+
+    de = erro - erroi;
+
+    erroi = erro;
+
+    dt = (millis - tf) / 1000.0;
+
+    tf = millis;
+
+    P = kp*erro;
+
+    I = I + ki * erro*dt;
+
+    D = kd * de / dt;
+
+    PID = P + I - D;
+
+    moverMotor(PID);
+
+}
+# 21 "main.c" 2
+
+
+char recebido = '\r';
 
 void __attribute__((picinterrupt(("")))) ISR(void) {
 
-    if(TMR0IF){
+    if (TMR0IF) {
         TMR0L = 99;
         millis++;
         TMR0IF = 0;
@@ -5913,45 +6091,58 @@ void __attribute__((picinterrupt(("")))) ISR(void) {
             RCSTAbits.CREN = 1;
         }
 
-        if (UARTReadChar() == '0') {
-            desligaTimer0();
-            UARTSendString("Timer0 off", 16);
-        }
-
-        if (UARTReadChar() == '1') {
+        if (RCREG == '1') {
             ligaTimer0();
             UARTSendString("Timer0 on", 16);
         }
 
-        if (UARTReadChar() == 'f') {
-            setEstrategia("lampadasON");
-            UARTSendString("Alterando Lampadas", 16);
+        if (RCREG == 'a') {
+            setEstrategia("testeMotores");
+            UARTSendString(comando, 16);
         }
 
-        if (UARTReadChar() == 'a') {
-            setEstrategia("lampada1");
-            UARTSendString("Alterando 1", 16);
+        if (RCREG == 'b') {
+            setEstrategia("testeLampadas");
+            UARTSendString(comando, 16);
         }
 
-        if (UARTReadChar() == 'b') {
-            setEstrategia("lampada2");
-            UARTSendString("Alterando 2", 16);
+        if (RCREG == 'c') {
+            setEstrategia("AD");
+            UARTSendString(comando, 16);
         }
 
-        if (UARTReadChar() == 'c') {
-            setEstrategia("lampada3");
-            UARTSendString("Alterando 3", 16);
+        if (RCREG == 'd') {
+            for (millis = 0; millis < 60000; millis++) {
+                setPID();
+                if (millis == 1000) {
+                    UARTSendString("PID", 16);
+                }
+            }
+            UARTSendString(comando, 16);
+
+        }
+        if (RCREG == 'f') {
+            setEstrategia("testeADbit");
+            UARTSendString(comando, 16);
         }
 
-        if (UARTReadChar() == 'd') {
-            setEstrategia("lampada4");
-            UARTSendString("Alterando 4", 16);
-        }
+        if (RCREG == 'p') {
+            setEstrategia("idle");
+            UARTSendString("IDLE", 16);
+            setDutyPWM0(0);
+            setDutyPWM2(0);
+            setDutyPWM4(0);
+            setDutyPWM6(0);
 
+            RC0 = 0;
+            RC1 = 0;
+            RC2 = 0;
+            RC3 = 0;
+            UARTSendString(comando, 16);
+        }
         PIR1bits.RCIF = 0;
     }
 }
-
 
 void main(void) {
 
@@ -5985,13 +6176,39 @@ void main(void) {
 
     initTimer0(99);
 
-    int AN0,AN1,AN2,AN3,AN4,AN5,AN6;
+    comando = "\0";
 
-    while(1){
+    int AN0, AN1, AN2, AN3, AN4, AN5, AN6;
 
-        testeAD();
-# 141 "main.c"
+    while (1) {
+
+        UARTSendChar(UARTReadChar());
+
+        if (myStrncmp(comando, "idle")) {
+            UARTSendChar(UARTReadChar());
+        }
+
+        if (myStrncmp(comando, "testeMotores")) {
+            testeMotores();
+        }
+
+        if (myStrncmp(comando, "testeLampadas")) {
+            testeLampadas();
+        }
+
+        if (myStrncmp(comando, "AD")) {
+            UARTSendChar(UARTReadChar());
+            testeAD();
+        }
+
+        if (myStrncmp(comando, "testeADbit")) {
+            UARTSendChar(UARTReadChar());
+            UARTSendString(comando, 16);
+            testeADbit();
+        }
+
+
+
     }
-
     return;
 }

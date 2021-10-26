@@ -1,8 +1,9 @@
 build/default/production/main.p1:  \
 main.c  \
-defines.h  \
+ADC.h  \
 PWM.h  \
 bluetooth.h  \
-ADC.h  \
+defines.h  \
 geral.h  \
-Timer0.h 
+Timer0.h  \
+Seguidor.h 
