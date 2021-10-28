@@ -36,7 +36,7 @@ void configUSART() {
     PIE1bits.RCIE = 1;
 }
 
-void setEstrategia(char* c) {
+void setComando(char* c) {
     comando = c;
 }
 

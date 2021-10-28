@@ -5425,6 +5425,69 @@ extern int getdate_err;
 struct tm *getdate (const char *);
 # 14 "main.c" 2
 
+# 1 "./bluetooth.h" 1
+
+
+
+
+
+
+char* comando = "";
+
+void configUSART() {
+    SPBRG = 0x81;
+# 22 "./bluetooth.h"
+    TXSTAbits.BRGH = 1;
+
+    TXSTAbits.SYNC = 0;
+    TXSTAbits.TX9 = 0;
+    TXSTAbits.TXEN = 1;
+    PIE1bits.TXIE = 0;
+
+    RCSTAbits.SPEN = 1;
+    RCSTAbits.RX9 = 0;
+    RCSTAbits.CREN = 1;
+    TRISCbits.TRISC6 = 0;
+    TRISCbits.TRISC7 = 1;
+
+    PIR1bits.RCIF = 0;
+    PIE1bits.RCIE = 1;
+}
+
+void setComando(char* c) {
+    comando = c;
+}
+
+char UARTReadChar() {
+    char ler = RCREG;
+    return ler;
+}
+
+void UARTWriteTest() {
+    while (!TRMT);
+}
+
+void UARTSendChar(char c) {
+    TXREG = c;
+    UARTWriteTest();
+}
+
+void UARTSendString(char* str, const int max_length) {
+    int i = 0;
+
+    for (i = 0; i < max_length; i++) {
+
+        if (str[i] == '\0') break;
+        UARTSendChar(str[i]);
+        UARTWriteTest();
+
+    }
+}
+# 15 "main.c" 2
+
+# 1 "./defines.h" 1
+# 16 "main.c" 2
+
 # 1 "./ADC.h" 1
 
 
@@ -5553,7 +5616,7 @@ int getAD_ANbit(int porta) {
     return (int) ANread;
 # 147 "./ADC.h"
 }
-# 15 "main.c" 2
+# 17 "main.c" 2
 
 # 1 "./PWM.h" 1
 
@@ -5601,69 +5664,6 @@ void setDutyPWM6(unsigned int porcVelo) {
     PDC3L = velo & 0b11111111;
     PDC3H = (velo >> 8) & 0b11111111;
 }
-# 16 "main.c" 2
-
-# 1 "./bluetooth.h" 1
-
-
-
-
-
-
-char* comando = "";
-
-void configUSART() {
-    SPBRG = 0x81;
-# 22 "./bluetooth.h"
-    TXSTAbits.BRGH = 1;
-
-    TXSTAbits.SYNC = 0;
-    TXSTAbits.TX9 = 0;
-    TXSTAbits.TXEN = 1;
-    PIE1bits.TXIE = 0;
-
-    RCSTAbits.SPEN = 1;
-    RCSTAbits.RX9 = 0;
-    RCSTAbits.CREN = 1;
-    TRISCbits.TRISC6 = 0;
-    TRISCbits.TRISC7 = 1;
-
-    PIR1bits.RCIF = 0;
-    PIE1bits.RCIE = 1;
-}
-
-void setEstrategia(char* c) {
-    comando = c;
-}
-
-char UARTReadChar() {
-    char ler = RCREG;
-    return ler;
-}
-
-void UARTWriteTest() {
-    while (!TRMT);
-}
-
-void UARTSendChar(char c) {
-    TXREG = c;
-    UARTWriteTest();
-}
-
-void UARTSendString(char* str, const int max_length) {
-    int i = 0;
-
-    for (i = 0; i < max_length; i++) {
-
-        if (str[i] == '\0') break;
-        UARTSendChar(str[i]);
-        UARTWriteTest();
-
-    }
-}
-# 17 "main.c" 2
-
-# 1 "./defines.h" 1
 # 18 "main.c" 2
 
 # 1 "./geral.h" 1
@@ -5734,7 +5734,7 @@ int bitExtract(int numero, int k, int p) {
 }
 
 int myStrncmp(const char *str1, const char *str2) {
-    if (strncmp(str1, str2, strlen(str1)) == 0) {
+    if (strcmp(str1, str2) == 0) {
         return 1;
     }
     else {
@@ -5957,13 +5957,9 @@ void resetaMillis(){
 # 20 "main.c" 2
 
 # 1 "./Seguidor.h" 1
-
-
-
-
-
-
-
+# 13 "./Seguidor.h"
+int PID_int = 0;
+int porcVelo = 3;
 double sensor[7];
 double leitura[7];
 double posin = 0;
@@ -5981,7 +5977,6 @@ double dt = 0.0;
 double de = 0.0;
 double tf = 0.0;
 double erroi = 0.0;
-int bspeed = 20;
 
 void configDA()
 {
@@ -5997,6 +5992,7 @@ void configDA()
         }
     }
 }
+
 
 double posicao() {
     int i;
@@ -6015,6 +6011,7 @@ double posicao() {
     }
 }
 
+
 void lados(char lado, int porcVelo) {
     PORTBbits.RB6 = 1;
     PORTBbits.RB7 = 1;
@@ -6030,18 +6027,22 @@ void lados(char lado, int porcVelo) {
     }
 }
 
+
 void moverMotor(double PID)
 {
     if (PID == 0) {
-        lados('e', bspeed);
-        lados('d', bspeed);
+        lados('e', porcVelo);
+        lados('d', porcVelo);
     } else {
-        lados('e', bspeed + PID);
-        lados('d', bspeed - PID);
+        PID_int = PID / 2;
+        lados('e', (porcVelo + PID_int));
+        lados('d', (porcVelo - PID_int));
     }
+
 }
 
-void setPID(){
+
+void setPID() {
 
     configDA();
 
@@ -6065,7 +6066,7 @@ void setPID(){
 
     D = kd * de / dt;
 
-    PID = P + I - D;
+    PID = P + I + D;
 
     moverMotor(PID);
 
@@ -6073,15 +6074,10 @@ void setPID(){
 # 21 "main.c" 2
 
 
-char recebido = '\r';
+
+char recebidoChar;
 
 void __attribute__((picinterrupt(("")))) ISR(void) {
-
-    if (TMR0IF) {
-        TMR0L = 99;
-        millis++;
-        TMR0IF = 0;
-    }
 
     if (PIR1bits.RCIF) {
 
@@ -6091,56 +6087,58 @@ void __attribute__((picinterrupt(("")))) ISR(void) {
             RCSTAbits.CREN = 1;
         }
 
+        recebidoChar = UARTReadChar();
+
         if (RCREG == '1') {
             ligaTimer0();
             UARTSendString("Timer0 on", 16);
         }
 
         if (RCREG == 'a') {
-            setEstrategia("testeMotores");
+            setComando("testeMotores");
             UARTSendString(comando, 16);
         }
 
         if (RCREG == 'b') {
-            setEstrategia("testeLampadas");
+            setComando("testeLampadas");
             UARTSendString(comando, 16);
         }
 
         if (RCREG == 'c') {
-            setEstrategia("AD");
+            setComando("AD");
             UARTSendString(comando, 16);
         }
 
         if (RCREG == 'd') {
-            for (millis = 0; millis < 60000; millis++) {
-                setPID();
-                if (millis == 1000) {
-                    UARTSendString("PID", 16);
-                }
-            }
+            setComando("PID");
             UARTSendString(comando, 16);
-
         }
         if (RCREG == 'f') {
-            setEstrategia("testeADbit");
+            setComando("testeADbit");
             UARTSendString(comando, 16);
         }
 
         if (RCREG == 'p') {
-            setEstrategia("idle");
+            setComando("idle");
             UARTSendString("IDLE", 16);
             setDutyPWM0(0);
             setDutyPWM2(0);
             setDutyPWM4(0);
             setDutyPWM6(0);
 
-            RC0 = 0;
-            RC1 = 0;
-            RC2 = 0;
-            RC3 = 0;
+            RC0 = 1;
+            RC1 = 1;
+            RC2 = 1;
+            RC3 = 1;
             UARTSendString(comando, 16);
         }
         PIR1bits.RCIF = 0;
+    }
+
+    if (TMR0IF) {
+        TMR0L = 99;
+        millis++;
+        TMR0IF = 0;
     }
 }
 
@@ -6182,8 +6180,6 @@ void main(void) {
 
     while (1) {
 
-        UARTSendChar(UARTReadChar());
-
         if (myStrncmp(comando, "idle")) {
             UARTSendChar(UARTReadChar());
         }
@@ -6203,11 +6199,35 @@ void main(void) {
 
         if (myStrncmp(comando, "testeADbit")) {
             UARTSendChar(UARTReadChar());
-            UARTSendString(comando, 16);
             testeADbit();
         }
 
+        if (myStrncmp(comando, "PID")) {
+            setPID();
+        }
 
+        if (myStrncmp(comando, "final")) {
+            setPID();
+            RC0 = 0;
+            RC1 = 0;
+            RC2 = 0;
+            RC3 = 0;
+
+            if (millis > 120000) {
+
+                UARTSendString("IDLE", 16);
+                comando = "idle";
+                setDutyPWM0(0);
+                setDutyPWM2(0);
+                setDutyPWM4(0);
+                setDutyPWM6(0);
+
+                RC0 = 1;
+                RC1 = 1;
+                RC2 = 1;
+                RC3 = 1;
+            }
+        }
 
     }
     return;

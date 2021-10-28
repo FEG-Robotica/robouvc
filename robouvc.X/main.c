@@ -12,23 +12,18 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
-#include "ADC.h"
-#include "PWM.h"
 #include "bluetooth.h"
 #include "defines.h"
+#include "ADC.h"
+#include "PWM.h"
 #include "geral.h"
 #include "Timer0.h"
 #include "Seguidor.h"
 
-char recebido = '\r';
+
+char recebidoChar;
 
 void __interrupt() ISR(void) {
-
-    if (TMR0IF) {
-        TMR0L = 99; //99 0b01100011;
-        millis++;
-        TMR0IF = 0;
-    }
 
     if (PIR1bits.RCIF) {
 
@@ -37,57 +32,59 @@ void __interrupt() ISR(void) {
             RCSTAbits.CREN = 0;
             RCSTAbits.CREN = 1;
         }
-        
+
+        recebidoChar = UARTReadChar();
+
         if (RCREG == '1') {
             ligaTimer0();
             UARTSendString("Timer0 on", MAX_LENGTH_UART);
         }
-        
-        if (RCREG == 'a') {
-            setEstrategia("testeMotores");
-            UARTSendString(comando, MAX_LENGTH_UART);
-        }
-        
-        if (RCREG == 'b') {
-            setEstrategia("testeLampadas");
-            UARTSendString(comando, MAX_LENGTH_UART);
-        }
-        
-        if (RCREG == 'c') {
-            setEstrategia("AD");
-            UARTSendString(comando, MAX_LENGTH_UART);
-        }
-        
-        if (RCREG == 'd') {
-            for (millis = 0; millis < 60000; millis++) {
-                setPID();
-                if (millis == 1000) {
-                    UARTSendString("PID", MAX_LENGTH_UART);
-                }
-            }
-            UARTSendString(comando, MAX_LENGTH_UART);
 
+        if (RCREG == 'a') {
+            setComando("testeMotores");
+            UARTSendString(comando, MAX_LENGTH_UART);
+        }
+
+        if (RCREG == 'b') {
+            setComando("testeLampadas");
+            UARTSendString(comando, MAX_LENGTH_UART);
+        }
+
+        if (RCREG == 'c') {
+            setComando("AD");
+            UARTSendString(comando, MAX_LENGTH_UART);
+        }
+
+        if (RCREG == 'd') {
+            setComando("PID");
+            UARTSendString(comando, MAX_LENGTH_UART);
         }
         if (RCREG == 'f') {
-            setEstrategia("testeADbit");
+            setComando("testeADbit");
             UARTSendString(comando, MAX_LENGTH_UART);
         }
-        
+
         if (RCREG == 'p') {
-            setEstrategia("idle");
+            setComando("idle");
             UARTSendString("IDLE", MAX_LENGTH_UART);
             setDutyPWM0(0);
             setDutyPWM2(0);
             setDutyPWM4(0);
             setDutyPWM6(0);
-            
-            RC0 = 0;
-            RC1 = 0;
-            RC2 = 0;
-            RC3 = 0;
+
+            RC0 = 1;
+            RC1 = 1;
+            RC2 = 1;
+            RC3 = 1;
             UARTSendString(comando, MAX_LENGTH_UART);
         }
         PIR1bits.RCIF = 0;
+    }
+
+    if (TMR0IF) {
+        TMR0L = 99; //99 0b01100011;
+        millis++;
+        TMR0IF = 0;
     }
 }
 
@@ -122,13 +119,13 @@ void main(void) {
     configAD();
 
     initTimer0(99);
-    
+
     comando = "\0";
 
     int AN0, AN1, AN2, AN3, AN4, AN5, AN6;
 
     while (1) {
-        
+
         if (myStrncmp(comando, "idle")) {
             UARTSendChar(UARTReadChar());
         }
@@ -136,23 +133,48 @@ void main(void) {
         if (myStrncmp(comando, "testeMotores")) {
             testeMotores();
         }
-        
+
         if (myStrncmp(comando, "testeLampadas")) {
             testeLampadas();
         }
-        
+
         if (myStrncmp(comando, "AD")) {
             UARTSendChar(UARTReadChar());
             testeAD();
         }
-        
+
         if (myStrncmp(comando, "testeADbit")) {
             UARTSendChar(UARTReadChar());
-            UARTSendString(comando, MAX_LENGTH_UART);
             testeADbit();
         }
-        
-        
+
+        if (myStrncmp(comando, "PID")) {
+            setPID();
+        }
+
+        if (myStrncmp(comando, "final")) {
+            setPID();
+            RC0 = 0;
+            RC1 = 0;
+            RC2 = 0;
+            RC3 = 0;
+
+            if (millis > 120000) {
+                
+                UARTSendString("IDLE", MAX_LENGTH_UART);
+                comando = "idle";
+                setDutyPWM0(0);
+                setDutyPWM2(0);
+                setDutyPWM4(0);
+                setDutyPWM6(0);
+
+                RC0 = 1;
+                RC1 = 1;
+                RC2 = 1;
+                RC3 = 1;
+            }
+        }
+
     }
     return;
 }

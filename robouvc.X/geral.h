@@ -74,7 +74,7 @@ int bitExtract(int numero, int k, int p) {
 }
 
 int myStrncmp(const char *str1, const char *str2) {
-    if (strncmp(str1, str2, strlen(str1)) == 0) {
+    if (strcmp(str1, str2) == 0) {
         return 1;
     }
     else {
