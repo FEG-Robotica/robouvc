@@ -1,0 +1,980 @@
+[p GLOBOPT AUTOSTATIC IEEE_FLT IEEE_DBL LFSROK EMI_WORD ]
+[d version 1.1 ]
+[d edition pro ]
+[d chip 18F4431 ]
+[d frameptr 4065 ]
+"11 C:\Users\Roberto\Desktop\robouvc-main\robouvc.X/ADC.h
+[v _configAD configAD `(v  1 e 1 0 ]
+"35
+[v _valorConvUART valorConvUART `(*.39Cuc  1 e 2 0 ]
+"51
+[v _valorConvUARTbit valorConvUARTbit `(*.39Cuc  1 e 2 0 ]
+"72
+[v _readAD_AN readAD_AN `(f  1 e 4 0 ]
+"83
+[v _readAD_ANbit readAD_ANbit `(i  1 e 2 0 ]
+"92
+[v _getAD_AN getAD_AN `(i  1 e 2 0 ]
+"122
+[v _getAD_ANbit getAD_ANbit `(i  1 e 2 0 ]
+"9 C:\Users\Roberto\Desktop\robouvc-main\robouvc.X/bluetooth.h
+[v _configUSART configUSART `(v  1 e 1 0 ]
+"39
+[v _setComando setComando `(v  1 e 1 0 ]
+"43
+[v _UARTReadChar UARTReadChar `(uc  1 e 1 0 ]
+[v i2_UARTReadChar UARTReadChar `(uc  1 e 1 0 ]
+"48
+[v _UARTWriteTest UARTWriteTest `(v  1 e 1 0 ]
+[v i2_UARTWriteTest UARTWriteTest `(v  1 e 1 0 ]
+"52
+[v _UARTSendChar UARTSendChar `(v  1 e 1 0 ]
+[v i2_UARTSendChar UARTSendChar `(v  1 e 1 0 ]
+"57
+[v _UARTSendString UARTSendString `(v  1 e 1 0 ]
+[v i2_UARTSendString UARTSendString `(v  1 e 1 0 ]
+"11 C:\Users\Roberto\Desktop\robouvc-main\robouvc.X/geral.h
+[v _configBits configBits `(v  1 e 1 0 ]
+"72
+[v _bitExtract bitExtract `(i  1 e 2 0 ]
+"76
+[v _myStrncmp myStrncmp `(i  1 e 2 0 ]
+"115
+[v _testeMotores testeMotores `(v  1 e 1 0 ]
+"200
+[v _testeLampadas testeLampadas `(v  1 e 1 0 ]
+"213
+[v _testeAD testeAD `(v  1 e 1 0 ]
+"244
+[v _testeADbit testeADbit `(v  1 e 1 0 ]
+"9 C:\Users\Roberto\Desktop\robouvc-main\robouvc.X/PWM.h
+[v _configPWM configPWM `(v  1 e 1 0 ]
+"23
+[v _setDutyPWM0 setDutyPWM0 `(v  1 e 1 0 ]
+[v i2_setDutyPWM0 setDutyPWM0 `(v  1 e 1 0 ]
+"29
+[v _setDutyPWM2 setDutyPWM2 `(v  1 e 1 0 ]
+[v i2_setDutyPWM2 setDutyPWM2 `(v  1 e 1 0 ]
+"35
+[v _setDutyPWM4 setDutyPWM4 `(v  1 e 1 0 ]
+[v i2_setDutyPWM4 setDutyPWM4 `(v  1 e 1 0 ]
+"41
+[v _setDutyPWM6 setDutyPWM6 `(v  1 e 1 0 ]
+[v i2_setDutyPWM6 setDutyPWM6 `(v  1 e 1 0 ]
+"37 C:\Users\Roberto\Desktop\robouvc-main\robouvc.X/Seguidor.h
+[v _configDA configDA `(v  1 e 1 0 ]
+"53
+[v _posicao posicao `(d  1 e 4 0 ]
+"74
+[v _lados lados `(v  1 e 1 0 ]
+"90
+[v _moverMotor moverMotor `(v  1 e 1 0 ]
+"104
+[v _setPID setPID `(v  1 e 1 0 ]
+"136
+[v _PrintSensores PrintSensores `(v  1 e 1 0 ]
+"10 C:\Users\Roberto\Desktop\robouvc-main\robouvc.X/Timer0.h
+[v _initTimer0 initTimer0 `(v  1 e 1 0 ]
+"21
+[v _ligaTimer0 ligaTimer0 `(v  1 e 1 0 ]
+"7 C:\Program Files\Microchip\xc8\v2.36\pic\sources\c99\common\awdiv.c
+[v ___awdiv __awdiv `(i  1 e 2 0 ]
+"7 C:\Program Files\Microchip\xc8\v2.36\pic\sources\c99\common\awmod.c
+[v ___awmod __awmod `(i  1 e 2 0 ]
+"4 C:\Program Files\Microchip\xc8\v2.36\pic\sources\c99\common\fleq.c
+[v ___fleq __fleq `(b  1 e 0 0 ]
+"4 C:\Program Files\Microchip\xc8\v2.36\pic\sources\c99\common\flge.c
+[v ___flge __flge `(b  1 e 0 0 ]
+"62 C:\Program Files\Microchip\xc8\v2.36\pic\sources\c99\common\float.c
+[v ___ftpack __ftpack `(f  1 e 4 0 ]
+"43 C:\Program Files\Microchip\xc8\v2.36\pic\sources\c99\common\fltol.c
+[v ___fltol __fltol `(l  1 e 4 0 ]
+"86 C:\Program Files\Microchip\xc8\v2.36\pic\sources\c99\common\ftadd.c
+[v ___ftadd __ftadd `(f  1 e 4 0 ]
+"54 C:\Program Files\Microchip\xc8\v2.36\pic\sources\c99\common\ftdiv.c
+[v ___ftdiv __ftdiv `(f  1 e 4 0 ]
+"62 C:\Program Files\Microchip\xc8\v2.36\pic\sources\c99\common\ftmul.c
+[v ___ftmul __ftmul `(f  1 e 4 0 ]
+"19 C:\Program Files\Microchip\xc8\v2.36\pic\sources\c99\common\ftsub.c
+[v ___ftsub __ftsub `(f  1 e 4 0 ]
+"10 C:\Program Files\Microchip\xc8\v2.36\pic\sources\c99\common\sprcadd.c
+[v ___fladd __fladd `(d  1 e 4 0 ]
+"245
+[v ___flsub __flsub `(d  1 e 4 0 ]
+"11 C:\Program Files\Microchip\xc8\v2.36\pic\sources\c99\common\sprcdiv.c
+[v ___fldiv __fldiv `(d  1 e 4 0 ]
+"8 C:\Program Files\Microchip\xc8\v2.36\pic\sources\c99\common\sprcmul.c
+[v ___flmul __flmul `(d  1 e 4 0 ]
+"3 C:\Program Files\Microchip\xc8\v2.36\pic\sources\c99\common\strcmp.c
+[v _strcmp strcmp `(i  1 e 2 0 ]
+"15 C:\Program Files\Microchip\xc8\v2.36\pic\sources\c99\common\Umul16.c
+[v ___wmul __wmul `(ui  1 e 2 0 ]
+[v i2___wmul __wmul `(ui  1 e 2 0 ]
+"15 C:\Program Files\Microchip\xc8\v2.36\pic\sources\c99\common\Umul32.c
+[v ___lmul __lmul `(ul  1 e 4 0 ]
+"91 C:\Program Files\Microchip\xc8\v2.36\pic\sources\c99\common\Umul64.c
+[v ___omul __omul `(uo  1 e 8 0 ]
+"10 C:\Program Files\Microchip\xc8\v2.36\pic\sources\c99\common\xxtofl.c
+[v ___xxtofl __xxtofl `(d  1 e 4 0 ]
+"26 C:\Users\Roberto\Desktop\robouvc-main\robouvc.X\main.c
+[v _ISR ISR `IIH(v  1 e 1 0 ]
+"104
+[v _main main `(v  1 e 1 0 ]
+"69 C:\Users\Roberto\Desktop\robouvc-main\robouvc.X/ADC.h
+[v _vdig_AN vdig_AN `i  1 e 2 0 ]
+"70
+[v _vanal_AN vanal_AN `f  1 e 4 0 ]
+"7 C:\Users\Roberto\Desktop\robouvc-main\robouvc.X/bluetooth.h
+[v _comando comando `*.25uc  1 e 2 0 ]
+"16 C:\Users\Roberto\Desktop\robouvc-main\robouvc.X/Seguidor.h
+[v _PID_int PID_int `i  1 e 2 0 ]
+"19
+[v _sensor sensor `[5]d  1 e 20 0 ]
+"20
+[v _leitura leitura `[5]d  1 e 20 0 ]
+"21
+[v _posin posin `d  1 e 4 0 ]
+"22
+[v _pos pos `d  1 e 4 0 ]
+"24
+[v _erro erro `d  1 e 4 0 ]
+"25
+[v _P P `d  1 e 4 0 ]
+"26
+[v _I I `d  1 e 4 0 ]
+"27
+[v _D D `d  1 e 4 0 ]
+"28
+[v _PID PID `d  1 e 4 0 ]
+"32
+[v _dt dt `d  1 e 4 0 ]
+"33
+[v _de de `d  1 e 4 0 ]
+"34
+[v _tf tf `d  1 e 4 0 ]
+"35
+[v _erroi erroi `d  1 e 4 0 ]
+"134
+[v _millisPassado millisPassado `ul  1 e 4 0 ]
+"8 C:\Users\Roberto\Desktop\robouvc-main\robouvc.X/Timer0.h
+[v _millis millis `ul  1 e 4 0 ]
+"366 C:\Program Files\Microchip\xc8\v2.36\pic\include\proc\pic18f4431.h
+[v _OVDCONS OVDCONS `VEuc  1 e 1 @3946 ]
+"436
+[v _OVDCOND OVDCOND `VEuc  1 e 1 @3947 ]
+"568
+[v _DTCON DTCON `VEuc  1 e 1 @3949 ]
+"694
+[v _PWMCON1 PWMCON1 `VEuc  1 e 1 @3950 ]
+"760
+[v _PWMCON0 PWMCON0 `VEuc  1 e 1 @3951 ]
+"844
+[v _PDC3H PDC3H `VEuc  1 e 1 @3954 ]
+"851
+[v _PDC3L PDC3L `VEuc  1 e 1 @3955 ]
+"858
+[v _PDC2H PDC2H `VEuc  1 e 1 @3956 ]
+"865
+[v _PDC2L PDC2L `VEuc  1 e 1 @3957 ]
+"872
+[v _PDC1H PDC1H `VEuc  1 e 1 @3958 ]
+"879
+[v _PDC1L PDC1L `VEuc  1 e 1 @3959 ]
+"886
+[v _PDC0H PDC0H `VEuc  1 e 1 @3960 ]
+"893
+[v _PDC0L PDC0L `VEuc  1 e 1 @3961 ]
+"900
+[v _PTPERH PTPERH `VEuc  1 e 1 @3962 ]
+"907
+[v _PTPERL PTPERL `VEuc  1 e 1 @3963 ]
+"928
+[v _PTCON1 PTCON1 `VEuc  1 e 1 @3966 ]
+"955
+[v _PTCON0 PTCON0 `VEuc  1 e 1 @3967 ]
+"1198
+[v _PORTB PORTB `VEuc  1 e 1 @3969 ]
+[s S471 . 1 `uc 1 RB0 1 0 :1:0 
+`uc 1 RB1 1 0 :1:1 
+`uc 1 RB2 1 0 :1:2 
+`uc 1 RB3 1 0 :1:3 
+`uc 1 RB4 1 0 :1:4 
+`uc 1 RB5 1 0 :1:5 
+`uc 1 RB6 1 0 :1:6 
+`uc 1 RB7 1 0 :1:7 
+]
+"1219
+[s S480 . 1 `uc 1 . 1 0 :3:0 
+`uc 1 CCP2_PA2 1 0 :1:3 
+]
+[u S483 . 1 `S471 1 . 1 0 `S480 1 . 1 0 ]
+[v _PORTBbits PORTBbits `VES483  1 e 1 @3969 ]
+"1269
+[v _PORTC PORTC `VEuc  1 e 1 @3970 ]
+"1535
+[v _PORTD PORTD `VEuc  1 e 1 @3971 ]
+"1606
+[v _PORTE PORTE `VEuc  1 e 1 @3972 ]
+"2274
+[v _TRISA TRISA `VEuc  1 e 1 @3986 ]
+"2496
+[v _TRISB TRISB `VEuc  1 e 1 @3987 ]
+"2718
+[v _TRISC TRISC `VEuc  1 e 1 @3988 ]
+[s S166 . 1 `uc 1 TRISC0 1 0 :1:0 
+`uc 1 TRISC1 1 0 :1:1 
+`uc 1 TRISC2 1 0 :1:2 
+`uc 1 TRISC3 1 0 :1:3 
+`uc 1 TRISC4 1 0 :1:4 
+`uc 1 TRISC5 1 0 :1:5 
+`uc 1 TRISC6 1 0 :1:6 
+`uc 1 TRISC7 1 0 :1:7 
+]
+"2750
+[s S175 . 1 `uc 1 RC0 1 0 :1:0 
+`uc 1 RC1 1 0 :1:1 
+`uc 1 RC2 1 0 :1:2 
+`uc 1 RC3 1 0 :1:3 
+`uc 1 RC4 1 0 :1:4 
+`uc 1 RC5 1 0 :1:5 
+`uc 1 RC6 1 0 :1:6 
+`uc 1 RC7 1 0 :1:7 
+]
+[u S184 . 1 `S166 1 . 1 0 `S175 1 . 1 0 ]
+[v _TRISCbits TRISCbits `VES184  1 e 1 @3988 ]
+"2940
+[v _TRISD TRISD `VEuc  1 e 1 @3989 ]
+"3162
+[v _TRISE TRISE `VEuc  1 e 1 @3990 ]
+[s S393 . 1 `uc 1 SASEL 1 0 :2:0 
+`uc 1 SCSEL 1 0 :2:2 
+`uc 1 SBSEL 1 0 :2:4 
+`uc 1 SDSEL 1 0 :2:6 
+]
+"3297
+[s S398 . 1 `uc 1 GASEL0 1 0 :1:0 
+`uc 1 GASEL1 1 0 :1:1 
+`uc 1 GCSEL0 1 0 :1:2 
+`uc 1 GCSEL1 1 0 :1:3 
+`uc 1 GBSEL0 1 0 :1:4 
+`uc 1 GBSEL1 1 0 :1:5 
+`uc 1 GDSEL0 1 0 :1:6 
+`uc 1 GDSEL1 1 0 :1:7 
+]
+[s S407 . 1 `uc 1 SASEL0 1 0 :1:0 
+`uc 1 SASEL1 1 0 :1:1 
+`uc 1 SCSEL0 1 0 :1:2 
+`uc 1 SCSEL1 1 0 :1:3 
+`uc 1 SBSEL0 1 0 :1:4 
+`uc 1 SBSEL1 1 0 :1:5 
+`uc 1 SDSEL0 1 0 :1:6 
+`uc 1 SDSEL1 1 0 :1:7 
+]
+[u S416 . 1 `S393 1 . 1 0 `S398 1 . 1 0 `S407 1 . 1 0 ]
+[v _ADCHSbits ADCHSbits `VES416  1 e 1 @3993 ]
+"3402
+[v _ADCON3 ADCON3 `VEuc  1 e 1 @3994 ]
+[s S77 . 1 `uc 1 TMR1IE 1 0 :1:0 
+`uc 1 TMR2IE 1 0 :1:1 
+`uc 1 CCP1IE 1 0 :1:2 
+`uc 1 SSPIE 1 0 :1:3 
+`uc 1 TXIE 1 0 :1:4 
+`uc 1 RCIE 1 0 :1:5 
+`uc 1 ADIE 1 0 :1:6 
+]
+"3557
+[s S85 . 1 `uc 1 . 1 0 :4:0 
+`uc 1 TBIE 1 0 :1:4 
+]
+[s S88 . 1 `uc 1 . 1 0 :4:0 
+`uc 1 TX1IE 1 0 :1:4 
+`uc 1 RC1IE 1 0 :1:5 
+]
+[u S92 . 1 `S77 1 . 1 0 `S85 1 . 1 0 `S88 1 . 1 0 ]
+[v _PIE1bits PIE1bits `VES92  1 e 1 @3997 ]
+[s S206 . 1 `uc 1 TMR1IF 1 0 :1:0 
+`uc 1 TMR2IF 1 0 :1:1 
+`uc 1 CCP1IF 1 0 :1:2 
+`uc 1 SSPIF 1 0 :1:3 
+`uc 1 TXIF 1 0 :1:4 
+`uc 1 RCIF 1 0 :1:5 
+`uc 1 ADIF 1 0 :1:6 
+]
+"3637
+[s S214 . 1 `uc 1 . 1 0 :4:0 
+`uc 1 TBIF 1 0 :1:4 
+]
+[s S217 . 1 `uc 1 . 1 0 :4:0 
+`uc 1 TX1IF 1 0 :1:4 
+`uc 1 RC1IF 1 0 :1:5 
+]
+[u S221 . 1 `S206 1 . 1 0 `S214 1 . 1 0 `S217 1 . 1 0 ]
+[v _PIR1bits PIR1bits `VES221  1 e 1 @3998 ]
+[s S112 . 1 `uc 1 RX9D 1 0 :1:0 
+`uc 1 OERR 1 0 :1:1 
+`uc 1 FERR 1 0 :1:2 
+`uc 1 ADDEN 1 0 :1:3 
+`uc 1 CREN 1 0 :1:4 
+`uc 1 SREN 1 0 :1:5 
+`uc 1 RX9 1 0 :1:6 
+`uc 1 SPEN 1 0 :1:7 
+]
+"4415
+[s S121 . 1 `uc 1 . 1 0 :3:0 
+`uc 1 ADEN 1 0 :1:3 
+]
+[s S124 . 1 `uc 1 . 1 0 :5:0 
+`uc 1 SRENA 1 0 :1:5 
+]
+[s S127 . 1 `uc 1 . 1 0 :6:0 
+`uc 1 RC8_9 1 0 :1:6 
+]
+[s S130 . 1 `uc 1 . 1 0 :6:0 
+`uc 1 RC9 1 0 :1:6 
+]
+[s S133 . 1 `uc 1 RCD8 1 0 :1:0 
+]
+[u S135 . 1 `S112 1 . 1 0 `S121 1 . 1 0 `S124 1 . 1 0 `S127 1 . 1 0 `S130 1 . 1 0 `S133 1 . 1 0 ]
+[v _RCSTAbits RCSTAbits `VES135  1 e 1 @4011 ]
+[s S25 . 1 `uc 1 TX9D 1 0 :1:0 
+`uc 1 TRMT 1 0 :1:1 
+`uc 1 BRGH 1 0 :1:2 
+`uc 1 SENDB 1 0 :1:3 
+`uc 1 SYNC 1 0 :1:4 
+`uc 1 TXEN 1 0 :1:5 
+`uc 1 TX9 1 0 :1:6 
+`uc 1 CSRC 1 0 :1:7 
+]
+"4623
+[s S34 . 1 `uc 1 TX9D1 1 0 :1:0 
+`uc 1 TRMT1 1 0 :1:1 
+`uc 1 BRGH1 1 0 :1:2 
+`uc 1 SENDB1 1 0 :1:3 
+`uc 1 SYNC1 1 0 :1:4 
+`uc 1 TXEN1 1 0 :1:5 
+`uc 1 TX91 1 0 :1:6 
+`uc 1 CSRC1 1 0 :1:7 
+]
+[s S43 . 1 `uc 1 . 1 0 :6:0 
+`uc 1 TX8_9 1 0 :1:6 
+]
+[s S46 . 1 `uc 1 TXD8 1 0 :1:0 
+]
+[u S48 . 1 `S25 1 . 1 0 `S34 1 . 1 0 `S43 1 . 1 0 `S46 1 . 1 0 ]
+[v _TXSTAbits TXSTAbits `VES48  1 e 1 @4012 ]
+"4840
+[v _TXREG TXREG `VEuc  1 e 1 @4013 ]
+"4852
+[v _RCREG RCREG `VEuc  1 e 1 @4014 ]
+"4864
+[v _SPBRG SPBRG `VEuc  1 e 1 @4015 ]
+"5153
+[v _ANSEL0 ANSEL0 `VEuc  1 e 1 @4024 ]
+"5215
+[v _ANSEL1 ANSEL1 `VEuc  1 e 1 @4025 ]
+[s S358 . 1 `uc 1 ADCS 1 0 :3:0 
+`uc 1 ACQT 1 0 :4:3 
+`uc 1 ADFM 1 0 :1:7 
+]
+"5456
+[s S362 . 1 `uc 1 ADCS0 1 0 :1:0 
+`uc 1 ADCS1 1 0 :1:1 
+`uc 1 ADCS2 1 0 :1:2 
+`uc 1 ACQT0 1 0 :1:3 
+`uc 1 ACQT1 1 0 :1:4 
+`uc 1 ACQT2 1 0 :1:5 
+`uc 1 ACQT3 1 0 :1:6 
+]
+[u S370 . 1 `S358 1 . 1 0 `S362 1 . 1 0 ]
+[v _ADCON2bits ADCON2bits `VES370  1 e 1 @4032 ]
+[s S244 . 1 `uc 1 ADPNT 1 0 :2:0 
+`uc 1 BFOVFL 1 0 :1:2 
+`uc 1 BFEMT 1 0 :1:3 
+`uc 1 FIFOEN 1 0 :1:4 
+`uc 1 . 1 0 :1:5 
+`uc 1 VCFG 1 0 :2:6 
+]
+"5542
+[s S251 . 1 `uc 1 ADPNT0 1 0 :1:0 
+`uc 1 ADPNT1 1 0 :1:1 
+`uc 1 . 1 0 :4:2 
+`uc 1 VCFG0 1 0 :1:6 
+`uc 1 VCFG1 1 0 :1:7 
+]
+[s S257 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 FFOVFL 1 0 :1:2 
+]
+[s S260 . 1 `uc 1 . 1 0 :3:0 
+`uc 1 CHSN3 1 0 :1:3 
+`uc 1 VCFG01 1 0 :1:4 
+]
+[u S264 . 1 `S244 1 . 1 0 `S251 1 . 1 0 `S257 1 . 1 0 `S260 1 . 1 0 ]
+[v _ADCON1bits ADCON1bits `VES264  1 e 1 @4033 ]
+[s S290 . 1 `uc 1 . 1 0 :1:0 
+`uc 1 GO_NOT_DONE 1 0 :1:1 
+]
+"5651
+[s S293 . 1 `uc 1 ADON 1 0 :1:0 
+`uc 1 GO_nDONE 1 0 :1:1 
+`uc 1 ACMOD 1 0 :2:2 
+`uc 1 ACSCH 1 0 :1:4 
+`uc 1 ACONV 1 0 :1:5 
+]
+[s S299 . 1 `uc 1 . 1 0 :1:0 
+`uc 1 GO_DONE 1 0 :1:1 
+`uc 1 ACMOD0 1 0 :1:2 
+`uc 1 ACMOD1 1 0 :1:3 
+]
+[s S304 . 1 `uc 1 . 1 0 :1:0 
+`uc 1 DONE 1 0 :1:1 
+]
+[s S307 . 1 `uc 1 . 1 0 :1:0 
+`uc 1 GO 1 0 :1:1 
+]
+[s S310 . 1 `uc 1 . 1 0 :1:0 
+`uc 1 NOT_DONE 1 0 :1:1 
+]
+[s S313 . 1 `uc 1 . 1 0 :1:0 
+`uc 1 nDONE 1 0 :1:1 
+]
+[s S316 . 1 `uc 1 . 1 0 :1:0 
+`uc 1 GODONE 1 0 :1:1 
+]
+[u S319 . 1 `S290 1 . 1 0 `S293 1 . 1 0 `S299 1 . 1 0 `S304 1 . 1 0 `S307 1 . 1 0 `S310 1 . 1 0 `S313 1 . 1 0 `S316 1 . 1 0 ]
+[v _ADCON0bits ADCON0bits `VES319  1 e 1 @4034 ]
+"5733
+[v _ADRESL ADRESL `VEuc  1 e 1 @4035 ]
+"5740
+[v _ADRESH ADRESH `VEuc  1 e 1 @4036 ]
+"6789
+[v _T0CON T0CON `VEuc  1 e 1 @4053 ]
+"6872
+[v _TMR0L TMR0L `VEuc  1 e 1 @4054 ]
+[s S520 . 1 `uc 1 RBIF 1 0 :1:0 
+`uc 1 INT0IF 1 0 :1:1 
+`uc 1 TMR0IF 1 0 :1:2 
+`uc 1 RBIE 1 0 :1:3 
+`uc 1 INT0IE 1 0 :1:4 
+`uc 1 TMR0IE 1 0 :1:5 
+`uc 1 PEIE_GIEL 1 0 :1:6 
+`uc 1 GIE_GIEH 1 0 :1:7 
+]
+"7340
+[s S529 . 1 `uc 1 . 1 0 :1:0 
+`uc 1 INT0F 1 0 :1:1 
+`uc 1 T0IF 1 0 :1:2 
+`uc 1 . 1 0 :1:3 
+`uc 1 INT0E 1 0 :1:4 
+`uc 1 T0IE 1 0 :1:5 
+`uc 1 PEIE 1 0 :1:6 
+`uc 1 GIE 1 0 :1:7 
+]
+[s S538 . 1 `uc 1 . 1 0 :6:0 
+`uc 1 GIEL 1 0 :1:6 
+`uc 1 GIEH 1 0 :1:7 
+]
+[u S542 . 1 `S520 1 . 1 0 `S529 1 . 1 0 `S538 1 . 1 0 ]
+[v _INTCONbits INTCONbits `VES542  1 e 1 @4082 ]
+"8823
+[v _RC0 RC0 `VEb  1 e 0 @31760 ]
+"8826
+[v _RC1 RC1 `VEb  1 e 0 @31761 ]
+"8838
+[v _RC2 RC2 `VEb  1 e 0 @31762 ]
+"8841
+[v _RC3 RC3 `VEb  1 e 0 @31763 ]
+"9267
+[v _TMR0IF TMR0IF `VEb  1 e 0 @32658 ]
+"9273
+[v _TMR0ON TMR0ON `VEb  1 e 0 @32431 ]
+"9438
+[v _TRMT TRMT `VEb  1 e 0 @32097 ]
+"24 C:\Users\Roberto\Desktop\robouvc-main\robouvc.X\main.c
+[v _recebidoChar recebidoChar `uc  1 e 1 0 ]
+"104
+[v _main main `(v  1 e 1 0 ]
+{
+"215
+} 0
+"115 C:\Users\Roberto\Desktop\robouvc-main\robouvc.X/geral.h
+[v _testeMotores testeMotores `(v  1 e 1 0 ]
+{
+"117
+[v testeMotores@i i `i  1 a 2 72 ]
+"195
+} 0
+"200
+[v _testeLampadas testeLampadas `(v  1 e 1 0 ]
+{
+"201
+[v testeLampadas@i i `i  1 a 2 34 ]
+"211
+} 0
+"76
+[v _myStrncmp myStrncmp `(i  1 e 2 0 ]
+{
+[v myStrncmp@str1 str1 `*.25Cuc  1 p 2 23 ]
+[v myStrncmp@str2 str2 `*.25Cuc  1 p 2 25 ]
+"83
+} 0
+"3 C:\Program Files\Microchip\xc8\v2.36\pic\sources\c99\common\strcmp.c
+[v _strcmp strcmp `(i  1 e 2 0 ]
+{
+[v strcmp@l l `*.25Cuc  1 p 2 18 ]
+[v strcmp@r r `*.25Cuc  1 p 2 20 ]
+"7
+} 0
+"244 C:\Users\Roberto\Desktop\robouvc-main\robouvc.X/geral.h
+[v _testeADbit testeADbit `(v  1 e 1 0 ]
+{
+"246
+[v testeADbit@string string `[2]uc  1 a 2 74 ]
+"245
+[v testeADbit@i i `i  1 a 2 76 ]
+"260
+} 0
+"51 C:\Users\Roberto\Desktop\robouvc-main\robouvc.X/ADC.h
+[v _valorConvUARTbit valorConvUARTbit `(*.39Cuc  1 e 2 0 ]
+{
+"58
+[v valorConvUARTbit@string string `[5]uc  1 a 5 38 ]
+"56
+[v valorConvUARTbit@unidade unidade `i  1 a 2 49 ]
+"55
+[v valorConvUARTbit@dezena dezena `i  1 a 2 47 ]
+"54
+[v valorConvUARTbit@centena centena `i  1 a 2 45 ]
+"53
+[v valorConvUARTbit@milhar milhar `i  1 a 2 43 ]
+"51
+[v valorConvUARTbit@valor valor `i  1 p 2 36 ]
+"66
+} 0
+"213 C:\Users\Roberto\Desktop\robouvc-main\robouvc.X/geral.h
+[v _testeAD testeAD `(v  1 e 1 0 ]
+{
+"242
+} 0
+"104 C:\Users\Roberto\Desktop\robouvc-main\robouvc.X/Seguidor.h
+[v _setPID setPID `(v  1 e 1 0 ]
+{
+"132
+} 0
+"53
+[v _posicao posicao `(d  1 e 4 0 ]
+{
+"57
+[v posicao@total total `d  1 a 4 8 ]
+"55
+[v posicao@pos pos `d  1 a 4 4 ]
+"56
+[v posicao@local local `d  1 a 4 0 ]
+"54
+[v posicao@i i `i  1 a 2 12 ]
+"71
+} 0
+"11 C:\Program Files\Microchip\xc8\v2.36\pic\sources\c99\common\sprcdiv.c
+[v ___fldiv __fldiv `(d  1 e 4 0 ]
+{
+"21
+[v ___fldiv@grs grs `ul  1 a 4 60 ]
+"22
+[v ___fldiv@rem rem `ul  1 a 4 53 ]
+"20
+[v ___fldiv@new_exp new_exp `s  1 a 2 58 ]
+"19
+[v ___fldiv@aexp aexp `uc  1 a 1 65 ]
+"18
+[v ___fldiv@bexp bexp `uc  1 a 1 64 ]
+"16
+[v ___fldiv@sign sign `uc  1 a 1 57 ]
+"11
+[v ___fldiv@b b `d  1 p 4 41 ]
+[v ___fldiv@a a `d  1 p 4 45 ]
+"185
+} 0
+"90 C:\Users\Roberto\Desktop\robouvc-main\robouvc.X/Seguidor.h
+[v _moverMotor moverMotor `(v  1 e 1 0 ]
+{
+[v moverMotor@PID PID `i  1 p 2 45 ]
+"101
+} 0
+"74
+[v _lados lados `(v  1 e 1 0 ]
+{
+[v lados@lado lado `uc  1 a 1 wreg ]
+[v lados@lado lado `uc  1 a 1 wreg ]
+[v lados@porcVelo porcVelo `i  1 p 2 43 ]
+[v lados@lado lado `uc  1 a 1 58 ]
+"87
+} 0
+"41 C:\Users\Roberto\Desktop\robouvc-main\robouvc.X/PWM.h
+[v _setDutyPWM6 setDutyPWM6 `(v  1 e 1 0 ]
+{
+"42
+[v setDutyPWM6@velo velo `ui  1 a 2 26 ]
+"41
+[v setDutyPWM6@porcVelo porcVelo `ui  1 p 2 24 ]
+"45
+} 0
+"35
+[v _setDutyPWM4 setDutyPWM4 `(v  1 e 1 0 ]
+{
+"36
+[v setDutyPWM4@velo velo `ui  1 a 2 26 ]
+"35
+[v setDutyPWM4@porcVelo porcVelo `ui  1 p 2 24 ]
+"39
+} 0
+"29
+[v _setDutyPWM2 setDutyPWM2 `(v  1 e 1 0 ]
+{
+"30
+[v setDutyPWM2@velo velo `ui  1 a 2 26 ]
+"29
+[v setDutyPWM2@porcVelo porcVelo `ui  1 p 2 24 ]
+"33
+} 0
+"23
+[v _setDutyPWM0 setDutyPWM0 `(v  1 e 1 0 ]
+{
+"24
+[v setDutyPWM0@velo velo `ui  1 a 2 26 ]
+"23
+[v setDutyPWM0@porcVelo porcVelo `ui  1 p 2 24 ]
+"27
+} 0
+"15 C:\Program Files\Microchip\xc8\v2.36\pic\sources\c99\common\Umul16.c
+[v ___wmul __wmul `(ui  1 e 2 0 ]
+{
+"17
+[v ___wmul@product product `ui  1 a 2 22 ]
+"15
+[v ___wmul@multiplier multiplier `ui  1 p 2 18 ]
+[v ___wmul@multiplicand multiplicand `ui  1 p 2 20 ]
+"53
+} 0
+"37 C:\Users\Roberto\Desktop\robouvc-main\robouvc.X/Seguidor.h
+[v _configDA configDA `(v  1 e 1 0 ]
+{
+"39
+[v configDA@i i `i  1 a 2 52 ]
+"50
+} 0
+"122 C:\Users\Roberto\Desktop\robouvc-main\robouvc.X/ADC.h
+[v _getAD_ANbit getAD_ANbit `(i  1 e 2 0 ]
+{
+"135
+[v getAD_ANbit@ANread ANread `i  1 a 2 34 ]
+"122
+[v getAD_ANbit@porta porta `i  1 p 2 32 ]
+"150
+} 0
+"83
+[v _readAD_ANbit readAD_ANbit `(i  1 e 2 0 ]
+{
+"90
+} 0
+"4 C:\Program Files\Microchip\xc8\v2.36\pic\sources\c99\common\flge.c
+[v ___flge __flge `(b  1 e 0 0 ]
+{
+[v ___flge@ff1 ff1 `d  1 p 4 18 ]
+[v ___flge@ff2 ff2 `d  1 p 4 22 ]
+"19
+} 0
+"245 C:\Program Files\Microchip\xc8\v2.36\pic\sources\c99\common\sprcadd.c
+[v ___flsub __flsub `(d  1 e 4 0 ]
+{
+[v ___flsub@b b `d  1 p 4 33 ]
+[v ___flsub@a a `d  1 p 4 37 ]
+"250
+} 0
+"10
+[v ___fladd __fladd `(d  1 e 4 0 ]
+{
+"17
+[v ___fladd@grs grs `uc  1 a 1 32 ]
+"15
+[v ___fladd@bexp bexp `uc  1 a 1 31 ]
+"16
+[v ___fladd@aexp aexp `uc  1 a 1 30 ]
+"13
+[v ___fladd@signs signs `uc  1 a 1 29 ]
+"10
+[v ___fladd@b b `d  1 p 4 17 ]
+[v ___fladd@a a `d  1 p 4 21 ]
+"237
+} 0
+"10 C:\Users\Roberto\Desktop\robouvc-main\robouvc.X/Timer0.h
+[v _initTimer0 initTimer0 `(v  1 e 1 0 ]
+{
+[v initTimer0@tempoInicial tempoInicial `i  1 p 2 18 ]
+"15
+} 0
+"9 C:\Users\Roberto\Desktop\robouvc-main\robouvc.X/bluetooth.h
+[v _configUSART configUSART `(v  1 e 1 0 ]
+{
+"37
+} 0
+"9 C:\Users\Roberto\Desktop\robouvc-main\robouvc.X/PWM.h
+[v _configPWM configPWM `(v  1 e 1 0 ]
+{
+"21
+} 0
+"11 C:\Users\Roberto\Desktop\robouvc-main\robouvc.X/geral.h
+[v _configBits configBits `(v  1 e 1 0 ]
+{
+"70
+} 0
+"11 C:\Users\Roberto\Desktop\robouvc-main\robouvc.X/ADC.h
+[v _configAD configAD `(v  1 e 1 0 ]
+{
+"33
+} 0
+"43 C:\Users\Roberto\Desktop\robouvc-main\robouvc.X/bluetooth.h
+[v _UARTReadChar UARTReadChar `(uc  1 e 1 0 ]
+{
+"44
+[v UARTReadChar@ler ler `uc  1 a 1 18 ]
+"46
+} 0
+"136 C:\Users\Roberto\Desktop\robouvc-main\robouvc.X/Seguidor.h
+[v _PrintSensores PrintSensores `(v  1 e 1 0 ]
+{
+"138
+[v PrintSensores@millisAtual millisAtual `ul  1 a 4 76 ]
+"178
+} 0
+"35 C:\Users\Roberto\Desktop\robouvc-main\robouvc.X/ADC.h
+[v _valorConvUART valorConvUART `(*.39Cuc  1 e 2 0 ]
+{
+"41
+[v valorConvUART@string string `[5]uc  1 a 5 51 ]
+"39
+[v valorConvUART@unidade unidade `i  1 a 2 60 ]
+"38
+[v valorConvUART@dezena dezena `i  1 a 2 58 ]
+"37
+[v valorConvUART@centena centena `i  1 a 2 56 ]
+"35
+[v valorConvUART@valor valor `i  1 p 2 49 ]
+"49
+} 0
+"7 C:\Program Files\Microchip\xc8\v2.36\pic\sources\c99\common\awmod.c
+[v ___awmod __awmod `(i  1 e 2 0 ]
+{
+"10
+[v ___awmod@sign sign `uc  1 a 1 31 ]
+[v ___awmod@counter counter `uc  1 a 1 30 ]
+"7
+[v ___awmod@dividend dividend `i  1 p 2 26 ]
+[v ___awmod@divisor divisor `i  1 p 2 28 ]
+"34
+} 0
+"7 C:\Program Files\Microchip\xc8\v2.36\pic\sources\c99\common\awdiv.c
+[v ___awdiv __awdiv `(i  1 e 2 0 ]
+{
+"10
+[v ___awdiv@quotient quotient `i  1 a 2 24 ]
+"11
+[v ___awdiv@sign sign `uc  1 a 1 23 ]
+[v ___awdiv@counter counter `uc  1 a 1 22 ]
+"7
+[v ___awdiv@dividend dividend `i  1 p 2 18 ]
+[v ___awdiv@divisor divisor `i  1 p 2 20 ]
+"41
+} 0
+"92 C:\Users\Roberto\Desktop\robouvc-main\robouvc.X/ADC.h
+[v _getAD_AN getAD_AN `(i  1 e 2 0 ]
+{
+"105
+[v getAD_AN@ANread ANread `f  1 a 4 45 ]
+"92
+[v getAD_AN@porta porta `i  1 p 2 43 ]
+"120
+} 0
+"72
+[v _readAD_AN readAD_AN `(f  1 e 4 0 ]
+{
+"81
+} 0
+"10 C:\Program Files\Microchip\xc8\v2.36\pic\sources\c99\common\xxtofl.c
+[v ___xxtofl __xxtofl `(d  1 e 4 0 ]
+{
+[v ___xxtofl@sign sign `uc  1 a 1 wreg ]
+"13
+[v ___xxtofl@arg arg `ul  1 a 4 46 ]
+"12
+[v ___xxtofl@exp exp `uc  1 a 1 45 ]
+"10
+[v ___xxtofl@sign sign `uc  1 a 1 wreg ]
+[v ___xxtofl@val val `l  1 p 4 36 ]
+"15
+[v ___xxtofl@sign sign `uc  1 a 1 44 ]
+"44
+} 0
+"8 C:\Program Files\Microchip\xc8\v2.36\pic\sources\c99\common\sprcmul.c
+[v ___flmul __flmul `(d  1 e 4 0 ]
+{
+[s S1207 . 4 `uc 1 a 1 0 `uc 1 b 1 1 `uc 1 c 1 2 `uc 1 d 1 3 ]
+"13
+[s S1212 . 4 `s 1 wordA 2 0 `s 1 wordB 2 2 ]
+[u S1215 . 4 `l 1 i 4 0 `d 1 f 4 0 `S1207 1 fAsBytes 4 0 `S1212 1 fAsWords 4 0 ]
+[v ___flmul@prod prod `S1215  1 a 4 11 ]
+"12
+[v ___flmul@grs grs `ul  1 a 4 6 ]
+[s S1283 . 2 `uc 1 a 1 0 `uc 1 b 1 1 ]
+"14
+[u S1286 . 2 `s 1 i 2 0 `us 1 n 2 0 `S1283 1 nAsBytes 2 0 ]
+[v ___flmul@temp temp `S1286  1 a 2 15 ]
+"10
+[v ___flmul@bexp bexp `uc  1 a 1 10 ]
+"11
+[v ___flmul@aexp aexp `uc  1 a 1 5 ]
+"9
+[v ___flmul@sign sign `uc  1 a 1 4 ]
+"8
+[v ___flmul@b b `d  1 p 4 50 ]
+[v ___flmul@a a `d  1 p 4 54 ]
+"205
+} 0
+"72 C:\Users\Roberto\Desktop\robouvc-main\robouvc.X/geral.h
+[v _bitExtract bitExtract `(i  1 e 2 0 ]
+{
+[v bitExtract@numero numero `i  1 p 2 18 ]
+[v bitExtract@k k `i  1 p 2 20 ]
+[v bitExtract@posicao posicao `i  1 p 2 22 ]
+"74
+} 0
+"43 C:\Program Files\Microchip\xc8\v2.36\pic\sources\c99\common\fltol.c
+[v ___fltol __fltol `(l  1 e 4 0 ]
+{
+"45
+[v ___fltol@exp1 exp1 `uc  1 a 1 42 ]
+[v ___fltol@sign1 sign1 `uc  1 a 1 41 ]
+"43
+[v ___fltol@f1 f1 `d  1 p 4 33 ]
+"70
+} 0
+"4 C:\Program Files\Microchip\xc8\v2.36\pic\sources\c99\common\fleq.c
+[v ___fleq __fleq `(b  1 e 0 0 ]
+{
+[v ___fleq@ff1 ff1 `d  1 p 4 18 ]
+[v ___fleq@ff2 ff2 `d  1 p 4 22 ]
+"12
+} 0
+"57 C:\Users\Roberto\Desktop\robouvc-main\robouvc.X/bluetooth.h
+[v _UARTSendString UARTSendString `(v  1 e 1 0 ]
+{
+"58
+[v UARTSendString@i i `i  1 a 2 70 ]
+"57
+[v UARTSendString@str str `*.35uc  1 p 2 64 ]
+[v UARTSendString@max_length max_length `Ci  1 p 2 66 ]
+"67
+} 0
+"52
+[v _UARTSendChar UARTSendChar `(v  1 e 1 0 ]
+{
+[v UARTSendChar@c c `uc  1 a 1 wreg ]
+[v UARTSendChar@c c `uc  1 a 1 wreg ]
+[v UARTSendChar@c c `uc  1 a 1 18 ]
+"55
+} 0
+"48
+[v _UARTWriteTest UARTWriteTest `(v  1 e 1 0 ]
+{
+"50
+} 0
+"26 C:\Users\Roberto\Desktop\robouvc-main\robouvc.X\main.c
+[v _ISR ISR `IIH(v  1 e 1 0 ]
+{
+"102
+} 0
+"41 C:\Users\Roberto\Desktop\robouvc-main\robouvc.X/PWM.h
+[v i2_setDutyPWM6 setDutyPWM6 `(v  1 e 1 0 ]
+{
+"42
+[v i2setDutyPWM6@velo velo `ui  1 a 2 8 ]
+"41
+[v i2setDutyPWM6@porcVelo porcVelo `ui  1 p 2 6 ]
+"45
+} 0
+"35
+[v i2_setDutyPWM4 setDutyPWM4 `(v  1 e 1 0 ]
+{
+"36
+[v i2setDutyPWM4@velo velo `ui  1 a 2 8 ]
+"35
+[v i2setDutyPWM4@porcVelo porcVelo `ui  1 p 2 6 ]
+"39
+} 0
+"29
+[v i2_setDutyPWM2 setDutyPWM2 `(v  1 e 1 0 ]
+{
+"30
+[v i2setDutyPWM2@velo velo `ui  1 a 2 8 ]
+"29
+[v i2setDutyPWM2@porcVelo porcVelo `ui  1 p 2 6 ]
+"33
+} 0
+"23
+[v i2_setDutyPWM0 setDutyPWM0 `(v  1 e 1 0 ]
+{
+"24
+[v i2setDutyPWM0@velo velo `ui  1 a 2 8 ]
+"23
+[v i2setDutyPWM0@porcVelo porcVelo `ui  1 p 2 6 ]
+"27
+} 0
+"15 C:\Program Files\Microchip\xc8\v2.36\pic\sources\c99\common\Umul16.c
+[v i2___wmul __wmul `(ui  1 e 2 0 ]
+{
+"17
+[v i2___wmul@product product `ui  1 a 2 4 ]
+"15
+[v i2___wmul@multiplier multiplier `ui  1 p 2 0 ]
+[v i2___wmul@multiplicand multiplicand `ui  1 p 2 2 ]
+"53
+} 0
+"57 C:\Users\Roberto\Desktop\robouvc-main\robouvc.X/bluetooth.h
+[v i2_UARTSendString UARTSendString `(v  1 e 1 0 ]
+{
+"58
+[v i2UARTSendString@i i `i  1 a 2 7 ]
+"57
+[v i2UARTSendString@str str `*.35uc  1 p 2 1 ]
+[v i2UARTSendString@max_length max_length `Ci  1 p 2 3 ]
+"67
+} 0
+"52
+[v i2_UARTSendChar UARTSendChar `(v  1 e 1 0 ]
+{
+[v i2UARTSendChar@c c `uc  1 a 1 wreg ]
+[v i2UARTSendChar@c c `uc  1 a 1 wreg ]
+[v i2UARTSendChar@c c `uc  1 a 1 0 ]
+"55
+} 0
+"48
+[v i2_UARTWriteTest UARTWriteTest `(v  1 e 1 0 ]
+{
+"50
+} 0
+"43
+[v i2_UARTReadChar UARTReadChar `(uc  1 e 1 0 ]
+{
+"44
+[v i2UARTReadChar@ler ler `uc  1 a 1 0 ]
+"46
+} 0
+"39
+[v _setComando setComando `(v  1 e 1 0 ]
+{
+[v setComando@c c `*.25uc  1 p 2 0 ]
+"41
+} 0
+"21 C:\Users\Roberto\Desktop\robouvc-main\robouvc.X/Timer0.h
+[v _ligaTimer0 ligaTimer0 `(v  1 e 1 0 ]
+{
+"23
+} 0
